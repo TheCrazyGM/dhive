@@ -44,6 +44,12 @@ declare module 'dhive/health-tracker' {
 	     * Default: 2 minutes.
 	     */
 	    headBlockTtlMs?: number;
+	    /**
+	     * Default duration (ms) to skip a node after receiving a 429 response,
+	     * used when the server doesn't provide a Retry-After header.
+	     * Default: 10 seconds.
+	     */
+	    defaultRateLimitMs?: number;
 	}
 	export class NodeHealthTracker {
 	    private health;
@@ -55,6 +61,7 @@ declare module 'dhive/health-tracker' {
 	    private readonly maxApiFailuresBeforeCooldown;
 	    private readonly staleBlockThreshold;
 	    private readonly headBlockTtlMs;
+	    private readonly defaultRateLimitMs;
 	    constructor(options?: HealthTrackerOptions);
 	    private getOrCreate;
 	    /**
@@ -67,6 +74,16 @@ declare module 'dhive/health-tracker' {
 	     * Increments both the global consecutive failure counter and the API-specific counter.
 	     */
 	    recordFailure(node: string, api: string): void;
+	    /**
+	     * Record that a node returned HTTP 429 (Too Many Requests).
+	     * The node will be skipped until the rate limit expires.
+	     * @param retryAfterSeconds Value from the Retry-After header, or undefined to use default.
+	     */
+	    recordRateLimit(node: string, retryAfterSeconds?: number): void;
+	    /**
+	     * Check if a node is currently rate-limited (429 cooldown active).
+	     */
+	    isRateLimited(node: string): boolean;
 	    /**
 	     * Record an API/plugin-specific failure (e.g. "method not found", "plugin not enabled").
 	     * Only increments the per-API counter, NOT the global consecutive failure counter.
