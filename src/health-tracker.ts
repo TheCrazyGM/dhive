@@ -12,6 +12,11 @@ interface ApiFailure {
   count: number
   lastFailure: number
 }
+/** Tracks rate-limit state for a node */
+interface RateLimitState {
+  /** Timestamp (ms) when the rate limit expires — skip this node until then */
+  retryAfter: number
+}
 
 interface NodeState {
   /** Per-API failure tracking (api name → failure info) */
@@ -24,6 +29,8 @@ interface NodeState {
   headBlock: number
   /** When headBlock was last updated */
   headBlockUpdatedAt: number
+  /** Rate-limit state — set when a 429 is received */
+  rateLimit?: RateLimitState
 }
 
 export interface HealthTrackerOptions {
@@ -57,6 +64,12 @@ export interface HealthTrackerOptions {
    * Default: 2 minutes.
    */
   headBlockTtlMs?: number
+  /**
+   * Default duration (ms) to skip a node after receiving a 429 response,
+   * used when the server doesn't provide a Retry-After header.
+   * Default: 10 seconds.
+   */
+  defaultRateLimitMs?: number
 }
 
 export class NodeHealthTracker {
@@ -70,6 +83,7 @@ export class NodeHealthTracker {
   private readonly maxApiFailuresBeforeCooldown: number
   private readonly staleBlockThreshold: number
   private readonly headBlockTtlMs: number
+  private readonly defaultRateLimitMs: number
 
   constructor(options: HealthTrackerOptions = {}) {
     this.nodeCooldownMs = options.nodeCooldownMs ?? 30_000
@@ -78,6 +92,7 @@ export class NodeHealthTracker {
     this.maxApiFailuresBeforeCooldown = options.maxApiFailuresBeforeCooldown ?? 2
     this.staleBlockThreshold = options.staleBlockThreshold ?? 30
     this.headBlockTtlMs = options.headBlockTtlMs ?? 120_000
+    this.defaultRateLimitMs = options.defaultRateLimitMs ?? 10_000
   }
 
   private getOrCreate(node: string): NodeState {
@@ -115,6 +130,30 @@ export class NodeHealthTracker {
     state.lastFailure = Date.now()
 
     this.incrementApiFailure(state, api)
+  }
+
+  /**
+   * Record that a node returned HTTP 429 (Too Many Requests).
+   * The node will be skipped until the rate limit expires.
+   * @param retryAfterSeconds Value from the Retry-After header, or undefined to use default.
+   */
+  recordRateLimit(node: string, retryAfterSeconds?: number): void {
+    const state = this.getOrCreate(node)
+    const delayMs = retryAfterSeconds != null
+      ? retryAfterSeconds * 1000
+      : this.defaultRateLimitMs
+    state.rateLimit = { retryAfter: Date.now() + delayMs }
+    state.consecutiveFailures++
+    state.lastFailure = Date.now()
+  }
+
+  /**
+   * Check if a node is currently rate-limited (429 cooldown active).
+   */
+  isRateLimited(node: string): boolean {
+    const state = this.health.get(node)
+    if (!state?.rateLimit) return false
+    return Date.now() < state.rateLimit.retryAfter
   }
 
   /**
@@ -157,6 +196,11 @@ export class NodeHealthTracker {
     if (!state) return true // Unknown nodes are assumed healthy
 
     const now = Date.now()
+
+    // Check rate-limit cooldown (429 received)
+    if (state.rateLimit && now < state.rateLimit.retryAfter) {
+      return false
+    }
 
     // Check overall node health (consecutive failures)
     if (state.consecutiveFailures >= this.maxFailuresBeforeCooldown) {
