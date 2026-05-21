@@ -1,5 +1,5 @@
 import "mocha";
-import * as assert from "assert";
+import assert from "assert";
 import * as stream from "stream";
 import { VError } from "verror";
 
@@ -38,7 +38,7 @@ describe("misc", function() {
           });
           s1.on("end", () => {
             assert.equal(c, 99);
-            resolve();
+            resolve(undefined);
           });
         }, 50);
       });
@@ -58,7 +58,7 @@ describe("misc", function() {
         });
         s.on("end", () => {
           assert(sawError);
-          resolve();
+          resolve(undefined);
         });
       });
     });

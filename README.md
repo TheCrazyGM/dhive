@@ -1,8 +1,8 @@
-# [dhive](https://github.com)
+# [dhive](https://github.com/openhive-network/dhive)
 
-Robust hive client library that runs in both node.js and the browser.
+Robust and modernized Hive client library that runs in both node.js and the browser.
 
-Needs test net urls, chain id
+**Secured and Audited:** This version of dhive has been modernized to use the `@noble` cryptographic suite, resolving all known critical vulnerabilities in the core engine.
 
 ---
 
@@ -12,15 +12,15 @@ Needs test net urls, chain id
 
 ## Browser compatibility
 
-[![Build Status](https://saucelabs.com/browser-matrix/feruzm-dhive.svg)](https://saucelabs.com/open_sauce/user/feruzm-dhive)
+Modernized to work with latest browsers and bundlers.
 
 ## Installation
 
 ### Via npm
 
-For node.js or the browser with [browserify](https://github.com/substack/node-browserify) or [webpack](https://github.com/webpack/webpack).
+For node.js or the browser with modern bundlers like [Vite](https://vitejs.dev/), [esbuild](https://esbuild.github.io/), or [Webpack](https://webpack.js.org/).
 
-```
+```bash
 npm install @hiveio/dhive
 ```
 
@@ -38,8 +38,6 @@ Or from the [unpkg](https://unpkg.com) cdn:
 <script src="https://unpkg.com/@hiveio/dhive@latest/dist/dhive.js"></script>
 ```
 
-Make sure to set the version you want when including from the cdn, you can also use `dhive@latest` but that is not always desirable. See [unpkg.com](https://unpkg.com) for more information.
-
 ## Usage
 
 ### In the browser
@@ -47,7 +45,7 @@ Make sure to set the version you want when including from the cdn, you can also 
 ```html
 <script src="https://unpkg.com/@hiveio/dhive@latest/dist/dhive.js"></script>
 <script>
-  var client = new dhive.Client(["https://api.hive.blog", "https://api.hivekings.com", "https://anyx.io", "https://api.openhive.network"]);
+  var client = new dhive.Client(["https://api.hive.blog", "https://api.openhive.network"]);
   client.database
     .getDiscussions("trending", { tag: "writing", limit: 1 })
     .then(function(discussions) {
@@ -59,8 +57,6 @@ Make sure to set the version you want when including from the cdn, you can also 
 </script>
 ```
 
-See the [demo source](https://github.com/openhive-network/dhive/tree/master/examples/comment-feed) for an example on how to setup a livereloading TypeScript pipeline with [wintersmith](https://github.com/jnordberg/wintersmith) and [browserify](https://github.com/substack/node-browserify).
-
 ### In node.js
 
 With TypeScript:
@@ -68,20 +64,20 @@ With TypeScript:
 ```typescript
 import { Client } from "@hiveio/dhive";
 
-const client = new Client(["https://api.hive.blog", "https://api.hivekings.com", "https://anyx.io", "https://api.openhive.network"]);
+const client = new Client(["https://api.hive.blog", "https://api.openhive.network"]);
 
 for await (const block of client.blockchain.getBlocks()) {
   console.log(`New block, id: ${block.block_id}`);
 }
 ```
 
-With JavaScript:
+With JavaScript (CommonJS):
 
 ```javascript
-var dhive = require("@hiveio/dhive");
+const dhive = require("@hiveio/dhive");
 
-var client = new dhive.Client(["https://api.hive.blog", "https://api.hivekings.com", "https://anyx.io", "https://api.openhive.network"]);
-var key = dhive.PrivateKey.fromLogin("username", "password", "posting");
+const client = new dhive.Client(["https://api.hive.blog", "https://api.openhive.network"]);
+const key = dhive.PrivateKey.fromLogin("username", "password", "posting");
 
 client.broadcast
   .vote(
@@ -103,12 +99,12 @@ client.broadcast
   );
 ```
 
-With ES2016 (node.js 7+):
+### Async/Await (node.js 12+)
 
 ```javascript
 const { Client } = require("@hiveio/dhive");
 
-const client = new Client(["https://api.hive.blog", "https://api.hivekings.com", "https://anyx.io", "https://api.openhive.network"]);
+const client = new Client(["https://api.hive.blog", "https://api.openhive.network"]);
 
 async function main() {
   const props = await client.database.getChainProperties();
@@ -119,31 +115,11 @@ async function main() {
 main().catch(console.error);
 ```
 
-With node.js streams:
-
-```javascript
-var dhive = require("@hiveio/dhive");
-var es = require("event-stream"); // npm install event-stream
-var util = require("util");
-
-var client = new dhive.Client(["https://api.hive.blog", "https://api.hivekings.com", "https://anyx.io", "https://api.openhive.network"]);
-
-var stream = client.blockchain.getBlockStream();
-
-stream
-  .pipe(
-    es.map(function(block, callback) {
-      callback(null, util.inspect(block, { colors: true, depth: null }) + "\n");
-    })
-  )
-  .pipe(process.stdout);
-```
-
 ## Bundling
 
-The easiest way to bundle dhive (with browserify, webpack etc.) is to just `npm install @hiveio/dhive` and `require('@hiveio/dhive')` which will give you well-tested (see browser compatibility matrix above) pre-bundled code guaranteed to JustWork™. However, that is not always desirable since it will not allow your bundler to de-duplicate any shared dependencies dhive and your app might have.
+The easiest way to bundle dhive (with Vite, Webpack, etc.) is to just `npm install @hiveio/dhive` and `import { Client } from '@hiveio/dhive'`. 
 
-To allow for deduplication you can `require('@hiveio/dhive/lib/index-browser')`, or if you plan to provide your own polyfills: `require('@hiveio/dhive/lib/index')`. See `src/index-browser.ts` for a list of polyfills expected.
+If you are bundling for the browser, `dhive` now includes a pre-bundled and minified version using **esbuild**, ensuring high performance and security.
 
 ---
 

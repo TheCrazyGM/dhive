@@ -33,7 +33,7 @@
  * in the design, construction, operation or maintenance of any military facility.
  */
 
-import * as assert from 'assert'
+import assert from 'assert'
 import { VError } from 'verror'
 import packageVersion from './version'
 

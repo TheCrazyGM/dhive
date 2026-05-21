@@ -189,6 +189,13 @@ export async function retryingFetch(
     const node = orderedNodes[nodeIndex]
 
     try {
+      // Skip nodes that are currently rate-limited
+      if (healthTracker && healthTracker.isRateLimited(node)) {
+        lastError = new Error(`Node ${node} is rate-limited, skipping`)
+        if (healthTracker && api) healthTracker.recordFailure(node, api)
+        throw lastError
+      }
+
       if (fetchTimeout) {
         opts.timeout = fetchTimeout(nodesTriedInRound)
       }
@@ -196,7 +203,23 @@ export async function retryingFetch(
       const response = await fetch(node, opts)
 
       if (!response.ok) {
-        // Some Hive nodes return non-200 HTTP status (500, 502, 503, 429, etc.)
+        // Handle 429 — record rate limit and fail over immediately
+        if (response.status === 429) {
+          const retryAfterHeader = response.headers?.get?.('retry-after')
+          const retryAfterSec = retryAfterHeader ? parseInt(retryAfterHeader, 10) : undefined
+          if (healthTracker) {
+            healthTracker.recordRateLimit(node, !isNaN(retryAfterSec as number) ? retryAfterSec : undefined)
+          }
+          throw new Error(`HTTP 429: Too Many Requests`)
+        }
+
+        // Handle 503 — don't parse JSON body, just fail over
+        if (response.status === 503) {
+          if (healthTracker && api) healthTracker.recordFailure(node, api)
+          throw new Error(`HTTP 503: Service Temporarily Unavailable`)
+        }
+
+        // Some Hive nodes return non-200 HTTP status (500, 502, etc.)
         // but still include a valid JSON-RPC response in the body.
         // This happens when a node is overloaded — it processes the transaction
         // but returns an error HTTP status. For broadcasts, ignoring the body
@@ -261,6 +284,12 @@ export async function retryingFetch(
         throw error
       }
 
+      // Small delay between node attempts within a round to prevent
+      // flooding all nodes when multiple concurrent requests fail over
+      if (totalNodes > 1 && nodesTriedInRound > 0) {
+        await sleep(50 + Math.random() * 50) // 50-100ms jitter
+      }
+
       // Try next node immediately (no backoff within a round)
       if (totalNodes > 1) {
         nodeIndex = nextNode(orderedNodes, nodeIndex)
@@ -307,7 +336,7 @@ export async function retryingFetch(
 
 // Hack to be able to generate a valid witness_set_properties op
 // Can hopefully be removed when hived's JSON representation is fixed
-import * as ByteBuffer from '@ecency/bytebuffer'
+import ByteBuffer from '@ecency/bytebuffer'
 import { Asset, PriceType } from './chain/asset'
 import { WitnessSetPropertiesOperation } from './chain/operation'
 import { Serializer, Types } from './chain/serializer'

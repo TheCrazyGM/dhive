@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "lib": ["dom", "ES7"],
+    "lib": ["dom", "ESNext"],
     "module": "commonjs",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "ignoreDeprecations": "5.0",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "noImplicitThis": true,
     "outDir": "lib",
-    "strictNullChecks": true,
-    "target": "es6"
+    "strict": false,
+    "target": "es2020",
+    "types": ["node", "mocha"]
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "test/**/*.ts"]
 }

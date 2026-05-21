@@ -1,5 +1,5 @@
-import * as bs58 from 'bs58'
-import * as ByteBuffer from '@ecency/bytebuffer'
+import { base58 as bs58 } from '@scure/base'
+import ByteBuffer from '@ecency/bytebuffer'
 import { types } from './chain/deserializer'
 import { Types } from './chain/serializer'
 import { PrivateKey, PublicKey } from './crypto'
@@ -65,8 +65,8 @@ const decode = (private_key: PrivateKey | string, memo: string): string => {
   memo = memo.substring(1)
   checkEncryption()
   private_key = toPrivateObj(private_key)
-  memo = bs58.decode(memo)
-  let memoBuffer = types.EncryptedMemoD(Buffer.from(memo, 'binary'))
+  const decodedMemo = bs58.decode(memo)
+  let memoBuffer = types.EncryptedMemoD(Buffer.from(decodedMemo))
   const { from, to, nonce, check, encrypted } = memoBuffer
   const pubkey = private_key.createPublic().toString()
   const otherpub =

@@ -1,5 +1,5 @@
 import "mocha";
-import * as assert from "assert";
+import assert from "assert";
 import { VError } from "verror";
 
 import { Client, utils } from "./../src";

@@ -1,5 +1,5 @@
 import "mocha";
-import * as assert from "assert";
+import assert from "assert";
 
 import {
   Client,
@@ -60,7 +60,7 @@ describe("blockchain", function() {
       stream.on("error", reject);
       stream.on("end", () => {
         assert.deepEqual(ids, expectedIds);
-        resolve();
+        resolve(undefined);
       });
     });
   });
@@ -89,7 +89,7 @@ describe("blockchain", function() {
       stream.on("error", reject);
       stream.on("end", () => {
         assert.deepEqual(ops, expectedOps);
-        resolve();
+        resolve(undefined);
       });
     });
   });
@@ -121,7 +121,7 @@ describe("blockchain", function() {
         assert(false, "unexpected stream data");
       });
       stream.on("error", error => {
-        resolve();
+        resolve(undefined);
       });
     });
   });
@@ -132,7 +132,7 @@ describe("blockchain", function() {
       const stream = client.blockchain.getBlockNumberStream();
       stream.on("data", num => {
         assert(num >= current);
-        resolve();
+        resolve(undefined);
       });
       stream.on("error", reject);
     });

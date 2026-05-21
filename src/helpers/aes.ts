@@ -1,4 +1,4 @@
-import * as assert from 'assert'
+import assert from 'assert'
 import {
   createCipheriv,
   createDecipheriv,
@@ -35,7 +35,7 @@ const crypt = (
   message: Buffer,
   checksum?: number
 ): {
-  nonce: Long
+  nonce: any
   message: Buffer
   checksum: number
 } => {
@@ -124,4 +124,4 @@ const uniqueNonce = (): string => {
   return long.toString()
 }
 
-const toLongObj = (o: any): Long => (o ? (Long.isLong(o) ? o : Long.fromString(o)) : o)
+const toLongObj = (o: any): any => (o ? (Long.isLong(o) ? o : Long.fromString(o)) : o)

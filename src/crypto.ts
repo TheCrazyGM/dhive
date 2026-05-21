@@ -33,24 +33,19 @@
  * in the design, construction, operation or maintenance of any military facility.
  */
 
-import * as assert from 'assert'
+import assert from 'assert'
 import { createHash } from 'crypto'
-import * as bigInteger from 'bigi'
-import * as bs58 from 'bs58'
-import * as ByteBuffer from '@ecency/bytebuffer'
-import * as ecurve from 'ecurve'
-import * as Ripemd160 from 'ripemd160'
-import * as secp256k1 from 'secp256k1'
+import ByteBuffer from '@ecency/bytebuffer'
 import { VError } from 'verror'
 import { Types } from './chain/serializer'
 import { SignedTransaction, Transaction } from './chain/transaction'
 import { DEFAULT_ADDRESS_PREFIX, DEFAULT_CHAIN_ID } from './client'
 import { copy } from './utils'
 
-/**
- * secp256k1 ecurve
- */
-const secp256k1Curve = ecurve.getCurveByName('secp256k1')
+import { base58 } from '@scure/base'
+import { ripemd160 as nobleRipemd160 } from '@noble/hashes/legacy.js'
+import { sha256 as nobleSha256, sha512 as nobleSha512 } from '@noble/hashes/sha2.js'
+import { secp256k1 as nobleSecp256k1 } from '@noble/curves/secp256k1.js'
 
 /**
  * Network id used in WIF-encoding.
@@ -61,27 +56,24 @@ export const NETWORK_ID = Buffer.from([0x80])
  * Return ripemd160 hash of input.
  */
 function ripemd160(input: Buffer | string): Buffer {
-  return new Ripemd160()
-    .update(input)
-    .digest()
+  const data = typeof input === 'string' ? Buffer.from(input, 'utf8') : input
+  return Buffer.from(nobleRipemd160(data))
 }
 
 /**
  * Return sha256 hash of input.
  */
 function sha256(input: Buffer | string): Buffer {
-  return createHash('sha256')
-    .update(input)
-    .digest()
+  const data = typeof input === 'string' ? Buffer.from(input, 'utf8') : input
+  return Buffer.from(nobleSha256(data))
 }
 
 /**
  * Return sha512 hash of input
  */
 function sha512(input: Buffer | string): Buffer {
-  return createHash('sha512')
-    .update(input)
-    .digest()
+  const data = typeof input === 'string' ? Buffer.from(input, 'utf8') : input
+  return Buffer.from(nobleSha512(data))
 }
 
 /**
@@ -96,7 +88,7 @@ function doubleSha256(input: Buffer | string): Buffer {
  */
 function encodePublic(key: Buffer, prefix: string): string {
   const checksum = ripemd160(key)
-  return prefix + bs58.encode(Buffer.concat([key, checksum.slice(0, 4)]))
+  return prefix + base58.encode(Buffer.concat([key, checksum.slice(0, 4)]))
 }
 
 /**
@@ -106,7 +98,7 @@ function decodePublic(encodedKey: string): { key: Buffer; prefix: string } {
   const prefix = encodedKey.slice(0, 3)
   assert.equal(prefix.length, 3, 'public key invalid prefix')
   encodedKey = encodedKey.slice(3)
-  const buffer: Buffer = bs58.decode(encodedKey)
+  const buffer: Buffer = Buffer.from(base58.decode(encodedKey))
   const checksum = buffer.slice(-4)
   const key = buffer.slice(0, -4)
   const checksumVerify = ripemd160(key).slice(0, 4)
@@ -120,14 +112,14 @@ function decodePublic(encodedKey: string): { key: Buffer; prefix: string } {
 function encodePrivate(key: Buffer): string {
   assert.equal(key.readUInt8(0), 0x80, 'private key network id mismatch')
   const checksum = doubleSha256(key)
-  return bs58.encode(Buffer.concat([key, checksum.slice(0, 4)]))
+  return base58.encode(Buffer.concat([key, checksum.slice(0, 4)]))
 }
 
 /**
  * Decode bs58+doubleSha256-checksum encoded private key.
  */
 function decodePrivate(encodedKey: string): Buffer {
-  const buffer: Buffer = bs58.decode(encodedKey)
+  const buffer: Buffer = Buffer.from(base58.decode(encodedKey))
   assert.deepEqual(
     buffer.slice(0, 1),
     NETWORK_ID,
@@ -157,13 +149,14 @@ function isCanonicalSignature(signature: Buffer): boolean {
  */
 function isWif(privWif: string | Buffer): boolean {
   try {
-      const bufWif = new Buffer(bs58.decode(privWif))
+      const wifStr = typeof privWif === 'string' ? privWif : privWif.toString('utf8')
+      const bufWif = Buffer.from(base58.decode(wifStr))
       const privKey = bufWif.slice(0, -4)
       const checksum = bufWif.slice(-4)
       let newChecksum = sha256(privKey)
       newChecksum = sha256(newChecksum)
       newChecksum = newChecksum.slice(0, 4)
-      return (checksum.toString() === newChecksum.toString())
+      return (checksum.toString('hex') === newChecksum.toString('hex'))
   } catch (e) {
       return false
   }
@@ -180,13 +173,22 @@ export class PublicKey {
     public readonly key: any,
     public readonly prefix = DEFAULT_ADDRESS_PREFIX,
   ) {
-    assert(secp256k1.publicKeyVerify(key), 'invalid public key')
-    this.uncompressed = Buffer.from(secp256k1.publicKeyConvert(key, false))
+    try {
+      const point = nobleSecp256k1.Point.fromBytes(key)
+      this.uncompressed = Buffer.from(point.toBytes(false))
+    } catch (err) {
+      assert(false, 'invalid public key')
+    }
   }
 
-  public static fromBuffer(key: ByteBuffer) {
-    assert(secp256k1.publicKeyVerify(key), 'invalid buffer as public key')
-    return { key }
+  public static fromBuffer(key: Buffer | ByteBuffer) {
+    const buffer = Buffer.isBuffer(key) ? key : Buffer.from((key as any).toBuffer())
+    try {
+      nobleSecp256k1.Point.fromBytes(buffer)
+    } catch (err) {
+      assert(false, 'invalid buffer as public key')
+    }
+    return { key: buffer } as any
   }
 
   /**
@@ -214,7 +216,12 @@ export class PublicKey {
    * @param signature Signature to verify.
    */
   public verify(message: Buffer, signature: Signature): boolean {
-    return secp256k1.verify(message, signature.data, this.key)
+    try {
+      const sig = new nobleSecp256k1.Signature(BigInt('0x' + signature.data.slice(0,32).toString('hex')), BigInt('0x' + signature.data.slice(32).toString('hex')))
+      return nobleSecp256k1.verify(sig.toBytes(), message, this.key, { prehash: false, lowS: true })
+    } catch (e) {
+      return false
+    }
   }
 
   /**
@@ -248,7 +255,11 @@ export class PrivateKey {
   public secret: Buffer
 
   constructor(private key: Buffer) {
-    assert(secp256k1.privateKeyVerify(key), 'invalid private key')
+    try {
+      assert(nobleSecp256k1.utils.isValidSecretKey(key), 'invalid private key')
+    } catch (e) {
+      assert(false, 'invalid private key')
+    }
   }
 
   /**
@@ -289,7 +300,9 @@ export class PrivateKey {
   }
 
   public multiply(pub: any): Buffer {
-    return Buffer.from(secp256k1.publicKeyTweakMul(pub.key, this.secret, false))
+    const point = nobleSecp256k1.Point.fromBytes(pub.key)
+    const result = point.multiply(BigInt('0x' + this.secret.toString('hex')))
+    return Buffer.from(result.toBytes(false))
   }
 
   /**
@@ -297,22 +310,21 @@ export class PrivateKey {
    * @param message 32-byte message.
    */
   public sign(message: Buffer): Signature {
-    let rv: { signature: Buffer; recovery: number }
+    let rawSig: Uint8Array
     let attempts = 0
     do {
-      const options = {
-        data: sha256(Buffer.concat([message, Buffer.alloc(1, ++attempts)]))
-      }
-      rv = secp256k1.sign(message, this.key, options)
-    } while (!isCanonicalSignature(rv.signature))
-    return new Signature(rv.signature, rv.recovery)
+      const extra = sha256(Buffer.concat([message, Buffer.alloc(1, ++attempts)]))
+      rawSig = nobleSecp256k1.sign(message, this.key, { extraEntropy: extra, format: 'recovered', prehash: false, lowS: true })
+    } while (!isCanonicalSignature(Buffer.from(rawSig.slice(1))))
+    return new Signature(Buffer.from(rawSig.slice(1)), rawSig[0])
   }
 
   /**
    * Derive the public key for this private key.
    */
   public createPublic(prefix?: string): PublicKey {
-    return new PublicKey(secp256k1.publicKeyCreate(this.key), prefix)
+    const pubKey = nobleSecp256k1.getPublicKey(this.key, true)
+    return new PublicKey(Buffer.from(pubKey), prefix)
   }
 
   /**
@@ -335,14 +347,10 @@ export class PrivateKey {
    * Get shared secret for memo cryptography
    */
   public get_shared_secret(public_key: PublicKey): Buffer {
-    const KBP = ecurve.Point.fromAffine(
-      secp256k1Curve,
-      bigInteger.fromBuffer(public_key.uncompressed.slice(1, 33)),
-      bigInteger.fromBuffer(public_key.uncompressed.slice(33, 65))
-    )
-    const P = KBP.multiply(bigInteger.fromBuffer(this.key))
-    const S = P.affineX.toBuffer({size: 32})
-    return sha512(S)
+    const point = nobleSecp256k1.Point.fromBytes(public_key.uncompressed)
+    const P = point.multiply(BigInt('0x' + this.key.toString('hex')))
+    const S = P.x.toString(16).padStart(64, '0')
+    return sha512(Buffer.from(S, 'hex'))
   }
 }
 
@@ -370,10 +378,9 @@ export class Signature {
    * @param message 32-byte message that was used to create the signature.
    */
   public recover(message: Buffer, prefix?: string) {
-    return new PublicKey(
-      secp256k1.recover(message, this.data, this.recovery),
-      prefix
-    )
+    const sig = new nobleSecp256k1.Signature(BigInt('0x' + this.data.slice(0,32).toString('hex')), BigInt('0x' + this.data.slice(32).toString('hex'))).addRecoveryBit(this.recovery)
+    const pubKey = sig.recoverPublicKey(message).toBytes(true)
+    return new PublicKey(Buffer.from(pubKey), prefix)
   }
 
   public toBuffer() {

@@ -1,5 +1,5 @@
 import "mocha";
-import * as assert from "assert";
+import assert from "assert";
 import { Memo } from "../src/memo"
 const { encode, decode } = Memo
 

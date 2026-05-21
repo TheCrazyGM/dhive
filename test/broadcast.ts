@@ -1,6 +1,6 @@
 import "mocha";
-import * as assert from "assert";
-import * as lorem from "lorem-ipsum";
+import assert from "assert";
+import { loremIpsum as lorem } from "lorem-ipsum";
 import { VError } from "verror";
 
 import { Client, PrivateKey, utils } from "./../src";

@@ -33,7 +33,7 @@
  * in the design, construction, operation or maintenance of any military facility.
  */
 
-import * as ByteBuffer from 'bytebuffer'
+import ByteBuffer from '@ecency/bytebuffer'
 import { PublicKey } from '../crypto'
 import { Asset } from './asset'
 import { HexBuffer } from './misc'
