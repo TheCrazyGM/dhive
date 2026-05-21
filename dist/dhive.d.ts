@@ -1,9 +1,9 @@
-declare module 'dhive/version' {
+declare module 'dhive/src/version' {
 	 const _default: string;
 	export default _default;
 
 }
-declare module 'dhive/health-tracker' {
+declare module 'dhive/src/health-tracker' {
 	/**
 	 * @file Node health tracking for smart failover.
 	 * @license BSD-3-Clause-No-Military-License
@@ -123,7 +123,7 @@ declare module 'dhive/health-tracker' {
 	}
 
 }
-declare module 'dhive/chain/asset' {
+declare module 'dhive/src/chain/asset' {
 	/**
 	 * @file Hive asset type definitions and helpers.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -269,7 +269,7 @@ declare module 'dhive/chain/asset' {
 	}
 
 }
-declare module 'dhive/chain/account' {
+declare module 'dhive/src/chain/account' {
 	/**
 	 * @file Hive account type definitions.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -304,8 +304,8 @@ declare module 'dhive/chain/account' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import { PublicKey } from 'dhive/crypto';
-	import { Asset } from 'dhive/chain/asset';
+	import { PublicKey } from 'dhive/src/crypto';
+	import { Asset } from 'dhive/src/chain/asset';
 	export interface AuthorityType {
 	    weight_threshold: number;
 	    account_auths: [string, number][];
@@ -417,8 +417,7 @@ declare module 'dhive/chain/account' {
 	}
 
 }
-declare module 'dhive/chain/misc' {
-	/// <reference types="node" />
+declare module 'dhive/src/chain/misc' {
 	/**
 	 * @file Misc hive type definitions.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -453,8 +452,8 @@ declare module 'dhive/chain/misc' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import { Account } from 'dhive/chain/account';
-	import { Asset, Price } from 'dhive/chain/asset';
+	import { Account } from 'dhive/src/chain/account';
+	import { Asset, Price } from 'dhive/src/chain/asset';
 	/**
 	 * Large number that may be unsafe to represent natively in JavaScript.
 	 */
@@ -636,7 +635,7 @@ declare module 'dhive/chain/misc' {
 	export function getVests(account: Account, subtract_delegated?: boolean, add_received?: boolean): number;
 
 }
-declare module 'dhive/chain/serializer' {
+declare module 'dhive/src/chain/serializer' {
 	/**
 	 * @file Hive protocol serialization.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -671,20 +670,19 @@ declare module 'dhive/chain/serializer' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	/// <reference types="node" />
-	import * as ByteBuffer from 'bytebuffer';
-	import { PublicKey } from 'dhive/crypto';
-	import { Asset } from 'dhive/chain/asset';
-	import { HexBuffer } from 'dhive/chain/misc';
-	import { Operation } from 'dhive/chain/operation';
+	import ByteBuffer from 'dhive/@ecency/bytebuffer';
+	import { PublicKey } from 'dhive/src/crypto';
+	import { Asset } from 'dhive/src/chain/asset';
+	import { HexBuffer } from 'dhive/src/chain/misc';
+	import { Operation } from 'dhive/src/chain/operation';
 	export type Serializer = (buffer: ByteBuffer, data: any) => void;
 	export const Types: {
 	    Array: (itemSerializer: Serializer) => (buffer: ByteBuffer, data: any[]) => void;
-	    Asset: (buffer: ByteBuffer, data: string | number | Asset) => void;
+	    Asset: (buffer: ByteBuffer, data: Asset | string | number) => void;
 	    Authority: (buffer: ByteBuffer, data: {
 	        [key: string]: any;
 	    }) => void;
-	    Binary: (size?: number | undefined) => (buffer: ByteBuffer, data: HexBuffer | Buffer) => void;
+	    Binary: (size?: number) => (buffer: ByteBuffer, data: Buffer | HexBuffer) => void;
 	    Boolean: (buffer: ByteBuffer, data: boolean) => void;
 	    Date: (buffer: ByteBuffer, data: string) => void;
 	    EncryptedMemo: (buffer: ByteBuffer, data: {
@@ -703,7 +701,7 @@ declare module 'dhive/chain/serializer' {
 	    Price: (buffer: ByteBuffer, data: {
 	        [key: string]: any;
 	    }) => void;
-	    PublicKey: (buffer: ByteBuffer, data: string | PublicKey | null) => void;
+	    PublicKey: (buffer: ByteBuffer, data: PublicKey | string | null) => void;
 	    StaticVariant: (itemSerializers: Serializer[]) => (buffer: ByteBuffer, data: [number, any]) => void;
 	    String: (buffer: ByteBuffer, data: string) => void;
 	    Transaction: (buffer: ByteBuffer, data: {
@@ -717,7 +715,7 @@ declare module 'dhive/chain/serializer' {
 	};
 
 }
-declare module 'dhive/chain/transaction' {
+declare module 'dhive/src/chain/transaction' {
 	/**
 	 * @file Hive transaction type definitions.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -752,7 +750,7 @@ declare module 'dhive/chain/transaction' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import { Operation } from 'dhive/chain/operation';
+	import { Operation } from 'dhive/src/chain/operation';
 	export interface Transaction {
 	    ref_block_num: number;
 	    ref_block_prefix: number;
@@ -771,7 +769,7 @@ declare module 'dhive/chain/transaction' {
 	}
 
 }
-declare module 'dhive/crypto' {
+declare module 'dhive/src/crypto' {
 	/**
 	 * @file Hive crypto helpers.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -806,13 +804,12 @@ declare module 'dhive/crypto' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	/// <reference types="node" />
-	import * as ByteBuffer from '@ecency/bytebuffer';
-	import { SignedTransaction, Transaction } from 'dhive/chain/transaction';
+	import ByteBuffer from 'dhive/@ecency/bytebuffer';
+	import { SignedTransaction, Transaction } from 'dhive/src/chain/transaction';
 	/**
 	 * Network id used in WIF-encoding.
 	 */
-	export const NETWORK_ID: Buffer; function ripemd160(input: Buffer | string): Buffer; function sha256(input: Buffer | string): Buffer; function doubleSha256(input: Buffer | string): Buffer; function encodePublic(key: Buffer, prefix: string): string; function encodePrivate(key: Buffer): string; function decodePrivate(encodedKey: string): Buffer; function isCanonicalSignature(signature: Buffer): boolean; function isWif(privWif: string | Buffer): boolean;
+	export const NETWORK_ID: Buffer<ArrayBuffer>; function ripemd160(input: Buffer | string): Buffer; function sha256(input: Buffer | string): Buffer; function doubleSha256(input: Buffer | string): Buffer; function encodePublic(key: Buffer, prefix: string): string; function encodePrivate(key: Buffer): string; function decodePrivate(encodedKey: string): Buffer; function isCanonicalSignature(signature: Buffer): boolean; function isWif(privWif: string | Buffer): boolean;
 	/**
 	 * ECDSA (secp256k1) public key.
 	 */
@@ -821,9 +818,7 @@ declare module 'dhive/crypto' {
 	    readonly prefix: string;
 	    readonly uncompressed: Buffer;
 	    constructor(key: any, prefix?: string);
-	    static fromBuffer(key: ByteBuffer): {
-	        key: any;
-	    };
+	    static fromBuffer(key: ByteBuffer): any;
 	    /**
 	     * Create a new instance from a WIF-encoded key.
 	     */
@@ -913,9 +908,9 @@ declare module 'dhive/crypto' {
 	     * @param message 32-byte message that was used to create the signature.
 	     */
 	    recover(message: Buffer, prefix?: string): PublicKey;
-	    toBuffer(): Buffer;
+	    toBuffer(): Buffer<ArrayBuffer>;
 	    toString(): string;
-	} function transactionDigest(transaction: Transaction | SignedTransaction, chainId?: Buffer): Buffer; function signTransaction(transaction: Transaction, keys: PrivateKey | PrivateKey[], chainId?: Buffer): SignedTransaction; function generateTrxId(transaction: Transaction): string;
+	} function transactionDigest(transaction: Transaction | SignedTransaction, chainId?: Buffer): Buffer<ArrayBufferLike>; function signTransaction(transaction: Transaction, keys: PrivateKey | PrivateKey[], chainId?: Buffer): SignedTransaction; function generateTrxId(transaction: Transaction): string;
 	/** Misc crypto utility functions. */
 	export const cryptoUtils: {
 	    decodePrivate: typeof decodePrivate;
@@ -933,7 +928,7 @@ declare module 'dhive/crypto' {
 	export {};
 
 }
-declare module 'dhive/chain/block' {
+declare module 'dhive/src/chain/block' {
 	/**
 	 * @file Hive block type definitions.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -968,7 +963,7 @@ declare module 'dhive/chain/block' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import { Transaction } from 'dhive/chain/transaction';
+	import { Transaction } from 'dhive/src/chain/transaction';
 	/**
 	 * Unsigned block header.
 	 */
@@ -996,7 +991,7 @@ declare module 'dhive/chain/block' {
 	}
 
 }
-declare module 'dhive/chain/comment' {
+declare module 'dhive/src/chain/comment' {
 	/**
 	 * @file Hive type definitions related to comments and posting.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -1031,7 +1026,7 @@ declare module 'dhive/chain/comment' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import { Asset } from 'dhive/chain/asset';
+	import { Asset } from 'dhive/src/chain/asset';
 	export interface Comment {
 	    id: number;
 	    category: string;
@@ -1091,7 +1086,7 @@ declare module 'dhive/chain/comment' {
 	}
 
 }
-declare module 'dhive/chain/operation' {
+declare module 'dhive/src/chain/operation' {
 	/**
 	 * @file Hive operation type definitions.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -1126,13 +1121,12 @@ declare module 'dhive/chain/operation' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	/// <reference types="node" />
-	import { PublicKey } from 'dhive/crypto';
-	import { AuthorityType } from 'dhive/chain/account';
-	import { Asset, PriceType } from 'dhive/chain/asset';
-	import { SignedBlockHeader } from 'dhive/chain/block';
-	import { BeneficiaryRoute } from 'dhive/chain/comment';
-	import { ChainProperties, HexBuffer } from 'dhive/chain/misc';
+	import { PublicKey } from 'dhive/src/crypto';
+	import { AuthorityType } from 'dhive/src/chain/account';
+	import { Asset, PriceType } from 'dhive/src/chain/asset';
+	import { SignedBlockHeader } from 'dhive/src/chain/block';
+	import { BeneficiaryRoute } from 'dhive/src/chain/comment';
+	import { ChainProperties, HexBuffer } from 'dhive/src/chain/misc';
 	/**
 	 * Operation name.
 	 * Ref: https://gitlab.syncad.com/hive/hive/-/blob/master/libraries/protocol/include/hive/protocol/operations.hpp
@@ -1955,7 +1949,7 @@ declare module 'dhive/chain/operation' {
 	}
 
 }
-declare module 'dhive/utils' {
+declare module 'dhive/src/utils' {
 	/**
 	 * @file Misc utility functions.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -1990,9 +1984,8 @@ declare module 'dhive/utils' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	/// <reference types="node" />
 	import { EventEmitter } from 'events';
-	import { NodeHealthTracker } from 'dhive/health-tracker';
+	import { NodeHealthTracker } from 'dhive/src/health-tracker';
 	/**
 	 * Context for smart retry/failover decisions.
 	 */
@@ -2039,9 +2032,9 @@ declare module 'dhive/utils' {
 	    response: any;
 	    currentAddress: string;
 	}>;
-	import { Asset, PriceType } from 'dhive/chain/asset';
-	import { WitnessSetPropertiesOperation } from 'dhive/chain/operation';
-	import { PublicKey } from 'dhive/crypto';
+	import { Asset, PriceType } from 'dhive/src/chain/asset';
+	import { WitnessSetPropertiesOperation } from 'dhive/src/chain/operation';
+	import { PublicKey } from 'dhive/src/crypto';
 	export interface WitnessProps {
 	    account_creation_fee?: string | Asset;
 	    account_subsidy_budget?: number;
@@ -2148,7 +2141,7 @@ declare module 'dhive/utils' {
 	export function makeBitMaskFilter(allowedOperations: number[]): any[];
 
 }
-declare module 'dhive/helpers/blockchain' {
+declare module 'dhive/src/helpers/blockchain' {
 	/**
 	 * @file Hive blockchain helpers.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -2183,8 +2176,7 @@ declare module 'dhive/helpers/blockchain' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	/// <reference types="node" />
-	import { Client } from 'dhive/client';
+	import { Client } from 'dhive/src/client';
 	export enum BlockchainMode {
 	    /**
 	     * Only get irreversible blocks.
@@ -2253,7 +2245,7 @@ declare module 'dhive/helpers/blockchain' {
 	}
 
 }
-declare module 'dhive/helpers/broadcast' {
+declare module 'dhive/src/helpers/broadcast' {
 	/**
 	 * @file Broadcast API helpers.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -2288,12 +2280,12 @@ declare module 'dhive/helpers/broadcast' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import { AuthorityType } from 'dhive/chain/account';
-	import { Asset } from 'dhive/chain/asset';
-	import { AccountUpdateOperation, CommentOperation, CommentOptionsOperation, CustomJsonOperation, DelegateVestingSharesOperation, Operation, TransferOperation, VoteOperation } from 'dhive/chain/operation';
-	import { SignedTransaction, Transaction, TransactionConfirmation } from 'dhive/chain/transaction';
-	import { Client } from 'dhive/client';
-	import { PrivateKey, PublicKey } from 'dhive/crypto';
+	import { AuthorityType } from 'dhive/src/chain/account';
+	import { Asset } from 'dhive/src/chain/asset';
+	import { AccountUpdateOperation, CommentOperation, CommentOptionsOperation, CustomJsonOperation, DelegateVestingSharesOperation, Operation, TransferOperation, VoteOperation } from 'dhive/src/chain/operation';
+	import { SignedTransaction, Transaction, TransactionConfirmation } from 'dhive/src/chain/transaction';
+	import { Client } from 'dhive/src/client';
+	import { PrivateKey, PublicKey } from 'dhive/src/crypto';
 	export interface CreateAccountOptions {
 	    /**
 	     * Username for the new account.
@@ -2421,7 +2413,7 @@ declare module 'dhive/helpers/broadcast' {
 	}
 
 }
-declare module 'dhive/helpers/database' {
+declare module 'dhive/src/helpers/database' {
 	/**
 	 * @file Database API helpers.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -2456,15 +2448,15 @@ declare module 'dhive/helpers/database' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import { ExtendedAccount } from 'dhive/chain/account';
-	import { Price } from 'dhive/chain/asset';
-	import { BlockHeader, SignedBlock } from 'dhive/chain/block';
-	import { Discussion } from 'dhive/chain/comment';
-	import { DynamicGlobalProperties } from 'dhive/chain/misc';
-	import { ChainProperties, VestingDelegation } from 'dhive/chain/misc';
-	import { AppliedOperation } from 'dhive/chain/operation';
-	import { SignedTransaction } from 'dhive/chain/transaction';
-	import { Client } from 'dhive/client';
+	import { ExtendedAccount } from 'dhive/src/chain/account';
+	import { Price } from 'dhive/src/chain/asset';
+	import { BlockHeader, SignedBlock } from 'dhive/src/chain/block';
+	import { Discussion } from 'dhive/src/chain/comment';
+	import { DynamicGlobalProperties } from 'dhive/src/chain/misc';
+	import { ChainProperties, VestingDelegation } from 'dhive/src/chain/misc';
+	import { AppliedOperation } from 'dhive/src/chain/operation';
+	import { SignedTransaction } from 'dhive/src/chain/transaction';
+	import { Client } from 'dhive/src/client';
 	/**
 	 * Possible categories for `get_discussions_by_*`.
 	 */
@@ -2603,7 +2595,7 @@ declare module 'dhive/helpers/database' {
 	}
 
 }
-declare module 'dhive/chain/hivemind' {
+declare module 'dhive/src/chain/hivemind' {
 	export interface CommunityDetail {
 	    id: number;
 	    name: string;
@@ -2635,14 +2627,14 @@ declare module 'dhive/chain/hivemind' {
 	}
 
 }
-declare module 'dhive/helpers/hivemind' {
+declare module 'dhive/src/helpers/hivemind' {
 	/**
 	 * Hivemind database query wrapper
 	 */
-	import { Account } from 'dhive/chain/account';
-	import { Discussion } from 'dhive/chain/comment';
-	import { CommunityDetail, Notifications } from 'dhive/chain/hivemind';
-	import { Client } from 'dhive/client';
+	import { Account } from 'dhive/src/chain/account';
+	import { Discussion } from 'dhive/src/chain/comment';
+	import { CommunityDetail, Notifications } from 'dhive/src/chain/hivemind';
+	import { Client } from 'dhive/src/client';
 	interface PostsQuery {
 	    /**
 	     * Number of posts to fetch
@@ -2748,13 +2740,13 @@ declare module 'dhive/helpers/hivemind' {
 	export {};
 
 }
-declare module 'dhive/helpers/key' {
+declare module 'dhive/src/helpers/key' {
 	/**
 	 * @file Account by key API helpers.
 	 * @author Bartłomiej (@engrave) Górnicki
 	 */
-	import { PublicKey } from 'dhive/crypto';
-	import { Client } from 'dhive/client';
+	import { PublicKey } from 'dhive/src/crypto';
+	import { Client } from 'dhive/src/client';
 	export interface AccountsByKey {
 	    accounts: string[][];
 	}
@@ -2772,9 +2764,9 @@ declare module 'dhive/helpers/key' {
 	}
 
 }
-declare module 'dhive/chain/rc' {
-	import { SMTAsset } from 'dhive/chain/asset';
-	import { Bignum } from 'dhive/chain/misc';
+declare module 'dhive/src/chain/rc' {
+	import { SMTAsset } from 'dhive/src/chain/asset';
+	import { Bignum } from 'dhive/src/chain/misc';
 	export interface RCParams {
 	    resource_history_bytes: Resource;
 	    resource_new_accounts: Resource;
@@ -2828,10 +2820,10 @@ declare module 'dhive/chain/rc' {
 	}
 
 }
-declare module 'dhive/helpers/rc' {
-	import { Account } from 'dhive/chain/account';
-	import { Manabar, RCAccount, RCParams, RCPool } from 'dhive/chain/rc';
-	import { Client } from 'dhive/client';
+declare module 'dhive/src/helpers/rc' {
+	import { Account } from 'dhive/src/chain/account';
+	import { Manabar, RCAccount, RCParams, RCPool } from 'dhive/src/chain/rc';
+	import { Client } from 'dhive/src/client';
 	export class RCAPI {
 	    readonly client: Client;
 	    constructor(client: Client);
@@ -2874,12 +2866,12 @@ declare module 'dhive/helpers/rc' {
 	}
 
 }
-declare module 'dhive/helpers/transaction' {
+declare module 'dhive/src/helpers/transaction' {
 	/**
 	 * @file Transaction status API helpers.
 	 * @author Bartłomiej (@engrave) Górnicki
 	 */
-	import { Client } from 'dhive/client';
+	import { Client } from 'dhive/src/client';
 	export type TransactionStatus = 'unknown' | 'within_mempool' | 'within_reversible_block' | 'within_irreversible_block' | 'expired_reversible' | 'expired_irreversible' | 'too_old';
 	export class TransactionStatusAPI {
 	    readonly client: Client;
@@ -2897,7 +2889,7 @@ declare module 'dhive/helpers/transaction' {
 	}
 
 }
-declare module 'dhive/client' {
+declare module 'dhive/src/client' {
 	/**
 	 * @file Hive RPC client implementation.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -2932,15 +2924,14 @@ declare module 'dhive/client' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	/// <reference types="node" />
-	import { Blockchain } from 'dhive/helpers/blockchain';
-	import { BroadcastAPI } from 'dhive/helpers/broadcast';
-	import { DatabaseAPI } from 'dhive/helpers/database';
-	import { HivemindAPI } from 'dhive/helpers/hivemind';
-	import { AccountByKeyAPI } from 'dhive/helpers/key';
-	import { RCAPI } from 'dhive/helpers/rc';
-	import { TransactionStatusAPI } from 'dhive/helpers/transaction';
-	import { NodeHealthTracker, HealthTrackerOptions } from 'dhive/health-tracker';
+	import { Blockchain } from 'dhive/src/helpers/blockchain';
+	import { BroadcastAPI } from 'dhive/src/helpers/broadcast';
+	import { DatabaseAPI } from 'dhive/src/helpers/database';
+	import { HivemindAPI } from 'dhive/src/helpers/hivemind';
+	import { AccountByKeyAPI } from 'dhive/src/helpers/key';
+	import { RCAPI } from 'dhive/src/helpers/rc';
+	import { TransactionStatusAPI } from 'dhive/src/helpers/transaction';
+	import { NodeHealthTracker, HealthTrackerOptions } from 'dhive/src/health-tracker';
 	/**
 	 * Library version.
 	 */
@@ -2948,7 +2939,7 @@ declare module 'dhive/client' {
 	/**
 	 * Main Hive network chain id.
 	 */
-	export const DEFAULT_CHAIN_ID: Buffer;
+	export const DEFAULT_CHAIN_ID: Buffer<ArrayBuffer>;
 	/**
 	 * Main Hive network address prefix.
 	 */
@@ -3093,17 +3084,16 @@ declare module 'dhive/client' {
 	}
 
 }
-declare module 'dhive/chain/deserializer' {
-	import * as ByteBuffer from '@ecency/bytebuffer';
+declare module 'dhive/src/chain/deserializer' {
+	import ByteBuffer from 'dhive/@ecency/bytebuffer';
 	export type Deserializer = (buffer: ByteBuffer) => void;
 	export const types: {
 	    EncryptedMemoD: any;
 	};
 
 }
-declare module 'dhive/helpers/aes' {
-	/// <reference types="node" />
-	import { PrivateKey, PublicKey } from 'dhive/crypto';
+declare module 'dhive/src/helpers/aes' {
+	import { PrivateKey, PublicKey } from 'dhive/src/crypto';
 	export const encrypt: (private_key: PrivateKey, public_key: PublicKey, message: Buffer, nonce?: string) => any;
 	export const decrypt: (private_key: PrivateKey, public_key: PublicKey, nonce: any, message: any, checksum: number) => any;
 	/**
@@ -3120,15 +3110,15 @@ declare module 'dhive/helpers/aes' {
 	export const cryptoJsEncrypt: (message: Buffer, tag: any, iv: any) => Buffer;
 
 }
-declare module 'dhive/memo' {
-	import { PrivateKey, PublicKey } from 'dhive/crypto';
+declare module 'dhive/src/memo' {
+	import { PrivateKey, PublicKey } from 'dhive/src/crypto';
 	export const Memo: {
-	    decode: (private_key: string | PrivateKey, memo: string) => string;
-	    encode: (private_key: string | PrivateKey, public_key: string | PublicKey, memo: string, testNonce?: string | undefined) => string;
+	    decode: (private_key: PrivateKey | string, memo: string) => string;
+	    encode: (private_key: PrivateKey | string, public_key: PublicKey | string, memo: string, testNonce?: string) => string;
 	};
 
 }
-declare module 'dhive' {
+declare module 'dhive/src/index' {
 	/**
 	 * @file dhive exports.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -3163,29 +3153,29 @@ declare module 'dhive' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import * as utils from 'dhive/utils';
+	import * as utils from 'dhive/src/utils';
 	export { utils };
-	export { NodeHealthTracker, HealthTrackerOptions } from 'dhive/health-tracker';
-	export * from 'dhive/helpers/blockchain';
-	export * from 'dhive/helpers/database';
-	export * from 'dhive/helpers/rc';
-	export * from 'dhive/helpers/key';
-	export * from 'dhive/helpers/hivemind';
-	export * from 'dhive/chain/account';
-	export * from 'dhive/chain/asset';
-	export * from 'dhive/chain/block';
-	export * from 'dhive/chain/comment';
-	export * from 'dhive/chain/misc';
-	export * from 'dhive/chain/operation';
-	export * from 'dhive/chain/serializer';
-	export * from 'dhive/chain/transaction';
-	export * from 'dhive/chain/hivemind';
-	export * from 'dhive/client';
-	export * from 'dhive/crypto';
-	export * from 'dhive/memo';
+	export { NodeHealthTracker, HealthTrackerOptions } from 'dhive/src/health-tracker';
+	export * from 'dhive/src/helpers/blockchain';
+	export * from 'dhive/src/helpers/database';
+	export * from 'dhive/src/helpers/rc';
+	export * from 'dhive/src/helpers/key';
+	export * from 'dhive/src/helpers/hivemind';
+	export * from 'dhive/src/chain/account';
+	export * from 'dhive/src/chain/asset';
+	export * from 'dhive/src/chain/block';
+	export * from 'dhive/src/chain/comment';
+	export * from 'dhive/src/chain/misc';
+	export * from 'dhive/src/chain/operation';
+	export * from 'dhive/src/chain/serializer';
+	export * from 'dhive/src/chain/transaction';
+	export * from 'dhive/src/chain/hivemind';
+	export * from 'dhive/src/client';
+	export * from 'dhive/src/crypto';
+	export * from 'dhive/src/memo';
 
 }
-declare module 'dhive/index-browser' {
+declare module 'dhive/src/index-browser' {
 	/**
 	 * @file dhive entry point for browsers.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -3220,18 +3210,18 @@ declare module 'dhive/index-browser' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	import 'core-js/features/array/from';
-	import 'core-js/features/map';
-	import 'core-js/features/number';
-	import 'core-js/features/promise';
-	import 'core-js/features/symbol';
-	import 'core-js/features/symbol/async-iterator';
-	import 'regenerator-runtime/runtime';
-	import 'whatwg-fetch';
-	export * from 'dhive';
+	import 'dhive/core-js/features/array/from';
+	import 'dhive/core-js/features/map';
+	import 'dhive/core-js/features/number';
+	import 'dhive/core-js/features/promise';
+	import 'dhive/core-js/features/symbol';
+	import 'dhive/core-js/features/symbol/async-iterator';
+	import 'dhive/regenerator-runtime/runtime';
+	import 'dhive/whatwg-fetch';
+	export * from 'dhive/src/index';
 
 }
-declare module 'dhive/index-node' {
+declare module 'dhive/src/index-node' {
 	/**
 	 * @file dhive entry point for node.js.
 	 * @author Johan Nordberg <code@johan-nordberg.com>
@@ -3266,6 +3256,79 @@ declare module 'dhive/index-node' {
 	 * You acknowledge that this software is not designed, licensed or intended for use
 	 * in the design, construction, operation or maintenance of any military facility.
 	 */
-	export * from 'dhive';
+	export * from 'dhive/src/index';
+
+}
+declare module 'dhive/test/asset' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/common' {
+	import * as https from 'https';
+	export const NUM_TEST_ACCOUNTS = 2;
+	export const IS_BROWSER: boolean;
+	export const TEST_NODE: string;
+	export const agent: https.Agent;
+	export function randomString(length: number): string;
+	export function createAccount(): Promise<{
+	    username: string;
+	    password: string;
+	}>;
+	export function getTestnetAccounts(): Promise<{
+	    username: string;
+	    password: string;
+	}[]>;
+
+}
+declare module 'dhive/test/blockchain' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/broadcast' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/client' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/crypto' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/database' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/hivemind' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/key' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/memo' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/misc' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/operations' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/rc' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/serializers' {
+	import 'mocha';
+
+}
+declare module 'dhive/test/transaction' {
+	import 'mocha';
 
 }

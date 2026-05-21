@@ -18,20 +18,13 @@ lib: $(SRC_FILES) node_modules
 	echo "$$VERSION_TEMPLATE" > lib/version.js
 	touch lib
 
-dist/%.js: lib
-	browserify $(filter-out $<,$^) --debug --full-paths \
-		--standalone dhive --plugin tsify \
-		--transform [ babelify --extensions .ts ] \
-		| derequire > $@
-	terser $@ \
-		--source-map "content=inline,url=$(notdir $@).map,filename=$@.map" \
-		--compress "dead_code,collapse_vars,reduce_vars,keep_infinity,drop_console,passes=2" \
-		--output $@ || rm $@
+dist/dhive.js: $(SRC_FILES)
+	esbuild src/index-browser.ts --bundle --minify --sourcemap --platform=browser --format=iife --global-name=dhive --outfile=$@ --define:process.env.NODE_ENV='"production"' --alias:assert=assert --alias:stream=stream-browserify --alias:crypto=crypto-browserify --alias:buffer=buffer --alias:events=events
 
 dist/dhive.js: src/index-browser.ts
 
 dist/dhive.d.ts: $(SRC_FILES) node_modules
-	dts-generator --name dhive --project . --out dist/dhive.d.ts
+	dts-generator --prefix dhive --project . --out dist/dhive.d.ts
 	perl -i -pe"s@'dhive/index'@'dhive'@g" dist/dhive.d.ts
 
 dist/%.gz: dist/dhive.js
