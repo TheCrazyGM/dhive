@@ -2,9 +2,8 @@
   "compilerOptions": {
     "declaration": true,
     "lib": ["dom", "ESNext"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "ignoreDeprecations": "5.0",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitThis": true,
