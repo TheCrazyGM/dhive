@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: AccountByKeyAPI
 
-Defined in: [src/helpers/key.ts:13](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/key.ts#L13)
+Defined in: [src/helpers/key.ts:13](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/key.ts#L13)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [src/helpers/key.ts:13](https://github.com/TheCrazyGM/dhive/blob/05b
 
 > **new AccountByKeyAPI**(`client`): `AccountByKeyAPI`
 
-Defined in: [src/helpers/key.ts:14](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/key.ts#L14)
+Defined in: [src/helpers/key.ts:14](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/key.ts#L14)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [src/helpers/key.ts:14](https://github.com/TheCrazyGM/dhive/blob/05b
 
 > `readonly` **client**: [`Client`](Client.md)
 
-Defined in: [src/helpers/key.ts:14](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/key.ts#L14)
+Defined in: [src/helpers/key.ts:14](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/key.ts#L14)
 
 ## Methods
 
@@ -40,7 +40,7 @@ Defined in: [src/helpers/key.ts:14](https://github.com/TheCrazyGM/dhive/blob/05b
 
 > **call**(`method`, `params?`): `Promise`\<`any`\>
 
-Defined in: [src/helpers/key.ts:19](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/key.ts#L19)
+Defined in: [src/helpers/key.ts:19](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/key.ts#L19)
 
 Convenience for calling `account_by_key_api`.
 
@@ -64,7 +64,7 @@ Convenience for calling `account_by_key_api`.
 
 > **getKeyReferences**(`keys`): `Promise`\<[`AccountsByKey`](../interfaces/AccountsByKey.md)\>
 
-Defined in: [src/helpers/key.ts:26](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/key.ts#L26)
+Defined in: [src/helpers/key.ts:26](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/key.ts#L26)
 
 Returns all accounts that have the key associated with their owner or active authorities.
 

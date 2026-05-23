@@ -1,14 +1,14 @@
-[**@srbde/pollen**](../../../../README.md)
+[**@srbde/pollen**](../../../../index.md)
 
 ***
 
-[@srbde/pollen](../../../../globals.md) / [utils](../README.md) / sleep
+[@srbde/pollen](../../../../globals.md) / [utils](../index.md) / sleep
 
 # Function: sleep()
 
 > **sleep**(`ms`): `Promise`\<`void`\>
 
-Defined in: [src/utils.ts:261](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/utils.ts#L261)
+Defined in: [src/utils.ts:261](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/utils.ts#L261)
 
 Sleep for N milliseconds.
 

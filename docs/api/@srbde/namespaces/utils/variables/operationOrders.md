@@ -1,14 +1,14 @@
-[**@srbde/pollen**](../../../../README.md)
+[**@srbde/pollen**](../../../../index.md)
 
 ***
 
-[@srbde/pollen](../../../../globals.md) / [utils](../README.md) / operationOrders
+[@srbde/pollen](../../../../globals.md) / [utils](../index.md) / operationOrders
 
 # Variable: operationOrders
 
 > `const` **operationOrders**: `object`
 
-Defined in: [src/utils.ts:603](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/utils.ts#L603)
+Defined in: [src/utils.ts:603](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/utils.ts#L603)
 
 ## Type Declaration
 

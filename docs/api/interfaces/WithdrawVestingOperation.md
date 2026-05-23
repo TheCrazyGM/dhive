@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: WithdrawVestingOperation
 
-Defined in: [src/chain/operation.ts:836](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L836)
+Defined in: [src/chain/operation.ts:836](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L836)
 
 At any given point in time an account can be withdrawing from their
 vesting shares. A user may change the number of shares they wish to
@@ -29,7 +29,7 @@ This operation is not valid if the user has no vesting shares.
 
 > **0**: `"withdraw_vesting"`
 
-Defined in: [src/chain/operation.ts:837](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L837)
+Defined in: [src/chain/operation.ts:837](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L837)
 
 #### Overrides
 
@@ -41,7 +41,7 @@ Defined in: [src/chain/operation.ts:837](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:838](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L838)
+Defined in: [src/chain/operation.ts:838](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L838)
 
 #### account
 

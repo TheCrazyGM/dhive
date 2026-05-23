@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > `const` **cryptoUtils**: `object`
 
-Defined in: [src/crypto.ts:455](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L455)
+Defined in: [src/crypto.ts:455](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L455)
 
 Misc crypto utility functions.
 

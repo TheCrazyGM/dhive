@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AccountWitnessVoteOperation
 
-Defined in: [src/chain/operation.ts:207](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L207)
+Defined in: [src/chain/operation.ts:207](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L207)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"account_witness_vote"`
 
-Defined in: [src/chain/operation.ts:208](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L208)
+Defined in: [src/chain/operation.ts:208](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L208)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:208](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:209](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L209)
+Defined in: [src/chain/operation.ts:209](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L209)
 
 #### account
 

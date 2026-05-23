@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: Blockchain
 
-Defined in: [src/helpers/blockchain.ts:66](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L66)
+Defined in: [src/helpers/blockchain.ts:66](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L66)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [src/helpers/blockchain.ts:66](https://github.com/TheCrazyGM/dhive/b
 
 > **new Blockchain**(`client`): `Blockchain`
 
-Defined in: [src/helpers/blockchain.ts:67](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L67)
+Defined in: [src/helpers/blockchain.ts:67](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L67)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [src/helpers/blockchain.ts:67](https://github.com/TheCrazyGM/dhive/b
 
 > `readonly` **client**: [`Client`](Client.md)
 
-Defined in: [src/helpers/blockchain.ts:67](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L67)
+Defined in: [src/helpers/blockchain.ts:67](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L67)
 
 ## Methods
 
@@ -40,7 +40,7 @@ Defined in: [src/helpers/blockchain.ts:67](https://github.com/TheCrazyGM/dhive/b
 
 > **getBlockNumbers**(`options?`): `AsyncGenerator`\<`number`, `void`, `unknown`\>
 
-Defined in: [src/helpers/blockchain.ts:102](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L102)
+Defined in: [src/helpers/blockchain.ts:102](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L102)
 
 Return a asynchronous block number iterator.
 
@@ -62,7 +62,7 @@ Feed options, can also be a block number to start from.
 
 > **getBlockNumberStream**(`options?`): `ReadableStream`
 
-Defined in: [src/helpers/blockchain.ts:133](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L133)
+Defined in: [src/helpers/blockchain.ts:133](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L133)
 
 Return a stream of block numbers, accepts same parameters as [getBlockNumbers](#getblocknumbers).
 
@@ -82,7 +82,7 @@ Return a stream of block numbers, accepts same parameters as [getBlockNumbers](#
 
 > **getBlocks**(`options?`): `AsyncGenerator`\<[`SignedBlock`](../interfaces/SignedBlock.md), `void`, `unknown`\>
 
-Defined in: [src/helpers/blockchain.ts:140](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L140)
+Defined in: [src/helpers/blockchain.ts:140](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L140)
 
 Return a asynchronous block iterator, accepts same parameters as [getBlockNumbers](#getblocknumbers).
 
@@ -102,7 +102,7 @@ Return a asynchronous block iterator, accepts same parameters as [getBlockNumber
 
 > **getBlockStream**(`options?`): `ReadableStream`
 
-Defined in: [src/helpers/blockchain.ts:149](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L149)
+Defined in: [src/helpers/blockchain.ts:149](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L149)
 
 Return a stream of blocks, accepts same parameters as [getBlockNumbers](#getblocknumbers).
 
@@ -122,7 +122,7 @@ Return a stream of blocks, accepts same parameters as [getBlockNumbers](#getbloc
 
 > **getCurrentBlock**(`mode?`): `Promise`\<[`SignedBlock`](../interfaces/SignedBlock.md)\>
 
-Defined in: [src/helpers/blockchain.ts:94](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L94)
+Defined in: [src/helpers/blockchain.ts:94](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L94)
 
 Get latest block.
 
@@ -142,7 +142,7 @@ Get latest block.
 
 > **getCurrentBlockHeader**(`mode?`): `Promise`\<[`BlockHeader`](../interfaces/BlockHeader.md)\>
 
-Defined in: [src/helpers/blockchain.ts:85](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L85)
+Defined in: [src/helpers/blockchain.ts:85](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L85)
 
 Get latest block header.
 
@@ -162,7 +162,7 @@ Get latest block header.
 
 > **getCurrentBlockNum**(`mode?`): `Promise`\<`number`\>
 
-Defined in: [src/helpers/blockchain.ts:72](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L72)
+Defined in: [src/helpers/blockchain.ts:72](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L72)
 
 Get latest block number.
 
@@ -182,7 +182,7 @@ Get latest block number.
 
 > **getOperations**(`options?`): `AsyncGenerator`\<[`AppliedOperation`](../interfaces/AppliedOperation.md), `void`, `unknown`\>
 
-Defined in: [src/helpers/blockchain.ts:156](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L156)
+Defined in: [src/helpers/blockchain.ts:156](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L156)
 
 Return a asynchronous operation iterator, accepts same parameters as [getBlockNumbers](#getblocknumbers).
 
@@ -202,7 +202,7 @@ Return a asynchronous operation iterator, accepts same parameters as [getBlockNu
 
 > **getOperationsStream**(`options?`): `ReadableStream`
 
-Defined in: [src/helpers/blockchain.ts:168](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L168)
+Defined in: [src/helpers/blockchain.ts:168](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L168)
 
 Return a stream of operations, accepts same parameters as [getBlockNumbers](#getblocknumbers).
 

@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: EscrowDisputeOperation
 
-Defined in: [src/chain/operation.ts:437](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L437)
+Defined in: [src/chain/operation.ts:437](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L437)
 
 If either the sender or receiver of an escrow payment has an issue, they can
 raise it for dispute. Once a payment is in dispute, the agent has authority over
@@ -22,7 +22,7 @@ who gets what.
 
 > **0**: `"escrow_dispute"`
 
-Defined in: [src/chain/operation.ts:438](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L438)
+Defined in: [src/chain/operation.ts:438](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L438)
 
 #### Overrides
 
@@ -34,7 +34,7 @@ Defined in: [src/chain/operation.ts:438](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:439](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L439)
+Defined in: [src/chain/operation.ts:439](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L439)
 
 #### agent
 

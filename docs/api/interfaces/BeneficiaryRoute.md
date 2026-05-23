@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BeneficiaryRoute
 
-Defined in: [src/chain/comment.ts:93](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/comment.ts#L93)
+Defined in: [src/chain/comment.ts:93](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L93)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/chain/comment.ts:93](https://github.com/TheCrazyGM/dhive/blob/0
 
 > **account**: `string`
 
-Defined in: [src/chain/comment.ts:94](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/comment.ts#L94)
+Defined in: [src/chain/comment.ts:94](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L94)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [src/chain/comment.ts:94](https://github.com/TheCrazyGM/dhive/blob/0
 
 > **weight**: `number`
 
-Defined in: [src/chain/comment.ts:95](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/comment.ts#L95)
+Defined in: [src/chain/comment.ts:95](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L95)

@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RecoverAccountOperation
 
-Defined in: [src/chain/operation.ts:607](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L607)
+Defined in: [src/chain/operation.ts:607](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L607)
 
 Recover an account to a new authority using a previous authority and verification
 of the recovery account as proof of identity. This operation can only succeed
@@ -54,7 +54,7 @@ concern.
 
 > **0**: `"recover_account"`
 
-Defined in: [src/chain/operation.ts:608](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L608)
+Defined in: [src/chain/operation.ts:608](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L608)
 
 #### Overrides
 
@@ -66,7 +66,7 @@ Defined in: [src/chain/operation.ts:608](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:609](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L609)
+Defined in: [src/chain/operation.ts:609](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L609)
 
 #### account\_to\_recover
 

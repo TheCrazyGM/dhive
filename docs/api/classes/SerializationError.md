@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: SerializationError
 
-Defined in: [src/errors.ts:34](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/errors.ts#L34)
+Defined in: [src/errors.ts:34](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L34)
 
 Error thrown when serialization or deserialization fails.
 
@@ -20,7 +20,7 @@ Error thrown when serialization or deserialization fails.
 
 > **new SerializationError**(`message`, `info?`): `SerializationError`
 
-Defined in: [src/errors.ts:35](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/errors.ts#L35)
+Defined in: [src/errors.ts:35](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L35)
 
 #### Parameters
 
@@ -58,7 +58,7 @@ Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/li
 
 > `readonly` `optional` **info?**: `any`
 
-Defined in: [src/errors.ts:10](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/errors.ts#L10)
+Defined in: [src/errors.ts:10](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L10)
 
 #### Inherited from
 

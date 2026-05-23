@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../../../README.md)
+[**@srbde/pollen**](../../../index.md)
 
 ***
 

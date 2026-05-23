@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: TransactionConfirmation
 
-Defined in: [src/chain/transaction.ts:50](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/transaction.ts#L50)
+Defined in: [src/chain/transaction.ts:50](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L50)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/chain/transaction.ts:50](https://github.com/TheCrazyGM/dhive/bl
 
 > **block\_num**: `number`
 
-Defined in: [src/chain/transaction.ts:52](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/transaction.ts#L52)
+Defined in: [src/chain/transaction.ts:52](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L52)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/chain/transaction.ts:52](https://github.com/TheCrazyGM/dhive/bl
 
 > **expired**: `boolean`
 
-Defined in: [src/chain/transaction.ts:54](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/transaction.ts#L54)
+Defined in: [src/chain/transaction.ts:54](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L54)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/chain/transaction.ts:54](https://github.com/TheCrazyGM/dhive/bl
 
 > **id**: `string`
 
-Defined in: [src/chain/transaction.ts:51](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/transaction.ts#L51)
+Defined in: [src/chain/transaction.ts:51](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L51)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [src/chain/transaction.ts:51](https://github.com/TheCrazyGM/dhive/bl
 
 > **trx\_num**: `number`
 
-Defined in: [src/chain/transaction.ts:53](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/transaction.ts#L53)
+Defined in: [src/chain/transaction.ts:53](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L53)

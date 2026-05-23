@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AuthorityType
 
-Defined in: [src/chain/account.ts:39](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/account.ts#L39)
+Defined in: [src/chain/account.ts:39](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L39)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/chain/account.ts:39](https://github.com/TheCrazyGM/dhive/blob/0
 
 > **account\_auths**: \[`string`, `number`\][]
 
-Defined in: [src/chain/account.ts:41](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/account.ts#L41)
+Defined in: [src/chain/account.ts:41](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L41)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/chain/account.ts:41](https://github.com/TheCrazyGM/dhive/blob/0
 
 > **key\_auths**: \[`string` \| [`PublicKey`](../classes/PublicKey.md), `number`\][]
 
-Defined in: [src/chain/account.ts:42](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/account.ts#L42)
+Defined in: [src/chain/account.ts:42](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L42)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [src/chain/account.ts:42](https://github.com/TheCrazyGM/dhive/blob/0
 
 > **weight\_threshold**: `number`
 
-Defined in: [src/chain/account.ts:40](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/account.ts#L40)
+Defined in: [src/chain/account.ts:40](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L40)

@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ChangeRecoveryAccountOperation
 
-Defined in: [src/chain/operation.ts:242](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L242)
+Defined in: [src/chain/operation.ts:242](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L242)
 
 Each account lists another account as their recovery account.
 The recovery account has the ability to create account_recovery_requests
@@ -35,7 +35,7 @@ witness according to stake.
 
 > **0**: `"change_recovery_account"`
 
-Defined in: [src/chain/operation.ts:243](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L243)
+Defined in: [src/chain/operation.ts:243](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L243)
 
 #### Overrides
 
@@ -47,7 +47,7 @@ Defined in: [src/chain/operation.ts:243](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:244](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/chain/operation.ts#L244)
+Defined in: [src/chain/operation.ts:244](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L244)
 
 #### account\_to\_recover
 

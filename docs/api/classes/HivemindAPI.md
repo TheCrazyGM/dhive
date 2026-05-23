@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: HivemindAPI
 
-Defined in: [src/helpers/hivemind.ts:79](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L79)
+Defined in: [src/helpers/hivemind.ts:79](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L79)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [src/helpers/hivemind.ts:79](https://github.com/TheCrazyGM/dhive/blo
 
 > **new HivemindAPI**(`client`): `HivemindAPI`
 
-Defined in: [src/helpers/hivemind.ts:80](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L80)
+Defined in: [src/helpers/hivemind.ts:80](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L80)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [src/helpers/hivemind.ts:80](https://github.com/TheCrazyGM/dhive/blo
 
 > `readonly` **client**: [`Client`](Client.md)
 
-Defined in: [src/helpers/hivemind.ts:80](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L80)
+Defined in: [src/helpers/hivemind.ts:80](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L80)
 
 ## Methods
 
@@ -40,7 +40,7 @@ Defined in: [src/helpers/hivemind.ts:80](https://github.com/TheCrazyGM/dhive/blo
 
 > **call**(`method`, `params?`): `Promise`\<`any`\>
 
-Defined in: [src/helpers/hivemind.ts:87](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L87)
+Defined in: [src/helpers/hivemind.ts:87](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L87)
 
 Convenience of calling hivemind api
 
@@ -64,7 +64,7 @@ Convenience of calling hivemind api
 
 > **getAccountNotifications**(`options?`): `Promise`\<[`Notifications`](../interfaces/Notifications.md)[]\>
 
-Defined in: [src/helpers/hivemind.ts:129](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L129)
+Defined in: [src/helpers/hivemind.ts:129](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L129)
 
 Get particular account notifications feed
 
@@ -84,7 +84,7 @@ Get particular account notifications feed
 
 > **getAccountPosts**(`options`): `Promise`\<[`Discussion`](../interfaces/Discussion.md)[]\>
 
-Defined in: [src/helpers/hivemind.ts:103](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L103)
+Defined in: [src/helpers/hivemind.ts:103](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L103)
 
 Get posts by particular account from Hivemind
 
@@ -104,7 +104,7 @@ Get posts by particular account from Hivemind
 
 > **getCommunity**(`options`): `Promise`\<[`CommunityDetail`](../interfaces/CommunityDetail.md)[]\>
 
-Defined in: [src/helpers/hivemind.ts:112](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L112)
+Defined in: [src/helpers/hivemind.ts:112](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L112)
 
 Get community details such as who are the admin,
 moderators, how many subscribers, etc..
@@ -125,7 +125,7 @@ moderators, how many subscribers, etc..
 
 > **getRankedPosts**(`options`): `Promise`\<[`Discussion`](../interfaces/Discussion.md)[]\>
 
-Defined in: [src/helpers/hivemind.ts:95](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L95)
+Defined in: [src/helpers/hivemind.ts:95](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L95)
 
 Get trending, hot, recent community posts from Hivemind
 
@@ -145,7 +145,7 @@ Get trending, hot, recent community posts from Hivemind
 
 > **listAllSubscriptions**(`account`): `Promise`\<[`Discussion`](../interfaces/Discussion.md)[]\>
 
-Defined in: [src/helpers/hivemind.ts:121](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L121)
+Defined in: [src/helpers/hivemind.ts:121](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L121)
 
 List all subscriptions by particular account
 
@@ -169,7 +169,7 @@ return role, what community the account joined
 
 > **listCommunities**(`options`): `Promise`\<[`CommunityDetail`](../interfaces/CommunityDetail.md)[]\>
 
-Defined in: [src/helpers/hivemind.ts:137](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/hivemind.ts#L137)
+Defined in: [src/helpers/hivemind.ts:137](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/hivemind.ts#L137)
 
 List all available communities on hivemind
 

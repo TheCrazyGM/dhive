@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ClientOptions
 
-Defined in: [src/client.ts:126](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L126)
+Defined in: [src/client.ts:126](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L126)
 
 RPC Client options
 ------------------
@@ -17,7 +17,7 @@ RPC Client options
 
 > `optional` **addressPrefix?**: `string`
 
-Defined in: [src/client.ts:138](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L138)
+Defined in: [src/client.ts:138](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L138)
 
 Hive address prefix. Defaults to main network:
 `STM`
@@ -28,7 +28,7 @@ Hive address prefix. Defaults to main network:
 
 > `optional` **agent?**: `any`
 
-Defined in: [src/client.ts:170](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L170)
+Defined in: [src/client.ts:170](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L170)
 
 Node.js http(s) agent, use if you want http keep-alive.
 Defaults to using https.globalAgent.
@@ -43,7 +43,7 @@ https://nodejs.org/api/http.html#http_new_agent_options.
 
 > `optional` **backoff?**: (`tries`) => `number`
 
-Defined in: [src/client.ts:164](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L164)
+Defined in: [src/client.ts:164](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L164)
 
 Retry backoff function, returns milliseconds. Default = defaultBackoff.
 
@@ -63,7 +63,7 @@ Retry backoff function, returns milliseconds. Default = defaultBackoff.
 
 > `optional` **chainId?**: `string`
 
-Defined in: [src/client.ts:133](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L133)
+Defined in: [src/client.ts:133](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L133)
 
 Hive chain id. Defaults to main hive network:
 need the new id?
@@ -75,7 +75,7 @@ need the new id?
 
 > `optional` **consoleOnFailover?**: `boolean`
 
-Defined in: [src/client.ts:159](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L159)
+Defined in: [src/client.ts:159](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L159)
 
 Whether a console.log should be made when RPC failed over to another one
 
@@ -85,7 +85,7 @@ Whether a console.log should be made when RPC failed over to another one
 
 > `optional` **failoverThreshold?**: `number`
 
-Defined in: [src/client.ts:154](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L154)
+Defined in: [src/client.ts:154](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L154)
 
 Specifies the amount of times the urls (RPC nodes) should be
 iterated and retried in case of timeout errors.
@@ -98,7 +98,7 @@ Can be set to 0 to iterate and retry forever. Defaults to 3 rounds.
 
 > `optional` **healthTrackerOptions?**: [`HealthTrackerOptions`](HealthTrackerOptions.md)
 
-Defined in: [src/client.ts:175](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L175)
+Defined in: [src/client.ts:175](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L175)
 
 Options for the node health tracker.
 Controls cooldown periods, stale block thresholds, etc.
@@ -109,7 +109,7 @@ Controls cooldown periods, stale block thresholds, etc.
 
 > `optional` **timeout?**: `number`
 
-Defined in: [src/client.ts:146](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/client.ts#L146)
+Defined in: [src/client.ts:146](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L146)
 
 Send timeout, how long to wait in milliseconds before giving
 up on a rpc call. Note that this is not an exact timeout,

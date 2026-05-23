@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: BlockchainMode
 
-Defined in: [src/helpers/blockchain.ts:39](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L39)
+Defined in: [src/helpers/blockchain.ts:39](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L39)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: [src/helpers/blockchain.ts:39](https://github.com/TheCrazyGM/dhive/b
 
 > **Irreversible**: `0`
 
-Defined in: [src/helpers/blockchain.ts:43](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L43)
+Defined in: [src/helpers/blockchain.ts:43](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L43)
 
 Only get irreversible blocks.
 
@@ -24,6 +24,6 @@ Only get irreversible blocks.
 
 > **Latest**: `1`
 
-Defined in: [src/helpers/blockchain.ts:47](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/blockchain.ts#L47)
+Defined in: [src/helpers/blockchain.ts:47](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/blockchain.ts#L47)
 
 Get all blocks.

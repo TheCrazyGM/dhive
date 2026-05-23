@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: PublicKey
 
-Defined in: [src/crypto.ts:167](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L167)
+Defined in: [src/crypto.ts:167](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L167)
 
 ECDSA (secp256k1) public key.
 
@@ -16,7 +16,7 @@ ECDSA (secp256k1) public key.
 
 > **new PublicKey**(`key`, `prefix?`): `PublicKey`
 
-Defined in: [src/crypto.ts:171](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L171)
+Defined in: [src/crypto.ts:171](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L171)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/crypto.ts:171](https://github.com/TheCrazyGM/dhive/blob/05b0edb
 
 > `readonly` **key**: `any`
 
-Defined in: [src/crypto.ts:172](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L172)
+Defined in: [src/crypto.ts:172](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L172)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/crypto.ts:172](https://github.com/TheCrazyGM/dhive/blob/05b0edb
 
 > `readonly` **prefix**: `string` = `DEFAULT_ADDRESS_PREFIX`
 
-Defined in: [src/crypto.ts:173](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L173)
+Defined in: [src/crypto.ts:173](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L173)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [src/crypto.ts:173](https://github.com/TheCrazyGM/dhive/blob/05b0edb
 
 > `readonly` **uncompressed**: `Buffer`
 
-Defined in: [src/crypto.ts:169](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L169)
+Defined in: [src/crypto.ts:169](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L169)
 
 ## Methods
 
@@ -62,7 +62,7 @@ Defined in: [src/crypto.ts:169](https://github.com/TheCrazyGM/dhive/blob/05b0edb
 
 > **inspect**(): `string`
 
-Defined in: [src/crypto.ts:243](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L243)
+Defined in: [src/crypto.ts:243](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L243)
 
 Used by `utils.inspect` and `console.log` in node.js.
 
@@ -76,7 +76,7 @@ Used by `utils.inspect` and `console.log` in node.js.
 
 > **toJSON**(): `string`
 
-Defined in: [src/crypto.ts:236](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L236)
+Defined in: [src/crypto.ts:236](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L236)
 
 Return JSON representation of this key, same as toString().
 
@@ -90,7 +90,7 @@ Return JSON representation of this key, same as toString().
 
 > **toString**(): `string`
 
-Defined in: [src/crypto.ts:229](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L229)
+Defined in: [src/crypto.ts:229](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L229)
 
 Return a WIF-encoded representation of the key.
 
@@ -104,7 +104,7 @@ Return a WIF-encoded representation of the key.
 
 > **verify**(`message`, `signature`): `boolean`
 
-Defined in: [src/crypto.ts:217](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L217)
+Defined in: [src/crypto.ts:217](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L217)
 
 Verify a 32-byte signature.
 
@@ -132,7 +132,7 @@ Signature to verify.
 
 > `static` **from**(`value`): `PublicKey`
 
-Defined in: [src/crypto.ts:204](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L204)
+Defined in: [src/crypto.ts:204](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L204)
 
 Create a new instance.
 
@@ -152,7 +152,7 @@ Create a new instance.
 
 > `static` **fromBuffer**(`key`): `any`
 
-Defined in: [src/crypto.ts:183](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L183)
+Defined in: [src/crypto.ts:183](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L183)
 
 #### Parameters
 
@@ -170,7 +170,7 @@ Defined in: [src/crypto.ts:183](https://github.com/TheCrazyGM/dhive/blob/05b0edb
 
 > `static` **fromString**(`wif`): `PublicKey`
 
-Defined in: [src/crypto.ts:196](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/crypto.ts#L196)
+Defined in: [src/crypto.ts:196](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L196)
 
 Create a new instance from a WIF-encoded key.
 

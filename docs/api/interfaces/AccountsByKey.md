@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AccountsByKey
 
-Defined in: [src/helpers/key.ts:9](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/key.ts#L9)
+Defined in: [src/helpers/key.ts:9](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/key.ts#L9)
 
 ## Properties
 
@@ -14,4 +14,4 @@ Defined in: [src/helpers/key.ts:9](https://github.com/TheCrazyGM/dhive/blob/05b0
 
 > **accounts**: `string`[][]
 
-Defined in: [src/helpers/key.ts:10](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/helpers/key.ts#L10)
+Defined in: [src/helpers/key.ts:10](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/key.ts#L10)

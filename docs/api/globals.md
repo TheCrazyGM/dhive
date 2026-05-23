@@ -1,4 +1,4 @@
-[**@srbde/pollen**](README.md)
+[**@srbde/pollen**](index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 ## Namespaces
 
-- [utils](@srbde/namespaces/utils/README.md)
+- [utils](@srbde/namespaces/utils/index.md)
 
 ## Enumerations
 

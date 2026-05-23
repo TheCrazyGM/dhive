@@ -1,4 +1,4 @@
-[**@srbde/pollen**](../README.md)
+[**@srbde/pollen**](../index.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > `const` **Memo**: `object`
 
-Defined in: [src/memo.ts:109](https://github.com/TheCrazyGM/dhive/blob/05b0edbddcc11f33d84516003ab882605dad28aa/src/memo.ts#L109)
+Defined in: [src/memo.ts:109](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/memo.ts#L109)
 
 ## Type Declaration
 
