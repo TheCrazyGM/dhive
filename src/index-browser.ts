@@ -33,4 +33,13 @@
  * in the design, construction, operation or maintenance of any military facility.
  */
 
+import { Buffer } from 'buffer'
+import process from 'process'
+
+if (typeof window !== 'undefined') {
+  ;(window as any).global = window
+  ;(window as any).Buffer = Buffer
+  ;(window as any).process = process
+}
+
 export * from './index.js'
