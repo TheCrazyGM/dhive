@@ -152,7 +152,7 @@ describe("crypto", function() {
     try {
       cryptoUtils.signTransaction(tx, testKey);
       assert(false, "should not be reached");
-    } catch (error) {
+    } catch (error: any) {
       assert.equal(error.name, "SerializationError");
     }
   });

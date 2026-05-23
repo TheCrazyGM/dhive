@@ -22,9 +22,9 @@ describe('serializers', function() {
         it(test.name, () => {
             let serializer: Serializer
             if (test.name.indexOf('::') === -1) {
-                serializer = Types[test.name]
+                serializer = (Types as any)[test.name]
             } else {
-                const [base, ...sub] = test.name.split('::').map((t) => Types[t])
+                const [base, ...sub] = test.name.split('::').map((t) => (Types as any)[t])
                 serializer = base(...sub)
             }
             for (const [expected, value] of test.values) {

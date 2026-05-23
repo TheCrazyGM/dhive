@@ -30,7 +30,7 @@ describe("client", function() {
     try {
       await client.call("condenser_api", "i_like_turtles");
       assert(false, "should not be reached");
-    } catch (error) {
+    } catch (error: any) {
       assert.equal(error.name, "RPCError");
       assert(
         error.message.includes(`no method with name 'i_like_turtles'`) || // pre-appbase
@@ -48,7 +48,7 @@ describe("client", function() {
     try {
       await client.call("condenser_api", "broadcast_transaction", [tx]);
       assert(false, "should not be reached");
-    } catch (error) {
+    } catch (error: any) {
       // If the node is down, we might get a FetchError instead of RPCError
       if (error.name === 'FetchError') {
           console.warn('Skipping format rpc errors test due to node connectivity issues');
@@ -81,7 +81,7 @@ describe("client", function() {
   //   try {
   //     await client.database.getChainProperties();
   //     assert(false, "should not be reached");
-  //   } catch (error) {
+  //   } catch (error: any) {
   //     assert(seenBackoff, "should have seen backoff");
   //   }
   // });

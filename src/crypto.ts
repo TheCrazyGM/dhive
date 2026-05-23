@@ -156,7 +156,7 @@ function isWif(privWif: string | Buffer): boolean {
       newChecksum = sha256(newChecksum)
       newChecksum = newChecksum.slice(0, 4)
       return (checksum.toString('hex') === newChecksum.toString('hex'))
-  } catch (e) {
+  } catch (e: any) {
       return false
   }
 }
@@ -218,7 +218,7 @@ export class PublicKey {
     try {
       const sig = new nobleSecp256k1.Signature(BigInt('0x' + signature.data.slice(0,32).toString('hex')), BigInt('0x' + signature.data.slice(32).toString('hex')))
       return nobleSecp256k1.verify(sig.toBytes(), message, this.key, { prehash: false, lowS: true })
-    } catch (e) {
+    } catch (e: any) {
       return false
     }
   }
@@ -251,12 +251,12 @@ export type KeyRole = 'owner' | 'active' | 'posting' | 'memo'
  * ECDSA (secp256k1) private key.
  */
 export class PrivateKey {
-  public secret: Buffer
+  public secret!: Buffer
 
   constructor(private key: Buffer) {
     try {
       assert(nobleSecp256k1.utils.isValidSecretKey(key), 'invalid private key')
-    } catch (e) {
+    } catch (e: any) {
       assert(false, 'invalid private key')
     }
   }

@@ -13,7 +13,8 @@ describe("broadcast", function() {
 
   const client = Client.testnet({ agent });
 
-  let acc1, acc2: { username: string; password: string };
+  let acc1: { username: string; password: string } | undefined,
+    acc2: { username: string; password: string } | undefined;
   beforeAll(async function() {
     const accounts = await getTestnetAccounts();
     if (accounts && accounts.length >= 2) {

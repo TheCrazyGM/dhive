@@ -20,7 +20,7 @@ describe("database api", function() {
         if (accounts && accounts.length > 0) {
             acc = accounts[0];
         }
-    } catch (e) {
+    } catch (e: any) {
         console.warn('Skipping testnet account setup in database tests');
     }
   });
@@ -82,7 +82,7 @@ describe("database api", function() {
     try {
       await liveClient.database.getTransaction("11c20a84c8a12164e1e0750f0ee5d3c37214e2f073");
       assert(false, "should not be reached");
-    } catch (error) {
+    } catch (error: any) {
         assert(error.message.includes("11c20a84c8a12164e1e0750f0ee5d3c37214e2f073"));
     }
   }, 30000);

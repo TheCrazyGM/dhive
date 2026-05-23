@@ -311,7 +311,7 @@ describe("operations", function() {
         acc1Key
       );
       assert(false, "should not be reached");
-    } catch (error) {
+    } catch (error: any) {
       assert.equal(
         error.message,
         "Fee must be exactly " + creationFee.toString()
@@ -355,7 +355,7 @@ describe("operations", function() {
     try {
       await client.broadcast.sendOperations([op], acc1Key);
       assert(false);
-    } catch (error) {
+    } catch (error: any) {
       assert.equal(
         error.message,
         "first_block.signee() == second_block.signee(): "

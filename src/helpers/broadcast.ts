@@ -324,7 +324,7 @@ export class BroadcastAPI {
     )
       .toISOString()
       .slice(0, -5)
-    const extensions = []
+    const extensions: any[] = []
 
     const tx: Transaction = {
       expiration,

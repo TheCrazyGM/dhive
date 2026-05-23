@@ -354,7 +354,7 @@ export class Client {
         if (!isBroadcast) {
             // bit of a hack to work around some nodes high error rates
             // only effective in node.js (until timeout spec lands in browsers)
-            fetchTimeout = (tries) => (tries + 1) * 500
+            fetchTimeout = (tries: number) => (tries + 1) * 500
         }
 
         const { response, currentAddress }: { response: RPCResponse; currentAddress: string } =

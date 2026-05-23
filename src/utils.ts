@@ -445,7 +445,7 @@ export async function retryingFetch(
 
       return { response: responseJson, currentAddress: node }
 
-    } catch (error) {
+    } catch (error: any) {
       lastError = error
 
       // Record failure in health tracker
@@ -702,7 +702,10 @@ export function makeBitMaskFilter(allowedOperations: number[]) {
     )
 }
 
-const redFunction = ([low, high], allowedOperation) => {
+const redFunction = (
+  [low, high]: [JSBI, JSBI],
+  allowedOperation: number
+): [JSBI, JSBI] => {
   if (allowedOperation < 64) {
     return [
       JSBI.bitwiseOr(

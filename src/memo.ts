@@ -74,24 +74,24 @@ const decode = (private_key: PrivateKey | string, memo: string): string => {
   const reader = new BinaryReader(new Uint8Array(decrypted))
   try {
     return '#' + reader.readString()
-  } catch (e) {
+  } catch (e: any) {
     // Sender did not length-prefix the memo
     return '#' + Buffer.from(decrypted).toString('utf-8')
   }
 }
 
-let encodeTest
+let encodeTest: boolean | undefined
 const checkEncryption: any = () => {
   if (encodeTest === undefined) {
-    let plaintext
+    let plaintext: string | undefined
     encodeTest = true // prevent infinate looping
     try {
       const wif = '5JdeC9P7Pbd1uGdFVEsJ41EkEnADbbHGq6p1BwFxm6txNBsQnsw'
       const pubkey = 'STM8m5UgaFAAYQRuaNejYdS8FVLVp9Ss3K1qAVk5de6F8s3HnVbvA'
       const cyphertext = encode(wif, pubkey, '#memo爱')
       plaintext = decode(wif, cyphertext)
-    } catch (e) {
-      throw new Error(e)
+    } catch (e: any) {
+      throw new Error(e.message || String(e))
     } finally {
       encodeTest = plaintext === '#memo爱'
     }

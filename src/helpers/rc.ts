@@ -77,7 +77,7 @@ export class RCAPI {
      */
     private _calculateManabar(
         max_mana: number,
-        { current_mana, last_update_time }
+        { current_mana, last_update_time }: { current_mana: any; last_update_time: any }
     ): Manabar {
         const delta: number = Date.now() / 1000 - last_update_time
         current_mana = Number(current_mana) + (delta * max_mana) / 432000

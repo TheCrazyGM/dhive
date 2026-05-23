@@ -6,7 +6,7 @@ import fetch from "cross-fetch";
 import { Client, PrivateKey } from '../src/index.js'
 
 export const NUM_TEST_ACCOUNTS = 2;
-export const IS_BROWSER = global["isBrowser"] === true;
+export const IS_BROWSER = (global as any)["isBrowser"] === true;
 export const TEST_NODE =
   process.env["TEST_NODE"] || "https://api.hive.blog";
 
@@ -14,7 +14,7 @@ export const agent = IS_BROWSER
   ? undefined
   : new https.Agent({ keepAlive: true });
 
-let testAccounts
+let testAccounts: { username: string; password: string }[] | undefined
 
 export function randomString(length: number) {
   return randomBytes(length * 2)
@@ -51,9 +51,9 @@ export async function createAccount(): Promise<{
         }
       ]], key)
       return { username, password };
-  } catch (error) {
+  } catch (error: any) {
       console.warn(`FAILED TO CREATE TEST ACCOUNT ${username}: ${error.message}`);
-      return null;
+      return null as any;
   }
 }
 
@@ -78,7 +78,7 @@ export async function getTestnetAccounts(): Promise<
       if (console && console.log) {
         console.log(`CREATED TESTNET ACCOUNTS: ${rv.map(i => i.username)}`);
       }
-  } catch (e) {
+  } catch (e: any) {
       console.warn('FAILED TO GET TESTNET ACCOUNTS');
   }
   return rv;
