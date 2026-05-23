@@ -2,7 +2,7 @@
   "compilerOptions": {
     "declaration": true,
     "lib": ["dom", "ESNext"],
-    "module": "commonjs",
+    "module": "esnext",
     "moduleResolution": "bundler",
     "ignoreDeprecations": "5.0",
     "esModuleInterop": true,
