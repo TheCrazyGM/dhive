@@ -1,7 +1,6 @@
 import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
 ;
 import assert from "assert";
-import ByteBuffer from '@ecency/bytebuffer';
 import { inspect } from "util";
 import { randomBytes, createHash } from "crypto";
 
@@ -14,7 +13,8 @@ import {
   Signature,
   cryptoUtils,
   Transaction,
-  Types
+  Types,
+  utils
 } from "../src/index.js";
 
 describe("crypto", function() {
@@ -125,15 +125,11 @@ describe("crypto", function() {
       ]
     };
     const key = PrivateKey.fromSeed("hello");
-    const buffer = new ByteBuffer(
-      ByteBuffer.DEFAULT_CAPACITY,
-      ByteBuffer.LITTLE_ENDIAN
-    );
-    Types.Transaction(buffer, tx);
-    buffer.flip();
-    const data = Buffer.from(buffer.toBuffer());
+    const writer = new utils.BinaryWriter();
+    Types.Transaction(writer, tx);
+    const data = writer.getBuffer();
     const digest = createHash("sha256")
-      .update(Buffer.concat([DEFAULT_CHAIN_ID, data]))
+      .update(Buffer.concat([DEFAULT_CHAIN_ID, Buffer.from(data)]))
       .digest();
     const signed = cryptoUtils.signTransaction(tx, key);
     const pkey = key.createPublic();

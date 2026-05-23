@@ -1,9 +1,9 @@
 import { base58 as bs58 } from '@scure/base'
-import ByteBuffer from '@ecency/bytebuffer'
 import { types } from './chain/deserializer.js'
 import { Types } from './chain/serializer.js'
 import { PrivateKey, PublicKey } from './crypto.js'
 import * as Aes from './helpers/aes.js'
+import { BinaryReader, BinaryWriter } from './utils.js'
 
 /**
  * Memo/Any message encoding using AES (aes-cbc algorithm)
@@ -25,31 +25,27 @@ const encode = (
   checkEncryption()
   private_key = toPrivateObj(private_key)
   public_key = toPublicObj(public_key)
-  const mbuf = new ByteBuffer(
-    ByteBuffer.DEFAULT_CAPACITY,
-    ByteBuffer.LITTLE_ENDIAN
-  )
-  mbuf.writeVString(memo)
-  const memoBuffer = Buffer.from(mbuf.copy(0, mbuf.offset).toBinary(), 'binary')
+  
+  const writer = new BinaryWriter()
+  writer.writeString(memo)
+  const memoBuffer = Buffer.from(writer.getBuffer())
+
   const { nonce, message, checksum } = Aes.encrypt(
     private_key,
     public_key,
     memoBuffer,
     testNonce
   )
-  const mbuf2 = new ByteBuffer(
-    ByteBuffer.DEFAULT_CAPACITY,
-    ByteBuffer.LITTLE_ENDIAN
-  )
-  Types.EncryptedMemo(mbuf2, {
+  
+  const writer2 = new BinaryWriter()
+  Types.EncryptedMemo(writer2, {
     check: checksum,
     encrypted: message,
     from: private_key.createPublic(),
     nonce,
     to: public_key
   })
-  mbuf2.flip()
-  const data = Buffer.from(mbuf2.toBuffer())
+  const data = Buffer.from(writer2.getBuffer())
   return '#' + bs58.encode(data)
 }
 
@@ -66,26 +62,21 @@ const decode = (private_key: PrivateKey | string, memo: string): string => {
   checkEncryption()
   private_key = toPrivateObj(private_key)
   const decodedMemo = bs58.decode(memo)
-  let memoBuffer = types.EncryptedMemoD(Buffer.from(decodedMemo))
+  let memoBuffer: any = types.EncryptedMemoD(Buffer.from(decodedMemo))
   const { from, to, nonce, check, encrypted } = memoBuffer
   const pubkey = private_key.createPublic().toString()
   const otherpub =
     pubkey === new PublicKey(from.key).toString()
       ? new PublicKey(to.key)
       : new PublicKey(from.key)
-  memoBuffer = Aes.decrypt(private_key, otherpub, nonce, encrypted, check)
-  const mbuf = ByteBuffer.fromBinary(
-    memoBuffer.toString('binary'),
-    ByteBuffer.LITTLE_ENDIAN
-  )
+  
+  const decrypted = Aes.decrypt(private_key, otherpub, nonce, encrypted, check)
+  const reader = new BinaryReader(new Uint8Array(decrypted))
   try {
-    mbuf.mark()
-    return '#' + mbuf.readVString()
+    return '#' + reader.readString()
   } catch (e) {
-    mbuf.reset()
     // Sender did not length-prefix the memo
-    memo = Buffer.from(mbuf.toString('binary'), 'binary').toString('utf-8')
-    return '#' + memo
+    return '#' + Buffer.from(decrypted).toString('utf-8')
   }
 }
 

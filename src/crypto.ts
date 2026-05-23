@@ -35,12 +35,11 @@
 
 import assert from 'assert'
 import { createHash } from 'crypto'
-import ByteBuffer from '@ecency/bytebuffer'
 import { VError } from 'verror'
 import { Types } from './chain/serializer.js'
 import { SignedTransaction, Transaction } from './chain/transaction.js'
 import { DEFAULT_ADDRESS_PREFIX, DEFAULT_CHAIN_ID } from './client.js'
-import { copy } from './utils.js'
+import { copy, BinaryWriter } from './utils.js'
 
 import { base58 } from '@scure/base'
 import { ripemd160 as nobleRipemd160 } from '@noble/hashes/legacy.js'
@@ -181,8 +180,8 @@ export class PublicKey {
     }
   }
 
-  public static fromBuffer(key: Buffer | ByteBuffer) {
-    const buffer = Buffer.isBuffer(key) ? key : Buffer.from((key as any).toBuffer())
+  public static fromBuffer(key: Buffer | Uint8Array) {
+    const buffer = Buffer.isBuffer(key) ? key : Buffer.from(key)
     try {
       nobleSecp256k1.Point.fromBytes(buffer)
     } catch (err) {
@@ -402,21 +401,16 @@ function transactionDigest(
   transaction: Transaction | SignedTransaction,
   chainId: Buffer = DEFAULT_CHAIN_ID
 ) {
-  const buffer = new ByteBuffer(
-    ByteBuffer.DEFAULT_CAPACITY,
-    ByteBuffer.LITTLE_ENDIAN
-  )
+  const writer = new BinaryWriter()
   try {
-    Types.Transaction(buffer, transaction)
-  } catch (cause) {
+    Types.Transaction(writer, transaction)
+  } catch (cause: any) {
     throw new VError(
       { cause, name: 'SerializationError' },
       'Unable to serialize transaction'
     )
   }
-  buffer.flip()
-
-  const transactionData = Buffer.from(buffer.toBuffer())
+  const transactionData = writer.getBuffer()
   const digest = sha256(Buffer.concat([chainId, transactionData]))
   return digest
 }
@@ -450,21 +444,17 @@ function signTransaction(
 }
 
 function generateTrxId(transaction: Transaction) {
-  const buffer = new ByteBuffer(
-    ByteBuffer.DEFAULT_CAPACITY,
-    ByteBuffer.LITTLE_ENDIAN
-  )
+  const writer = new BinaryWriter()
   try {
-    Types.Transaction(buffer, transaction)
-  } catch (cause) {
+    Types.Transaction(writer, transaction)
+  } catch (cause: any) {
     throw new VError(
       { cause, name: 'SerializationError' },
       'Unable to serialize transaction'
     )
   }
-  buffer.flip()
-  const transactionData = Buffer.from(buffer.toBuffer())
-  return cryptoUtils.sha256(transactionData).toString('hex').slice(0, 40)
+  const transactionData = writer.getBuffer()
+  return cryptoUtils.sha256(Buffer.from(transactionData)).toString('hex').slice(0, 40)
 }
 
 /** Misc crypto utility functions. */

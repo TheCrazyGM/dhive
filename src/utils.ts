@@ -59,6 +59,191 @@ export interface RetryContext {
 }
 
 /**
+ * Native binary writer using Uint8Array.
+ */
+export class BinaryWriter {
+  private buffer: Uint8Array
+  private cursor = 0
+
+  constructor(size = 1024) {
+    this.buffer = new Uint8Array(size)
+  }
+
+  private ensureCapacity(size: number) {
+    if (this.cursor + size > this.buffer.length) {
+      const newBuffer = new Uint8Array(this.buffer.length * 2 + size)
+      newBuffer.set(this.buffer)
+      this.buffer = newBuffer
+    }
+  }
+
+  public writeInt8(value: number) {
+    this.ensureCapacity(1)
+    new DataView(this.buffer.buffer).setInt8(this.cursor++, value)
+  }
+
+  public writeUint8(value: number) {
+    this.ensureCapacity(1)
+    this.buffer[this.cursor++] = value
+  }
+
+  public writeInt16(value: number) {
+    this.ensureCapacity(2)
+    new DataView(this.buffer.buffer).setInt16(this.cursor, value, true)
+    this.cursor += 2
+  }
+
+  public writeUint16(value: number) {
+    this.ensureCapacity(2)
+    new DataView(this.buffer.buffer).setUint16(this.cursor, value, true)
+    this.cursor += 2
+  }
+
+  public writeInt32(value: number) {
+    this.ensureCapacity(4)
+    new DataView(this.buffer.buffer).setInt32(this.cursor, value, true)
+    this.cursor += 4
+  }
+
+  public writeUint32(value: number) {
+    this.ensureCapacity(4)
+    new DataView(this.buffer.buffer).setUint32(this.cursor, value, true)
+    this.cursor += 4
+  }
+
+  public writeInt64(value: number | string | JSBI) {
+    this.ensureCapacity(8)
+    const val = JSBI.BigInt(value.toString())
+    const low = JSBI.toNumber(JSBI.bitwiseAnd(val, JSBI.BigInt(0xffffffff)))
+    const high = JSBI.toNumber(JSBI.signedRightShift(val, JSBI.BigInt(32)))
+    new DataView(this.buffer.buffer).setUint32(this.cursor, low, true)
+    new DataView(this.buffer.buffer).setUint32(this.cursor + 4, high, true)
+    this.cursor += 8
+  }
+
+  public writeUint64(value: number | string | JSBI) {
+    this.ensureCapacity(8)
+    const val = JSBI.BigInt(value.toString())
+    const low = JSBI.toNumber(JSBI.bitwiseAnd(val, JSBI.BigInt(0xffffffff)))
+    const high = JSBI.toNumber(JSBI.signedRightShift(val, JSBI.BigInt(32)))
+    new DataView(this.buffer.buffer).setUint32(this.cursor, low, true)
+    new DataView(this.buffer.buffer).setUint32(this.cursor + 4, high, true)
+    this.cursor += 8
+  }
+
+  public writeVarint32(value: number) {
+    while (value >= 0x80) {
+      this.writeUint8((value & 0x7f) | 0x80)
+      value >>>= 7
+    }
+    this.writeUint8(value)
+  }
+
+  public writeString(value: string) {
+    const bytes = new TextEncoder().encode(value)
+    this.writeVarint32(bytes.length)
+    this.writeBytes(bytes)
+  }
+
+  public writeBytes(bytes: Uint8Array | Buffer) {
+    this.ensureCapacity(bytes.length)
+    this.buffer.set(bytes, this.cursor)
+    this.cursor += bytes.length
+  }
+
+  public getBuffer(): Uint8Array {
+    return this.buffer.slice(0, this.cursor)
+  }
+}
+
+/**
+ * Native binary reader using Uint8Array.
+ */
+export class BinaryReader {
+  private view: DataView
+  private cursor = 0
+
+  constructor(private buffer: Uint8Array) {
+    this.view = new DataView(buffer.buffer, buffer.byteOffset, buffer.byteLength)
+  }
+
+  public readInt8(): number {
+    return this.view.getInt8(this.cursor++)
+  }
+
+  public readUint8(): number {
+    return this.view.getUint8(this.cursor++)
+  }
+
+  public readInt16(): number {
+    const val = this.view.getInt16(this.cursor, true)
+    this.cursor += 2
+    return val
+  }
+
+  public readUint16(): number {
+    const val = this.view.getUint16(this.cursor, true)
+    this.cursor += 2
+    return val
+  }
+
+  public readInt32(): number {
+    const val = this.view.getInt32(this.cursor, true)
+    this.cursor += 4
+    return val
+  }
+
+  public readUint32(): number {
+    const val = this.view.getUint32(this.cursor, true)
+    this.cursor += 4
+    return val
+  }
+
+  public readInt64(): JSBI {
+    const low = this.view.getUint32(this.cursor, true)
+    const high = this.view.getUint32(this.cursor + 4, true)
+    this.cursor += 8
+    return JSBI.add(
+      JSBI.BigInt(low),
+      JSBI.leftShift(JSBI.BigInt(high), JSBI.BigInt(32))
+    )
+  }
+
+  public readUint64(): JSBI {
+    return this.readInt64()
+  }
+
+  public readVarint32(): number {
+    let value = 0
+    let shift = 0
+    let b: number
+    do {
+      b = this.readUint8()
+      value |= (b & 0x7f) << shift
+      shift += 7
+    } while (b & 0x80)
+    return value
+  }
+
+  public readString(): string {
+    const length = this.readVarint32()
+    const bytes = this.buffer.slice(this.cursor, this.cursor + length)
+    this.cursor += length
+    return new TextDecoder().decode(bytes)
+  }
+
+  public readBytes(length: number): Uint8Array {
+    const bytes = this.buffer.slice(this.cursor, this.cursor + length)
+    this.cursor += length
+    return bytes
+  }
+
+  public skip(length: number) {
+    this.cursor += length
+  }
+}
+
+/**
  * Return a promise that will resove when a specific event is emitted.
  */
 export function waitForEvent<T>(
@@ -350,7 +535,6 @@ export async function retryingFetch(
 
 // Hack to be able to generate a valid witness_set_properties op
 // Can hopefully be removed when hived's JSON representation is fixed
-import ByteBuffer from '@ecency/bytebuffer'
 import { Asset, PriceType } from './chain/asset.js'
 import { WitnessSetPropertiesOperation } from './chain/operation.js'
 import { Serializer, Types } from './chain/serializer.js'
@@ -368,15 +552,9 @@ export interface WitnessProps {
 }
 
 const serialize = (serializer: Serializer, data: any) => {
-  const buffer = new ByteBuffer(
-    ByteBuffer.DEFAULT_CAPACITY,
-    ByteBuffer.LITTLE_ENDIAN
-  )
-  serializer(buffer, data)
-  buffer.flip()
-  // `props` values must be hex
-  return buffer.toString('hex')
-  // return Buffer.from(buffer.toBuffer());
+  const writer = new BinaryWriter()
+  serializer(writer, data)
+  return Buffer.from(writer.getBuffer()).toString('hex')
 }
 
 export const buildWitnessUpdateOp = (

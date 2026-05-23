@@ -1,9 +1,8 @@
 import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
 
 import assert from 'assert'
-import ByteBuffer from '@ecency/bytebuffer'
-
-import {Types, Serializer, HexBuffer} from '../src/index.js'
+import {Types, Serializer, HexBuffer, utils} from '../src/index.js'
+const { BinaryWriter } = utils
 
 /*
  Serializer tests in the format:
@@ -12,10 +11,9 @@ import {Types, Serializer, HexBuffer} from '../src/index.js'
 import serializerTests from './serializer-tests.json'
 
 function serialize(serializer: Serializer, data: any) {
-    const buffer = new ByteBuffer(ByteBuffer.DEFAULT_CAPACITY, ByteBuffer.LITTLE_ENDIAN)
-    serializer(buffer, data)
-    buffer.flip()
-    return Buffer.from(buffer.toBuffer()).toString('hex')
+    const writer = new BinaryWriter()
+    serializer(writer, data)
+    return Buffer.from(writer.getBuffer()).toString('hex')
 }
 
 describe('serializers', function() {

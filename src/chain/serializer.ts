@@ -33,60 +33,60 @@
  * in the design, construction, operation or maintenance of any military facility.
  */
 
-import ByteBuffer from '@ecency/bytebuffer'
+import { BinaryWriter } from '../utils.js'
 import { PublicKey } from '../crypto.js'
 import { Asset } from './asset.js'
 import { HexBuffer } from './misc.js'
 import { Operation } from './operation.js'
 
-export type Serializer = (buffer: ByteBuffer, data: any) => void
+export type Serializer = (buffer: BinaryWriter, data: any) => void
 
-const VoidSerializer = (buffer: ByteBuffer) => {
+const VoidSerializer = (buffer: BinaryWriter) => {
   throw new Error('Void can not be serialized')
 }
 
-const StringSerializer = (buffer: ByteBuffer, data: string) => {
-  buffer.writeVString(data)
+const StringSerializer = (buffer: BinaryWriter, data: string) => {
+  buffer.writeString(data)
 }
 
-const Int8Serializer = (buffer: ByteBuffer, data: number) => {
+const Int8Serializer = (buffer: BinaryWriter, data: number) => {
   buffer.writeInt8(data)
 }
 
-const Int16Serializer = (buffer: ByteBuffer, data: number) => {
+const Int16Serializer = (buffer: BinaryWriter, data: number) => {
   buffer.writeInt16(data)
 }
 
-const Int32Serializer = (buffer: ByteBuffer, data: number) => {
+const Int32Serializer = (buffer: BinaryWriter, data: number) => {
   buffer.writeInt32(data)
 }
 
-const Int64Serializer = (buffer: ByteBuffer, data: number) => {
+const Int64Serializer = (buffer: BinaryWriter, data: number) => {
   buffer.writeInt64(data)
 }
 
-const UInt8Serializer = (buffer: ByteBuffer, data: number) => {
+const UInt8Serializer = (buffer: BinaryWriter, data: number) => {
   buffer.writeUint8(data)
 }
 
-const UInt16Serializer = (buffer: ByteBuffer, data: number) => {
+const UInt16Serializer = (buffer: BinaryWriter, data: number) => {
   buffer.writeUint16(data)
 }
 
-const UInt32Serializer = (buffer: ByteBuffer, data: number) => {
+const UInt32Serializer = (buffer: BinaryWriter, data: number) => {
   buffer.writeUint32(data)
 }
 
-const UInt64Serializer = (buffer: ByteBuffer, data: number) => {
+const UInt64Serializer = (buffer: BinaryWriter, data: number) => {
   buffer.writeUint64(data)
 }
 
-const BooleanSerializer = (buffer: ByteBuffer, data: boolean) => {
-  buffer.writeByte(data ? 1 : 0)
+const BooleanSerializer = (buffer: BinaryWriter, data: boolean) => {
+  buffer.writeUint8(data ? 1 : 0)
 }
 
 const StaticVariantSerializer = (itemSerializers: Serializer[]) => (
-  buffer: ByteBuffer,
+  buffer: BinaryWriter,
   data: [number, any]
 ) => {
   const [id, item] = data
@@ -99,7 +99,7 @@ const StaticVariantSerializer = (itemSerializers: Serializer[]) => (
  * @note This looses precision for amounts larger than 2^53-1/10^precision.
  *       Should not be a problem in real-word usage.
  */
-const AssetSerializer = (buffer: ByteBuffer, data: Asset | string | number) => {
+const AssetSerializer = (buffer: BinaryWriter, data: Asset | string | number) => {
   const asset = Asset.from(data).steem_symbols()
   const precision = asset.getPrecision()
   buffer.writeInt64(Math.round(asset.amount * Math.pow(10, precision)))
@@ -109,12 +109,12 @@ const AssetSerializer = (buffer: ByteBuffer, data: Asset | string | number) => {
   }
 }
 
-const DateSerializer = (buffer: ByteBuffer, data: string) => {
+const DateSerializer = (buffer: BinaryWriter, data: string) => {
   buffer.writeUint32(Math.floor(new Date(data + 'Z').getTime() / 1000))
 }
 
 const PublicKeySerializer = (
-  buffer: ByteBuffer,
+  buffer: BinaryWriter,
   data: PublicKey | string | null
 ) => {
   if (
@@ -122,14 +122,14 @@ const PublicKeySerializer = (
     (typeof data === 'string' &&
       data.endsWith('1111111111111111111111111111111114T1Anm'))
   ) {
-    buffer.append(Buffer.alloc(33, 0))
+    buffer.writeBytes(new Uint8Array(33))
   } else {
-    buffer.append(PublicKey.from(data).key)
+    buffer.writeBytes(PublicKey.from(data).key)
   }
 }
 
 const BinarySerializer = (size?: number) => (
-  buffer: ByteBuffer,
+  buffer: BinaryWriter,
   data: Buffer | HexBuffer
 ) => {
   data = HexBuffer.from(data)
@@ -143,7 +143,7 @@ const BinarySerializer = (size?: number) => (
   } else {
     buffer.writeVarint32(len)
   }
-  buffer.append(data.buffer)
+  buffer.writeBytes(data.buffer)
 }
 
 const VariableBinarySerializer = BinarySerializer()
@@ -151,7 +151,7 @@ const VariableBinarySerializer = BinarySerializer()
 const FlatMapSerializer = (
   keySerializer: Serializer,
   valueSerializer: Serializer
-) => (buffer: ByteBuffer, data: [any, any][]) => {
+) => (buffer: BinaryWriter, data: [any, any][]) => {
   buffer.writeVarint32(data.length)
   for (const [key, value] of data) {
     keySerializer(buffer, key)
@@ -160,7 +160,7 @@ const FlatMapSerializer = (
 }
 
 const ArraySerializer = (itemSerializer: Serializer) => (
-  buffer: ByteBuffer,
+  buffer: BinaryWriter,
   data: any[]
 ) => {
   buffer.writeVarint32(data.length)
@@ -170,13 +170,13 @@ const ArraySerializer = (itemSerializer: Serializer) => (
 }
 
 const ObjectSerializer = (keySerializers: [string, Serializer][]) => (
-  buffer: ByteBuffer,
+  buffer: BinaryWriter,
   data: { [key: string]: any }
 ) => {
   for (const [key, serializer] of keySerializers) {
     try {
       serializer(buffer, data[key])
-    } catch (error) {
+    } catch (error: any) {
       error.message = `${key}: ${error.message}`
       throw error
     }
@@ -184,14 +184,14 @@ const ObjectSerializer = (keySerializers: [string, Serializer][]) => (
 }
 
 const OptionalSerializer = (valueSerializer: Serializer) => (
-  buffer: ByteBuffer,
+  buffer: BinaryWriter,
   data: any
 ) => {
   if (data) {
-    buffer.writeByte(1)
+    buffer.writeUint8(1)
     valueSerializer(buffer, data)
   } else {
-    buffer.writeByte(0)
+    buffer.writeUint8(0)
   }
 }
 
@@ -235,7 +235,7 @@ const OperationDataSerializer = (
   definitions: [string, Serializer][]
 ) => {
   const objectSerializer = ObjectSerializer(definitions)
-  return (buffer: ByteBuffer, data: { [key: string]: any }) => {
+  return (buffer: BinaryWriter, data: { [key: string]: any }) => {
     buffer.writeVarint32(operationId)
     objectSerializer(buffer, data)
   }
@@ -622,14 +622,14 @@ OperationSerializers.recurrent_transfer = OperationDataSerializer(49, [
   ['extensions', ArraySerializer(VoidSerializer)]
 ])
 
-const OperationSerializer = (buffer: ByteBuffer, operation: Operation) => {
+const OperationSerializer = (buffer: BinaryWriter, operation: Operation) => {
   const serializer = OperationSerializers[operation[0]]
   if (!serializer) {
     throw new Error(`No serializer for operation: ${operation[0]}`)
   }
   try {
     serializer(buffer, operation[1])
-  } catch (error) {
+  } catch (error: any) {
     error.message = `${operation[0]}: ${error.message}`
     throw error
   }
