@@ -2,15 +2,16 @@
   "compilerOptions": {
     "declaration": true,
     "lib": ["dom", "ESNext"],
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "ignoreDeprecations": "5.0",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitThis": true,
     "outDir": "lib",
     "strict": false,
     "target": "es2020",
-    "types": ["node", "mocha"]
+    "types": ["node", "vitest/globals"]
   },
   "include": ["src/**/*.ts", "test/**/*.ts"]
 }

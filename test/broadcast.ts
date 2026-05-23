@@ -1,4 +1,5 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 import { loremIpsum as lorem } from "lorem-ipsum";
 import { VError } from "verror";
@@ -8,13 +9,13 @@ import { Client, PrivateKey, utils } from "./../src";
 import { getTestnetAccounts, randomString, agent } from "./common";
 
 describe("broadcast", function() {
-  this.slow(10 * 1000);
-  this.timeout(60 * 1000);
+  
+  
 
   const client = Client.testnet({ agent });
 
   let acc1, acc2: { username: string; password: string };
-  before(async function() {
+  beforeAll(async function() {
     [acc1, acc2] = await getTestnetAccounts();
   });
 

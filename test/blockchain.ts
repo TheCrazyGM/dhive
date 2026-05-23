@@ -1,4 +1,5 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 
 import {
@@ -11,8 +12,8 @@ import {
 import { agent, TEST_NODE } from "./common";
 
 describe("blockchain", function() {
-  this.slow(5 * 1000);
-  this.timeout(60 * 1000);
+  
+  
 
   const client = new Client(TEST_NODE, { agent });
 

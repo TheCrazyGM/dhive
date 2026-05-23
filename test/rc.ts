@@ -1,19 +1,20 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 
 import { Client, Asset, Transaction, PrivateKey } from "./../src";
 import { getTestnetAccounts, randomString, agent, TEST_NODE } from "./common";
 
 describe("rc_api", function() {
-  this.slow(500);
-  this.timeout(20 * 1000);
+  
+  
 
   const client = Client.testnet({ agent });
   let serverConfig: { [key: string]: boolean | string | number };
   const liveClient = new Client(TEST_NODE, { agent });
 
   let acc: { username: string; posting: string; active: string };
-  /*before(async function () {
+  /*beforeAll(async function () {
         [acc] = await getTestnetAccounts()
     })*/
 

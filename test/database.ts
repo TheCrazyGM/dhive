@@ -1,19 +1,20 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 
 import { Client, Asset, Transaction, PrivateKey } from "./../src";
 import { getTestnetAccounts, randomString, agent, TEST_NODE } from "./common";
 
 describe("database api", function() {
-  this.slow(500);
-  this.timeout(20 * 1000);
+  
+  
 
   const client = Client.testnet({ agent });
   let serverConfig: { [key: string]: boolean | string | number };
   const liveClient = new Client(TEST_NODE, { agent });
 
   let acc: { username: string; password: string };
-  before(async function() {
+  beforeAll(async function() {
     [acc] = await getTestnetAccounts();
   });
 
@@ -136,7 +137,7 @@ describe("database api", function() {
 
   // this tests for delegations from the steem account
   it("getVestingDelegations", async function() {
-    this.slow(5 * 1000);
+    
     const [delegation] = await liveClient.database.getVestingDelegations(
       "mahdiyari",
       "",
@@ -151,7 +152,7 @@ describe("database api", function() {
   });
 
   it("verifyAuthority", async function() {
-    this.slow(5 * 1000);
+    
     const tx: Transaction = {
       ref_block_num: 0,
       ref_block_prefix: 0,

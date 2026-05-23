@@ -1,12 +1,13 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 
 import { Client, Asset, Transaction, PrivateKey } from "./../src";
 import { getTestnetAccounts, randomString, agent, TEST_NODE } from "./common";
 
 describe("HivemindAPI", function () {
-    this.slow(500);
-    this.timeout(20 * 1000);
+    
+    
 
     const client = Client.testnet({ agent });
     const liveClient = new Client(TEST_NODE, { agent });

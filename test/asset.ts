@@ -1,4 +1,5 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 
 import { Asset, Price, getVestingSharePrice } from "./../src";

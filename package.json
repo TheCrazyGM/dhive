@@ -17,10 +17,11 @@
     "build:browser": "esbuild src/index-browser.ts --bundle --minify --sourcemap --platform=browser --format=iife --global-name=pollen --outfile=dist/pollen.js --define:process.env.NODE_ENV='\"production\"' --alias:assert=assert --alias:stream=stream-browserify --alias:crypto=crypto-browserify --alias:buffer=buffer --alias:events=events && gzip -9 -f -c dist/pollen.js > dist/pollen.js.gz",
     "build:types": "dts-generator --prefix pollen --project . --out dist/pollen.d.ts && perl -i -pe\"s@'pollen/index'@'pollen'@g\" dist/pollen.d.ts",
     "build": "pnpm run build:node && pnpm run build:browser && pnpm run build:types",
-    "test": "nyc -r lcov -e .ts -i ts-node/register mocha --exit --reporter tap --require ts-node/register test/*.ts",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
     "lint": "oxlint src/**/*.ts",
     "format": "oxfmt src/**/*.ts",
-    "docs": "typedoc --gitRevision master --out docs src && find docs -name \"*.html\" | xargs perl -i -pe's~$(pwd)~.~g' && echo \"Served at <https://openhive-network.github.io/pollen>\" > docs/README.md && touch docs",
+    "docs": "typedoc --gitRevision master --out docs src && find docs -name \"*.html\" | xargs perl -i -pe's~$(pwd)~.~g'",
     "prepare": "pnpm run build"
   },
   "repository": {
@@ -54,9 +55,9 @@
     "whatwg-fetch": "^3.6.20"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.10",
     "@types/node": "^22.19.19",
     "@types/verror": "^1.10.11",
+    "@vitest/coverage-v8": "^4.1.7",
     "assert": "^2.1.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.1",
@@ -64,14 +65,12 @@
     "esbuild": "^0.24.2",
     "events": "^3.3.0",
     "lorem-ipsum": "^2.0.10",
-    "mocha": "^11.7.6",
-    "nyc": "^17.1.0",
     "oxfmt": "^0.51.0",
     "oxlint": "^1.66.0",
     "process": "^0.11.10",
     "stream-browserify": "^3.0.0",
-    "ts-node": "^10.9.2",
     "typedoc": "^0.26.11",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.7"
   }
 }

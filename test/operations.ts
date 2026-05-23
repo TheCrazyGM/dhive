@@ -1,4 +1,5 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 import { randomBytes } from "crypto";
 
@@ -9,15 +10,15 @@ const { Asset, PrivateKey, Client, HexBuffer } = ds;
 import { getTestnetAccounts, randomString, agent } from "./common";
 
 describe("operations", function() {
-  this.slow(20 * 1000);
-  this.timeout(60 * 1000);
+  
+  
 
   const client = Client.testnet({ agent });
 
   let acc1: { username: string; password: string },
     acc2: { username: string; password: string };
   let acc1Key: ds.PrivateKey;
-  before(async function() {
+  beforeAll(async function() {
     [acc1, acc2] = await getTestnetAccounts();
     acc1Key = PrivateKey.fromLogin(acc1.username, acc1.password, "active");
   });

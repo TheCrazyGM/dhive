@@ -1,12 +1,13 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 import { VError } from "verror";
 
 import { Client, utils } from "./../src";
 
 describe("client", function() {
-  this.slow(200);
-  this.timeout(30 * 1000);
+  
+  
 
   const client = Client.testnet();
   const aclient = client as any;
@@ -65,7 +66,7 @@ describe("client", function() {
 
   // bs, needs rework
   // it("should retry and timeout", async function() {
-  //   this.slow(2500);
+  //   
   //   aclient.timeout = 1000;
   //   aclient.address = "https://jnordberg.github.io/pollen/FAIL";
   //   const backoff = aclient.backoff;

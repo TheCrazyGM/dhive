@@ -1,5 +1,6 @@
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
 import assert from 'assert'
-import 'mocha'
+
 
 import { Client } from './../src'
 import { agent } from './common'

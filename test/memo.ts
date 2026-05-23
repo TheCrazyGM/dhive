@@ -1,4 +1,5 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 import { Memo } from "../src/memo"
 const { encode, decode } = Memo

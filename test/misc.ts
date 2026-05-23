@@ -1,4 +1,5 @@
-import "mocha";
+import { describe, it, beforeAll, beforeEach, afterAll, afterEach, expect, vi } from "vitest";
+;
 import assert from "assert";
 import * as stream from "stream";
 import { VError } from "verror";
@@ -23,7 +24,7 @@ describe("misc", function() {
     }
 
     it("should handle backpressure", async function() {
-      this.slow(500);
+      
       await new Promise((resolve, reject) => {
         const s1 = new stream.PassThrough({
           highWaterMark: 10,
