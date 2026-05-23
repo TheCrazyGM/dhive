@@ -45,7 +45,12 @@ import {AccountByKeyAPI} from './helpers/key.js'
 import { RCAPI } from './helpers/rc.js'
 import {TransactionStatusAPI} from './helpers/transaction.js'
 import { NodeHealthTracker, HealthTrackerOptions } from './health-tracker.js'
-import { copy, retryingFetch, waitForEvent } from './utils.js'
+import {
+    copy,
+    exponentialBackoffWithJitter,
+    retryingFetch,
+    waitForEvent
+} from './utils.js'
 
 /**
  * Library version.
@@ -457,7 +462,7 @@ export class Client {
 
 /**
  * Default backoff function.
- * ```min(tries*10^2, 10 seconds)```
+ * Exponential backoff with jitter.
  */
 const defaultBackoff = (tries: number): number =>
-    Math.min(Math.pow(tries * 10, 2), 10 * 1000)
+    exponentialBackoffWithJitter(tries)

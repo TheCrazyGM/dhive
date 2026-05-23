@@ -137,6 +137,20 @@ function nextNode(nodes: string[], currentIndex: number): number {
 }
 
 /**
+ * Standard exponential backoff with jitter.
+ * Formula: min(maxDelay, (base * 2^tries)) + random(0, jitter)
+ */
+export function exponentialBackoffWithJitter(
+  tries: number,
+  baseDelay = 500,
+  maxDelay = 10000,
+  jitter = 100
+): number {
+  const delay = Math.min(maxDelay, baseDelay * Math.pow(2, tries))
+  return delay + Math.floor(Math.random() * jitter)
+}
+
+/**
  * Smart fetch with immediate failover and per-node health tracking.
  *
  * For read operations:
