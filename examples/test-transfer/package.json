@@ -1,14 +1,14 @@
 {
   "name": "test-transfer",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample Transfer Script",
+  "license": "MIT",
+  "author": "Michael Garcia",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "node index.js"
   },
-  "author": "pjt",
-  "license": "ISC",
   "dependencies": {
     "@srbde/pollen": "link:../.."
   }

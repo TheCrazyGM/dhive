@@ -1,7 +1,7 @@
 {
   "name": "@srbde/pollen",
   "version": "2.0.0",
-  "description": "Modern, secure, and audited Hive blockchain SDK for JavaScript and TypeScript",
+  "description": "Modern, secure, and zero-dependency TypeScript SDK for the Hive blockchain",
   "author": "Sustainable Resource and Business Development Enterprise (SRBDE)",
   "license": "BSD-3-Clause-No-Military-License",
   "type": "module",
@@ -11,8 +11,7 @@
   "exports": {
     ".": {
       "types": "./lib/src/index-node.d.ts",
-      "import": "./lib/src/index-node.js",
-      "require": "./lib/src/index-node.cjs"
+      "import": "./lib/src/index-node.js"
     },
     "./browser": {
       "types": "./lib/src/index-browser.d.ts",
@@ -24,7 +23,7 @@
   },
   "scripts": {
     "prebuild": "mkdir -p lib dist docs",
-    "build:version": "echo \"export default '$npm_package_version';\" > lib/src/version.js",
+    "build:version": "echo \"export default '$npm_package_version';\" > src/version.ts",
     "build:node": "tsc -p tsconfig.json --outDir lib && pnpm run build:version",
     "build:browser": "esbuild src/index-browser.ts --bundle --minify --sourcemap --platform=browser --format=iife --global-name=pollen --outfile=dist/pollen.js --define:process.env.NODE_ENV='\"production\"' --alias:assert=assert --alias:stream=stream-browserify --alias:crypto=crypto-browserify --alias:buffer=buffer --alias:events=events && esbuild src/index-browser.ts --bundle --minify --sourcemap --platform=browser --format=esm --outfile=dist/pollen.mjs --define:process.env.NODE_ENV='\"production\"' --alias:assert=assert --alias:stream=stream-browserify --alias:crypto=crypto-browserify --alias:buffer=buffer --alias:events=events && gzip -9 -f -c dist/pollen.js > dist/pollen.js.gz",
     "build:types": "dts-generator --prefix pollen --project . --out dist/pollen.d.ts && perl -i -pe\"s@'pollen/index'@'pollen'@g\" dist/pollen.d.ts",

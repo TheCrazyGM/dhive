@@ -2,13 +2,13 @@ import { Client, PrivateKey } from "@srbde/pollen";
 
 const tx = {
   amount: "0.001 HIVE",
-  from: "petertag",
-  to: "mahdiyari",
+  from: "youraccount",
+  to: "thecrazygm",
   memo: "Sent with Pollen 🌸",
 };
 const privkey = "5J..."; // Replace with your key
 
-const client = new Client(["https://api.hive.blog", "https://api.openhive.network"]);
+const client = new Client(["https://api.hive.blog", "https://api.syncad.com"]);
 
 if (privkey !== "5J...") {
   const key = PrivateKey.fromString(privkey);

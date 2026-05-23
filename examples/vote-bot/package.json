@@ -1,7 +1,14 @@
 {
   "name": "vote-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "description": "Simple Vote Trail",
+  "license": "MIT",
+  "author": "Michael Garcia",
   "type": "module",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
   "dependencies": {
     "@srbde/pollen": "link:../.."
   }
