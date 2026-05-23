@@ -37,11 +37,11 @@ This document outlines the strategic roadmap for **`@srbde/pollen`**.
 - [x] Overhauled the entire serialization layer for zero-dependency operation.
 - [x] Verified with live-chain **Smoke Test** success.
 
-### 4. 🛠️ Legacy Pruning & Cleanup (NEXT STEP)
-- **Goal:** Remove the dead weight from the Steem era (2017).
-- [ ] Prune internal fallback functions no longer required by Hive nodes.
-- [ ] Remove deprecated code paths identified during the migration.
-- [ ] Target: 20-30% reduction in code volume.
+### 4. ✅ Legacy Pruning & Cleanup (COMPLETED)
+- [x] Pruned internal fallback functions no longer required by Hive nodes.
+- [x] Removed explicitly deprecated `rebrandedApi` and `updateOperations` methods.
+- [x] Deleted obsolete configuration files (`.babelrc`, `tslint.json`).
+- [x] Cleaned up redundant core-js/regenerator-runtime polyfills.
 
 ---
-*Document updated on Saturday, May 23, 2026. Phase 4 is officially complete.*
+*Document updated on Saturday, May 23, 2026. The Migration Roadmap is now 100% Complete.*

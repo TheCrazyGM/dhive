@@ -146,8 +146,8 @@ export class Asset {
   }
 
   /**
-   * returns a representation of this asset using only STEEM SBD for
-   * legacy purposes
+   * Returns a representation of this asset using STEEM/SBD symbols
+   * as required by the Hive blockchain protocol-level serialization.
    */
   public steem_symbols(): Asset {
     switch (this.symbol) {
