@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / PrivateKey
+[@srbde/pollen](../index.md) / PrivateKey
 
 # Class: PrivateKey
 
-Defined in: [src/crypto.ts:253](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L253)
+Defined in: [src/crypto.ts:253](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L253)
 
 ECDSA (secp256k1) private key.
 
@@ -16,7 +16,7 @@ ECDSA (secp256k1) private key.
 
 > **new PrivateKey**(`key`): `PrivateKey`
 
-Defined in: [src/crypto.ts:256](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L256)
+Defined in: [src/crypto.ts:256](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L256)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/crypto.ts:256](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > **secret**: `Buffer`
 
-Defined in: [src/crypto.ts:254](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L254)
+Defined in: [src/crypto.ts:254](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L254)
 
 ## Methods
 
@@ -42,7 +42,7 @@ Defined in: [src/crypto.ts:254](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > **createPublic**(`prefix?`): [`PublicKey`](PublicKey.md)
 
-Defined in: [src/crypto.ts:324](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L324)
+Defined in: [src/crypto.ts:324](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L324)
 
 Derive the public key for this private key.
 
@@ -62,7 +62,7 @@ Derive the public key for this private key.
 
 > **get\_shared\_secret**(`public_key`): `Buffer`
 
-Defined in: [src/crypto.ts:348](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L348)
+Defined in: [src/crypto.ts:348](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L348)
 
 Get shared secret for memo cryptography
 
@@ -82,7 +82,7 @@ Get shared secret for memo cryptography
 
 > **inspect**(): `string`
 
-Defined in: [src/crypto.ts:340](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L340)
+Defined in: [src/crypto.ts:340](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L340)
 
 Used by `utils.inspect` and `console.log` in node.js. Does not show the full key
 to get the full encoded key you need to explicitly call [toString](#tostring).
@@ -97,7 +97,7 @@ to get the full encoded key you need to explicitly call [toString](#tostring).
 
 > **multiply**(`pub`): `Buffer`
 
-Defined in: [src/crypto.ts:301](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L301)
+Defined in: [src/crypto.ts:301](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L301)
 
 #### Parameters
 
@@ -115,7 +115,7 @@ Defined in: [src/crypto.ts:301](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > **sign**(`message`): [`Signature`](Signature.md)
 
-Defined in: [src/crypto.ts:311](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L311)
+Defined in: [src/crypto.ts:311](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L311)
 
 Sign message.
 
@@ -137,7 +137,7 @@ Sign message.
 
 > **toString**(): `string`
 
-Defined in: [src/crypto.ts:332](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L332)
+Defined in: [src/crypto.ts:332](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L332)
 
 Return a WIF-encoded representation of the key.
 
@@ -151,7 +151,7 @@ Return a WIF-encoded representation of the key.
 
 > `static` **from**(`value`): `PrivateKey`
 
-Defined in: [src/crypto.ts:267](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L267)
+Defined in: [src/crypto.ts:267](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L267)
 
 Convenience to create a new instance from WIF string or buffer.
 
@@ -171,7 +171,7 @@ Convenience to create a new instance from WIF string or buffer.
 
 > `static` **fromLogin**(`username`, `password`, `role?`): `PrivateKey`
 
-Defined in: [src/crypto.ts:292](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L292)
+Defined in: [src/crypto.ts:292](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L292)
 
 Create key from username and password.
 
@@ -199,7 +199,7 @@ Create key from username and password.
 
 > `static` **fromSeed**(`seed`): `PrivateKey`
 
-Defined in: [src/crypto.ts:285](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L285)
+Defined in: [src/crypto.ts:285](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L285)
 
 Create a new instance from a seed.
 
@@ -219,7 +219,7 @@ Create a new instance from a seed.
 
 > `static` **fromString**(`wif`): `PrivateKey`
 
-Defined in: [src/crypto.ts:278](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L278)
+Defined in: [src/crypto.ts:278](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L278)
 
 Create a new instance from a WIF-encoded key.
 

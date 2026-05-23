@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / AppliedOperation
+[@srbde/pollen](../index.md) / AppliedOperation
 
 # Interface: AppliedOperation
 
-Defined in: [src/chain/operation.ts:144](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L144)
+Defined in: [src/chain/operation.ts:144](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L144)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/chain/operation.ts:144](https://github.com/TheCrazyGM/dhive/blo
 
 > **block**: `number`
 
-Defined in: [src/chain/operation.ts:146](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L146)
+Defined in: [src/chain/operation.ts:146](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L146)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/chain/operation.ts:146](https://github.com/TheCrazyGM/dhive/blo
 
 > **op**: [`Operation`](Operation.md)
 
-Defined in: [src/chain/operation.ts:151](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L151)
+Defined in: [src/chain/operation.ts:151](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L151)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/chain/operation.ts:151](https://github.com/TheCrazyGM/dhive/blo
 
 > **op\_in\_trx**: `number`
 
-Defined in: [src/chain/operation.ts:148](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L148)
+Defined in: [src/chain/operation.ts:148](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L148)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [src/chain/operation.ts:148](https://github.com/TheCrazyGM/dhive/blo
 
 > **timestamp**: `string`
 
-Defined in: [src/chain/operation.ts:150](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L150)
+Defined in: [src/chain/operation.ts:150](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L150)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/chain/operation.ts:150](https://github.com/TheCrazyGM/dhive/blo
 
 > **trx\_id**: `string`
 
-Defined in: [src/chain/operation.ts:145](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L145)
+Defined in: [src/chain/operation.ts:145](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L145)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [src/chain/operation.ts:145](https://github.com/TheCrazyGM/dhive/blo
 
 > **trx\_in\_block**: `number`
 
-Defined in: [src/chain/operation.ts:147](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L147)
+Defined in: [src/chain/operation.ts:147](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L147)
 
 ***
 
@@ -62,4 +62,4 @@ Defined in: [src/chain/operation.ts:147](https://github.com/TheCrazyGM/dhive/blo
 
 > **virtual\_op**: `number`
 
-Defined in: [src/chain/operation.ts:149](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L149)
+Defined in: [src/chain/operation.ts:149](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L149)

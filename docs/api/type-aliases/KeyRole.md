@@ -2,10 +2,10 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / KeyRole
+[@srbde/pollen](../index.md) / KeyRole
 
 # Type Alias: KeyRole
 
 > **KeyRole** = `"owner"` \| `"active"` \| `"posting"` \| `"memo"`
 
-Defined in: [src/crypto.ts:248](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L248)
+Defined in: [src/crypto.ts:248](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L248)

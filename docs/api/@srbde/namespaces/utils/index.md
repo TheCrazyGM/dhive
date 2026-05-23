@@ -2,7 +2,7 @@
 
 ***
 
-[@srbde/pollen](../../../globals.md) / utils
+[@srbde/pollen](../../../index.md) / utils
 
 # utils
 

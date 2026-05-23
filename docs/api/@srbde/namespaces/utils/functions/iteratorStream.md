@@ -2,13 +2,13 @@
 
 ***
 
-[@srbde/pollen](../../../../globals.md) / [utils](../index.md) / iteratorStream
+[@srbde/pollen](../../../../index.md) / [utils](../index.md) / iteratorStream
 
 # Function: iteratorStream()
 
 > **iteratorStream**\<`T`\>(`iterator`): `ReadableStream`
 
-Defined in: [src/utils.ts:270](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/utils.ts#L270)
+Defined in: [src/utils.ts:270](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/utils.ts#L270)
 
 Return a stream that emits iterator values.
 

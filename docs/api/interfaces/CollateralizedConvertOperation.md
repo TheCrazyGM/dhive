@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / CollateralizedConvertOperation
+[@srbde/pollen](../index.md) / CollateralizedConvertOperation
 
 # Interface: CollateralizedConvertOperation
 
-Defined in: [src/chain/operation.ts:946](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L946)
+Defined in: [src/chain/operation.ts:946](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L946)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"collateralized_convert"`
 
-Defined in: [src/chain/operation.ts:947](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L947)
+Defined in: [src/chain/operation.ts:947](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L947)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:947](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:948](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L948)
+Defined in: [src/chain/operation.ts:948](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L948)
 
 #### amount
 

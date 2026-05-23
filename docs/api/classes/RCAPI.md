@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / RCAPI
+[@srbde/pollen](../index.md) / RCAPI
 
 # Class: RCAPI
 
-Defined in: [src/helpers/rc.ts:8](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L8)
+Defined in: [src/helpers/rc.ts:8](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L8)
 
 ## Constructors
 
@@ -14,7 +14,7 @@ Defined in: [src/helpers/rc.ts:8](https://github.com/TheCrazyGM/dhive/blob/6054b
 
 > **new RCAPI**(`client`): `RCAPI`
 
-Defined in: [src/helpers/rc.ts:9](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L9)
+Defined in: [src/helpers/rc.ts:9](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L9)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [src/helpers/rc.ts:9](https://github.com/TheCrazyGM/dhive/blob/6054b
 
 > `readonly` **client**: [`Client`](Client.md)
 
-Defined in: [src/helpers/rc.ts:9](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L9)
+Defined in: [src/helpers/rc.ts:9](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L9)
 
 ## Methods
 
@@ -40,7 +40,7 @@ Defined in: [src/helpers/rc.ts:9](https://github.com/TheCrazyGM/dhive/blob/6054b
 
 > **calculateRCMana**(`rc_account`): `Manabar`
 
-Defined in: [src/helpers/rc.ts:60](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L60)
+Defined in: [src/helpers/rc.ts:60](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L60)
 
 Calculates the RC mana-data based on an RCAccount - findRCAccounts()
 
@@ -60,7 +60,7 @@ Calculates the RC mana-data based on an RCAccount - findRCAccounts()
 
 > **calculateVPMana**(`account`): `Manabar`
 
-Defined in: [src/helpers/rc.ts:70](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L70)
+Defined in: [src/helpers/rc.ts:70](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L70)
 
 Calculates the RC mana-data based on an Account - getAccounts()
 
@@ -80,7 +80,7 @@ Calculates the RC mana-data based on an Account - getAccounts()
 
 > **call**(`method`, `params?`): `Promise`\<`any`\>
 
-Defined in: [src/helpers/rc.ts:14](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L14)
+Defined in: [src/helpers/rc.ts:14](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L14)
 
 Convenience for calling `rc_api`.
 
@@ -104,7 +104,7 @@ Convenience for calling `rc_api`.
 
 > **findRCAccounts**(`usernames`): `Promise`\<`RCAccount`[]\>
 
-Defined in: [src/helpers/rc.ts:21](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L21)
+Defined in: [src/helpers/rc.ts:21](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L21)
 
 Returns RC data for array of usernames
 
@@ -124,7 +124,7 @@ Returns RC data for array of usernames
 
 > **getRCMana**(`username`): `Promise`\<`Manabar`\>
 
-Defined in: [src/helpers/rc.ts:42](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L42)
+Defined in: [src/helpers/rc.ts:42](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L42)
 
 Makes a API call and returns the RC mana-data for a specified username
 
@@ -144,7 +144,7 @@ Makes a API call and returns the RC mana-data for a specified username
 
 > **getResourceParams**(): `Promise`\<`RCParams`\>
 
-Defined in: [src/helpers/rc.ts:28](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L28)
+Defined in: [src/helpers/rc.ts:28](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L28)
 
 Returns the global resource params
 
@@ -158,7 +158,7 @@ Returns the global resource params
 
 > **getResourcePool**(): `Promise`\<`RCPool`\>
 
-Defined in: [src/helpers/rc.ts:35](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L35)
+Defined in: [src/helpers/rc.ts:35](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L35)
 
 Returns the global resource pool
 
@@ -172,7 +172,7 @@ Returns the global resource pool
 
 > **getVPMana**(`username`): `Promise`\<`Manabar`\>
 
-Defined in: [src/helpers/rc.ts:50](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/helpers/rc.ts#L50)
+Defined in: [src/helpers/rc.ts:50](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/helpers/rc.ts#L50)
 
 Makes a API call and returns the VP mana-data for a specified username
 

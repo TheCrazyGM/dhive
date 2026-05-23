@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / CustomBinaryOperation
+[@srbde/pollen](../index.md) / CustomBinaryOperation
 
 # Interface: CustomBinaryOperation
 
-Defined in: [src/chain/operation.ts:347](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L347)
+Defined in: [src/chain/operation.ts:347](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L347)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"custom_binary"`
 
-Defined in: [src/chain/operation.ts:348](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L348)
+Defined in: [src/chain/operation.ts:348](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L348)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:348](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:349](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L349)
+Defined in: [src/chain/operation.ts:349](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L349)
 
 #### data
 

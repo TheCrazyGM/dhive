@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / CustomJsonOperation
+[@srbde/pollen](../index.md) / CustomJsonOperation
 
 # Interface: CustomJsonOperation
 
-Defined in: [src/chain/operation.ts:362](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L362)
+Defined in: [src/chain/operation.ts:362](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L362)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"custom_json"`
 
-Defined in: [src/chain/operation.ts:363](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L363)
+Defined in: [src/chain/operation.ts:363](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L363)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:363](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:364](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L364)
+Defined in: [src/chain/operation.ts:364](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L364)
 
 #### id
 

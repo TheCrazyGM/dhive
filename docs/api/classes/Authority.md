@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / Authority
+[@srbde/pollen](../index.md) / Authority
 
 # Class: Authority
 
-Defined in: [src/chain/account.ts:45](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L45)
+Defined in: [src/chain/account.ts:45](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/account.ts#L45)
 
 ## Implements
 
@@ -18,7 +18,7 @@ Defined in: [src/chain/account.ts:45](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **new Authority**(`__namedParameters`): `Authority`
 
-Defined in: [src/chain/account.ts:50](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L50)
+Defined in: [src/chain/account.ts:50](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/account.ts#L50)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: [src/chain/account.ts:50](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **account\_auths**: \[`string`, `number`\][]
 
-Defined in: [src/chain/account.ts:47](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L47)
+Defined in: [src/chain/account.ts:47](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/account.ts#L47)
 
 #### Implementation of
 
@@ -48,7 +48,7 @@ Defined in: [src/chain/account.ts:47](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **key\_auths**: \[`string` \| [`PublicKey`](PublicKey.md), `number`\][]
 
-Defined in: [src/chain/account.ts:48](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L48)
+Defined in: [src/chain/account.ts:48](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/account.ts#L48)
 
 #### Implementation of
 
@@ -60,7 +60,7 @@ Defined in: [src/chain/account.ts:48](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **weight\_threshold**: `number`
 
-Defined in: [src/chain/account.ts:46](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L46)
+Defined in: [src/chain/account.ts:46](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/account.ts#L46)
 
 #### Implementation of
 
@@ -72,7 +72,7 @@ Defined in: [src/chain/account.ts:46](https://github.com/TheCrazyGM/dhive/blob/6
 
 > `static` **from**(`value`): `Authority`
 
-Defined in: [src/chain/account.ts:59](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/account.ts#L59)
+Defined in: [src/chain/account.ts:59](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/account.ts#L59)
 
 Convenience to create a new instance from PublicKey or authority object.
 

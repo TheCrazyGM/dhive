@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / Signature
+[@srbde/pollen](../index.md) / Signature
 
 # Class: Signature
 
-Defined in: [src/crypto.ts:359](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L359)
+Defined in: [src/crypto.ts:359](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L359)
 
 ECDSA (secp256k1) signature.
 
@@ -16,7 +16,7 @@ ECDSA (secp256k1) signature.
 
 > **new Signature**(`data`, `recovery`): `Signature`
 
-Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L360)
+Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L360)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > **data**: `Buffer`
 
-Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L360)
+Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L360)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > **recovery**: `number`
 
-Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L360)
+Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L360)
 
 ## Methods
 
@@ -54,7 +54,7 @@ Defined in: [src/crypto.ts:360](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > **recover**(`message`, `prefix?`): [`PublicKey`](PublicKey.md)
 
-Defined in: [src/crypto.ts:379](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L379)
+Defined in: [src/crypto.ts:379](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L379)
 
 Recover public key from signature by providing original signed message.
 
@@ -80,7 +80,7 @@ Recover public key from signature by providing original signed message.
 
 > **toBuffer**(): `Buffer`\<`ArrayBuffer`\>
 
-Defined in: [src/crypto.ts:385](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L385)
+Defined in: [src/crypto.ts:385](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L385)
 
 #### Returns
 
@@ -92,7 +92,7 @@ Defined in: [src/crypto.ts:385](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > **toString**(): `string`
 
-Defined in: [src/crypto.ts:392](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L392)
+Defined in: [src/crypto.ts:392](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L392)
 
 #### Returns
 
@@ -104,7 +104,7 @@ Defined in: [src/crypto.ts:392](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > `static` **fromBuffer**(`buffer`): `Signature`
 
-Defined in: [src/crypto.ts:364](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L364)
+Defined in: [src/crypto.ts:364](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L364)
 
 #### Parameters
 
@@ -122,7 +122,7 @@ Defined in: [src/crypto.ts:364](https://github.com/TheCrazyGM/dhive/blob/6054b90
 
 > `static` **fromString**(`string`): `Signature`
 
-Defined in: [src/crypto.ts:371](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/crypto.ts#L371)
+Defined in: [src/crypto.ts:371](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/crypto.ts#L371)
 
 #### Parameters
 

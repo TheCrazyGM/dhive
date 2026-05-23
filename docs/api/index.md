@@ -2,145 +2,134 @@
 
 ***
 
-# 🌸 Pollen
+# @srbde/pollen
 
-**The modern, secure, and zero-dependency TypeScript SDK for the Hive blockchain. Built for 2026 and beyond.**
+## Namespaces
 
-`dhive` built the foundation of JavaScript development on Hive — but it carried a decade of legacy: unmaintained cryptography, thousands of transient vulnerabilities, and a build system stuck in the past. **Pollen** is its spiritual successor, rebuilt for security, performance, and the environments developers actually build for today.
+- [utils](@srbde/namespaces/utils/index.md)
 
-If you are building for the web or Node.js on Hive, Pollen is your foundation.
+## Enumerations
 
----
+- [BlockchainMode](enumerations/BlockchainMode.md)
 
-**Secured and Native:** Pollen is powered by the **@noble** cryptographic suite and a custom, native **Uint8Array** byte engine. It has zero external dependencies for protocol-level serialization and signing.
+## Classes
 
----
+- [AccountByKeyAPI](classes/AccountByKeyAPI.md)
+- [Asset](classes/Asset.md)
+- [Authority](classes/Authority.md)
+- [Blockchain](classes/Blockchain.md)
+- [Client](classes/Client.md)
+- [DatabaseAPI](classes/DatabaseAPI.md)
+- [HexBuffer](classes/HexBuffer.md)
+- [HivemindAPI](classes/HivemindAPI.md)
+- [NodeHealthTracker](classes/NodeHealthTracker.md)
+- [PollenError](classes/PollenError.md)
+- [Price](classes/Price.md)
+- [PrivateKey](classes/PrivateKey.md)
+- [PublicKey](classes/PublicKey.md)
+- [RCAPI](classes/RCAPI.md)
+- [RPCError](classes/RPCError.md)
+- [SerializationError](classes/SerializationError.md)
+- [Signature](classes/Signature.md)
 
-## Why Pollen?
+## Interfaces
 
-The Hive ecosystem deserves infrastructure that is safe and fast by default.
+- [Account](interfaces/Account.md)
+- [AccountCreateOperation](interfaces/AccountCreateOperation.md)
+- [AccountCreateWithDelegationOperation](interfaces/AccountCreateWithDelegationOperation.md)
+- [AccountsByKey](interfaces/AccountsByKey.md)
+- [AccountUpdate2Operation](interfaces/AccountUpdate2Operation.md)
+- [AccountUpdateOperation](interfaces/AccountUpdateOperation.md)
+- [AccountWitnessProxyOperation](interfaces/AccountWitnessProxyOperation.md)
+- [AccountWitnessVoteOperation](interfaces/AccountWitnessVoteOperation.md)
+- [AppliedOperation](interfaces/AppliedOperation.md)
+- [AuthorityType](interfaces/AuthorityType.md)
+- [BeneficiaryRoute](interfaces/BeneficiaryRoute.md)
+- [BlockchainStreamOptions](interfaces/BlockchainStreamOptions.md)
+- [BlockHeader](interfaces/BlockHeader.md)
+- [CancelTransferFromSavingsOperation](interfaces/CancelTransferFromSavingsOperation.md)
+- [ChainProperties](interfaces/ChainProperties.md)
+- [ChangeRecoveryAccountOperation](interfaces/ChangeRecoveryAccountOperation.md)
+- [ClaimAccountOperation](interfaces/ClaimAccountOperation.md)
+- [ClaimRewardBalanceOperation](interfaces/ClaimRewardBalanceOperation.md)
+- [ClientOptions](interfaces/ClientOptions.md)
+- [CollateralizedConvertOperation](interfaces/CollateralizedConvertOperation.md)
+- [Comment](interfaces/Comment.md)
+- [CommentOperation](interfaces/CommentOperation.md)
+- [CommentOptionsOperation](interfaces/CommentOptionsOperation.md)
+- [CommunityDetail](interfaces/CommunityDetail.md)
+- [ConvertOperation](interfaces/ConvertOperation.md)
+- [CreateClaimedAccountOperation](interfaces/CreateClaimedAccountOperation.md)
+- [CreateProposalOperation](interfaces/CreateProposalOperation.md)
+- [CustomBinaryOperation](interfaces/CustomBinaryOperation.md)
+- [CustomJsonOperation](interfaces/CustomJsonOperation.md)
+- [CustomOperation](interfaces/CustomOperation.md)
+- [DeclineVotingRightsOperation](interfaces/DeclineVotingRightsOperation.md)
+- [DelegateVestingSharesOperation](interfaces/DelegateVestingSharesOperation.md)
+- [DeleteCommentOperation](interfaces/DeleteCommentOperation.md)
+- [Discussion](interfaces/Discussion.md)
+- [DisqussionQuery](interfaces/DisqussionQuery.md)
+- [DynamicGlobalProperties](interfaces/DynamicGlobalProperties.md)
+- [EscrowApproveOperation](interfaces/EscrowApproveOperation.md)
+- [EscrowDisputeOperation](interfaces/EscrowDisputeOperation.md)
+- [EscrowReleaseOperation](interfaces/EscrowReleaseOperation.md)
+- [EscrowTransferOperation](interfaces/EscrowTransferOperation.md)
+- [ExtendedAccount](interfaces/ExtendedAccount.md)
+- [FeedPublishOperation](interfaces/FeedPublishOperation.md)
+- [HealthTrackerOptions](interfaces/HealthTrackerOptions.md)
+- [LimitOrderCancelOperation](interfaces/LimitOrderCancelOperation.md)
+- [LimitOrderCreate2Operation](interfaces/LimitOrderCreate2Operation.md)
+- [LimitOrderCreateOperation](interfaces/LimitOrderCreateOperation.md)
+- [Notifications](interfaces/Notifications.md)
+- [Operation](interfaces/Operation.md)
+- [RecoverAccountOperation](interfaces/RecoverAccountOperation.md)
+- [RecurrentTransferOperation](interfaces/RecurrentTransferOperation.md)
+- [RemoveProposalOperation](interfaces/RemoveProposalOperation.md)
+- [ReportOverProductionOperation](interfaces/ReportOverProductionOperation.md)
+- [RequestAccountRecoveryOperation](interfaces/RequestAccountRecoveryOperation.md)
+- [ResetAccountOperation](interfaces/ResetAccountOperation.md)
+- [SetResetAccountOperation](interfaces/SetResetAccountOperation.md)
+- [SetWithdrawVestingRouteOperation](interfaces/SetWithdrawVestingRouteOperation.md)
+- [SignedBlock](interfaces/SignedBlock.md)
+- [SignedBlockHeader](interfaces/SignedBlockHeader.md)
+- [SignedTransaction](interfaces/SignedTransaction.md)
+- [SMTAsset](interfaces/SMTAsset.md)
+- [Transaction](interfaces/Transaction.md)
+- [TransactionConfirmation](interfaces/TransactionConfirmation.md)
+- [TransferFromSavingsOperation](interfaces/TransferFromSavingsOperation.md)
+- [TransferOperation](interfaces/TransferOperation.md)
+- [TransferToSavingsOperation](interfaces/TransferToSavingsOperation.md)
+- [TransferToVestingOperation](interfaces/TransferToVestingOperation.md)
+- [UpdateProposalOperation](interfaces/UpdateProposalOperation.md)
+- [UpdateProposalVotesOperation](interfaces/UpdateProposalVotesOperation.md)
+- [VestingDelegation](interfaces/VestingDelegation.md)
+- [VoteOperation](interfaces/VoteOperation.md)
+- [WithdrawVestingOperation](interfaces/WithdrawVestingOperation.md)
+- [WitnessSetPropertiesOperation](interfaces/WitnessSetPropertiesOperation.md)
+- [WitnessUpdateOperation](interfaces/WitnessUpdateOperation.md)
 
-### 🔒 Audited Cryptography & Native Engine
+## Type Aliases
 
-Pollen strips out legacy, unmaintained libraries like `secp256k1` (v3), `elliptic`, `ecurve`, and `@ecency/bytebuffer`. In their place:
+- [AssetSymbol](type-aliases/AssetSymbol.md)
+- [Bignum](type-aliases/Bignum.md)
+- [DiscussionQueryCategory](type-aliases/DiscussionQueryCategory.md)
+- [KeyRole](type-aliases/KeyRole.md)
+- [OperationName](type-aliases/OperationName.md)
+- [PriceType](type-aliases/PriceType.md)
+- [Serializer](type-aliases/Serializer.md)
+- [VirtualOperationName](type-aliases/VirtualOperationName.md)
 
-- **[@noble/curves](https://github.com/paulmillr/noble-curves)**: Audited, zero-dependency implementation of `secp256k1`.
-- **[@noble/hashes](https://github.com/paulmillr/noble-hashes)**: Modern, audited implementations of SHA256, RIPEMD160, and SHA512.
-- **Native Byte Engine**: High-performance serialization using standard `Uint8Array` and `DataView`, eliminating the need for bulky legacy wrappers.
+## Variables
 
-### ⚡ Blazing Fast Builds & Tests
+- [cryptoUtils](variables/cryptoUtils.md)
+- [DEFAULT\_ADDRESS\_PREFIX](variables/DEFAULT_ADDRESS_PREFIX.md)
+- [DEFAULT\_CHAIN\_ID](variables/DEFAULT_CHAIN_ID.md)
+- [Memo](variables/Memo.md)
+- [NETWORK\_ID](variables/NETWORK_ID.md)
+- [Types](variables/Types.md)
+- [VERSION](variables/VERSION.md)
 
-We replaced the legacy Browserify/Babelify/Mocha pipeline with modern, Rust-backed and esbuild-powered tools:
+## Functions
 
-- **esbuild**: Generates secure browser bundles in ~200ms.
-- **Vitest**: Native TypeScript test runner with instant startup and interactive watch mode.
-- **oxlint**: Near-instant, Rust-based linting.
-
-### 🔌 Ecosystem Alignment
-
-Pollen is the JavaScript counterpart to **[Nectar](https://github.com/srbde/hive-nectar)** (Python). Together, they form a unified, secure foundation for building cross-platform Hive applications under the **SRBDE** umbrella.
-
----
-
-## 🚀 Quick Start
-
-Requires Node.js >= 18.
-
-```bash
-pnpm add @srbde/pollen
-```
-
-### Read account data (TypeScript)
-
-```typescript
-import { Client } from "@srbde/pollen";
-
-const client = new Client(["https://api.hive.blog", "https://api.openhive.network"]);
-
-async function main() {
-  const account = await client.database.getAccounts(["thecrazygm"]);
-  console.log(`HIVE Balance: ${account[0].balance}`);
-}
-
-main();
-```
-
-### Sign and broadcast (Node.js ESM)
-
-```javascript
-import { Client, PrivateKey } from "@srbde/pollen";
-
-const client = new Client(["https://api.hive.blog"]);
-const key = PrivateKey.from(process.env.ACTIVE_KEY);
-
-client.broadcast
-  .transfer(
-    {
-      from: "username",
-      to: "recipient",
-      amount: "0.001 HIVE",
-      memo: "Sent with Pollen 🌸",
-    },
-    key,
-  )
-  .then(console.log);
-```
-
----
-
-## 🏗️ Building from Source
-
-Pollen uses a modernized, pnpm-based toolchain.
-
-```bash
-# Install dependencies
-pnpm install
-
-# Build all targets (Node, Browser, Types)
-pnpm run build
-
-# Run the 100% Green test suite
-pnpm run test
-```
-
----
-
-## 📦 Bundling
-
-The easiest way to bundle Pollen (with Vite, Webpack, etc.) is to just `pnpm add @srbde/pollen` and `import { Client } from '@srbde/pollen'`.
-
-If you are bundling for the browser, Pollen now includes two pre-bundled versions:
-
-- `dist/pollen.js`: A minified IIFE bundle for legacy `<script>` tags.
-- `dist/pollen.mjs`: A modern ESM bundle for native browser imports.
-
----
-
-## 📜 Standing on Shoulders
-
-Pollen is a modernized fork of [dhive](https://github.com/openhive-network/dhive), originally built by Johan Nordberg. His years of work provided the architecture that Pollen has secured and carried into the modern era.
-
----
-
-## 🌐 Built by SRBDE
-
-Nectar is developed and maintained by the **Sustainable Resource and Business Development Enterprise (SRBDE)** — an open-source infrastructure organization building tools and platforms for communities that build things together.
-
-We apply the logic of agricultural sustainability to software: the goal is always to return more to the ecosystem than we extract.
-
-- **Open source is our value, not just our business model.**
-- **Our commercial products fund our open-source core. The open work is the mission.**
-
-### Explore the Ecosystem
-
-| Project                                             | Description                |
-| --------------------------------------------------- | -------------------------- |
-| [Hive-Nectar](https://github.com/srbde/hive-nectar) | The modern Hive Python SDK |
-| [ecoinstats.net](https://ecoinstats.net)            | SRBDE corporate hub        |
-| [thecrazygm.com](https://thecrazygm.com)            | Open gaming tools & TTRPGs |
-
----
-
-## 🤝 Contributing
-
-Audits, forks, and pull requests are welcome. Nectar is built to last for the decade, not the quarter. If you find a security issue, please open a private advisory rather than a public issue.
+- [getVestingSharePrice](functions/getVestingSharePrice.md)
+- [getVests](functions/getVests.md)

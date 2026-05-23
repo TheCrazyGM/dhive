@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / CommentOptionsOperation
+[@srbde/pollen](../index.md) / CommentOptionsOperation
 
 # Interface: CommentOptionsOperation
 
-Defined in: [src/chain/operation.ts:295](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L295)
+Defined in: [src/chain/operation.ts:295](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L295)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"comment_options"`
 
-Defined in: [src/chain/operation.ts:296](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L296)
+Defined in: [src/chain/operation.ts:296](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L296)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:296](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:297](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L297)
+Defined in: [src/chain/operation.ts:297](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L297)
 
 #### allow\_curation\_rewards
 

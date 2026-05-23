@@ -32,7 +32,7 @@
     "test:watch": "vitest",
     "lint": "oxlint src/**/*.ts",
     "format": "oxfmt src/**/*.ts",
-    "docs:api": "typedoc --plugin typedoc-plugin-markdown --out docs/api src --entryFileName index.md",
+    "docs:api": "typedoc --plugin typedoc-plugin-markdown --out docs/api src --entryFileName index.md --readme none",
     "docs:dev": "vitepress dev docs",
     "docs:build": "pnpm run docs:api && vitepress build docs",
     "docs:preview": "vitepress preview docs",

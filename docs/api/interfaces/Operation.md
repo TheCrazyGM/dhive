@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / Operation
+[@srbde/pollen](../index.md) / Operation
 
 # Interface: Operation
 
-Defined in: [src/chain/operation.ts:139](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L139)
+Defined in: [src/chain/operation.ts:139](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L139)
 
 Generic operation.
 
@@ -67,7 +67,7 @@ Generic operation.
 
 > **0**: [`OperationName`](../type-aliases/OperationName.md) \| [`VirtualOperationName`](../type-aliases/VirtualOperationName.md)
 
-Defined in: [src/chain/operation.ts:140](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L140)
+Defined in: [src/chain/operation.ts:140](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L140)
 
 ***
 
@@ -75,7 +75,7 @@ Defined in: [src/chain/operation.ts:140](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:141](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L141)
+Defined in: [src/chain/operation.ts:141](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L141)
 
 #### Index Signature
 

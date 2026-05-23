@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / WitnessUpdateOperation
+[@srbde/pollen](../index.md) / WitnessUpdateOperation
 
 # Interface: WitnessUpdateOperation
 
-Defined in: [src/chain/operation.ts:861](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L861)
+Defined in: [src/chain/operation.ts:861](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L861)
 
 Users who wish to become a witness must pay a fee acceptable to
 the current witnesses to apply for the position and allow voting
@@ -31,7 +31,7 @@ producing blocks.
 
 > **0**: `"witness_update"`
 
-Defined in: [src/chain/operation.ts:862](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L862)
+Defined in: [src/chain/operation.ts:862](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L862)
 
 #### Overrides
 
@@ -43,7 +43,7 @@ Defined in: [src/chain/operation.ts:862](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:863](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L863)
+Defined in: [src/chain/operation.ts:863](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L863)
 
 #### block\_signing\_key
 

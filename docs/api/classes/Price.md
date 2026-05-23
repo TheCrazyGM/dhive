@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / Price
+[@srbde/pollen](../index.md) / Price
 
 # Class: Price
 
-Defined in: [src/chain/asset.ts:236](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L236)
+Defined in: [src/chain/asset.ts:236](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L236)
 
 Represents quotation of the relative value of asset against another asset.
 Similar to 'currency pair' used to determine value of currencies.
@@ -24,7 +24,7 @@ Similar to 'currency pair' used to determine value of currencies.
 
 > **new Price**(`base`, `quote`): `Price`
 
-Defined in: [src/chain/asset.ts:245](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L245)
+Defined in: [src/chain/asset.ts:245](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L245)
 
 #### Parameters
 
@@ -54,7 +54,7 @@ Both base and quote shall have different symbol defined.
 
 > `readonly` **base**: [`Asset`](Asset.md)
 
-Defined in: [src/chain/asset.ts:245](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L245)
+Defined in: [src/chain/asset.ts:245](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L245)
 
 represents a value of the price object to be expressed relatively to quote
                asset. Cannot have amount == 0 if you want to build valid price.
@@ -65,7 +65,7 @@ represents a value of the price object to be expressed relatively to quote
 
 > `readonly` **quote**: [`Asset`](Asset.md)
 
-Defined in: [src/chain/asset.ts:245](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L245)
+Defined in: [src/chain/asset.ts:245](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L245)
 
 represents an relative asset. Cannot have amount == 0, otherwise
                asertion fail.
@@ -78,7 +78,7 @@ Both base and quote shall have different symbol defined.
 
 > **convert**(`asset`): [`Asset`](Asset.md)
 
-Defined in: [src/chain/asset.ts:278](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L278)
+Defined in: [src/chain/asset.ts:278](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L278)
 
 Return a new Asset with the price converted between the symbols in the pair.
 Throws if passed asset symbol is not base or quote.
@@ -99,7 +99,7 @@ Throws if passed asset symbol is not base or quote.
 
 > **toString**(): `string`
 
-Defined in: [src/chain/asset.ts:270](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L270)
+Defined in: [src/chain/asset.ts:270](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L270)
 
 Return a string representation of this price pair.
 
@@ -113,7 +113,7 @@ Return a string representation of this price pair.
 
 > `static` **from**(`value`): `Price`
 
-Defined in: [src/chain/asset.ts:259](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L259)
+Defined in: [src/chain/asset.ts:259](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L259)
 
 Convenience to create new Price.
 

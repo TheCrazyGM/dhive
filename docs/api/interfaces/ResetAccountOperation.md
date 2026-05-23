@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / ResetAccountOperation
+[@srbde/pollen](../index.md) / ResetAccountOperation
 
 # Interface: ResetAccountOperation
 
-Defined in: [src/chain/operation.ts:706](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L706)
+Defined in: [src/chain/operation.ts:706](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L706)
 
 This operation allows recovery_account to change account_to_reset's owner authority to
 new_owner_authority after 60 days of inactivity.
@@ -21,7 +21,7 @@ new_owner_authority after 60 days of inactivity.
 
 > **0**: `"reset_account"`
 
-Defined in: [src/chain/operation.ts:707](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L707)
+Defined in: [src/chain/operation.ts:707](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L707)
 
 #### Overrides
 
@@ -33,7 +33,7 @@ Defined in: [src/chain/operation.ts:707](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:708](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L708)
+Defined in: [src/chain/operation.ts:708](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L708)
 
 #### account\_to\_reset
 

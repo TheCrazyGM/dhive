@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / AccountUpdateOperation
+[@srbde/pollen](../index.md) / AccountUpdateOperation
 
 # Interface: AccountUpdateOperation
 
-Defined in: [src/chain/operation.ts:187](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L187)
+Defined in: [src/chain/operation.ts:187](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L187)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"account_update"`
 
-Defined in: [src/chain/operation.ts:188](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L188)
+Defined in: [src/chain/operation.ts:188](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L188)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:188](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:189](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L189)
+Defined in: [src/chain/operation.ts:189](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L189)
 
 #### account
 

@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / SMTAsset
+[@srbde/pollen](../index.md) / SMTAsset
 
 # Interface: SMTAsset
 
-Defined in: [src/chain/asset.ts:38](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L38)
+Defined in: [src/chain/asset.ts:38](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L38)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/chain/asset.ts:38](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **amount**: `string` \| `number`
 
-Defined in: [src/chain/asset.ts:39](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L39)
+Defined in: [src/chain/asset.ts:39](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L39)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/chain/asset.ts:39](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **nai**: `string`
 
-Defined in: [src/chain/asset.ts:41](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L41)
+Defined in: [src/chain/asset.ts:41](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L41)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [src/chain/asset.ts:41](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **precision**: `number`
 
-Defined in: [src/chain/asset.ts:40](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L40)
+Defined in: [src/chain/asset.ts:40](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L40)

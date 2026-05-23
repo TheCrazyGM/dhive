@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / PollenError
+[@srbde/pollen](../index.md) / PollenError
 
 # Class: PollenError
 
-Defined in: [src/errors.ts:9](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L9)
+Defined in: [src/errors.ts:9](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/errors.ts#L9)
 
 Base error class for all Pollen-related errors.
 
@@ -25,7 +25,7 @@ Base error class for all Pollen-related errors.
 
 > **new PollenError**(`message`, `info?`): `PollenError`
 
-Defined in: [src/errors.ts:12](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L12)
+Defined in: [src/errors.ts:12](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/errors.ts#L12)
 
 #### Parameters
 
@@ -63,7 +63,7 @@ Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/li
 
 > `readonly` `optional` **info?**: `any`
 
-Defined in: [src/errors.ts:10](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L10)
+Defined in: [src/errors.ts:10](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/errors.ts#L10)
 
 ***
 

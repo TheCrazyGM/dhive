@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / HexBuffer
+[@srbde/pollen](../index.md) / HexBuffer
 
 # Class: HexBuffer
 
-Defined in: [src/chain/misc.ts:46](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L46)
+Defined in: [src/chain/misc.ts:46](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L46)
 
 Buffer wrapper that serializes to a hex-encoded string.
 
@@ -16,7 +16,7 @@ Buffer wrapper that serializes to a hex-encoded string.
 
 > **new HexBuffer**(`buffer`): `HexBuffer`
 
-Defined in: [src/chain/misc.ts:47](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L47)
+Defined in: [src/chain/misc.ts:47](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L47)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/chain/misc.ts:47](https://github.com/TheCrazyGM/dhive/blob/6054
 
 > **buffer**: `Buffer`
 
-Defined in: [src/chain/misc.ts:47](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L47)
+Defined in: [src/chain/misc.ts:47](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L47)
 
 ## Methods
 
@@ -42,7 +42,7 @@ Defined in: [src/chain/misc.ts:47](https://github.com/TheCrazyGM/dhive/blob/6054
 
 > **toJSON**(): `string`
 
-Defined in: [src/chain/misc.ts:68](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L68)
+Defined in: [src/chain/misc.ts:68](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L68)
 
 #### Returns
 
@@ -54,7 +54,7 @@ Defined in: [src/chain/misc.ts:68](https://github.com/TheCrazyGM/dhive/blob/6054
 
 > **toString**(`encoding?`): `string`
 
-Defined in: [src/chain/misc.ts:64](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L64)
+Defined in: [src/chain/misc.ts:64](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L64)
 
 #### Parameters
 
@@ -72,7 +72,7 @@ Defined in: [src/chain/misc.ts:64](https://github.com/TheCrazyGM/dhive/blob/6054
 
 > `static` **from**(`value`): `HexBuffer`
 
-Defined in: [src/chain/misc.ts:52](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L52)
+Defined in: [src/chain/misc.ts:52](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L52)
 
 Convenience to create a new HexBuffer, does not copy data if value passed is already a buffer.
 

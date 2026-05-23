@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / RemoveProposalOperation
+[@srbde/pollen](../index.md) / RemoveProposalOperation
 
 # Interface: RemoveProposalOperation
 
-Defined in: [src/chain/operation.ts:925](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L925)
+Defined in: [src/chain/operation.ts:925](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L925)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"remove_proposal"`
 
-Defined in: [src/chain/operation.ts:926](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L926)
+Defined in: [src/chain/operation.ts:926](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L926)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:926](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:927](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L927)
+Defined in: [src/chain/operation.ts:927](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L927)
 
 #### extensions
 

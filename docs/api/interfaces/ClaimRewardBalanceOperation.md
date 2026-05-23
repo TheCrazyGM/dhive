@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / ClaimRewardBalanceOperation
+[@srbde/pollen](../index.md) / ClaimRewardBalanceOperation
 
 # Interface: ClaimRewardBalanceOperation
 
-Defined in: [src/chain/operation.ts:260](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L260)
+Defined in: [src/chain/operation.ts:260](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L260)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"claim_reward_balance"`
 
-Defined in: [src/chain/operation.ts:261](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L261)
+Defined in: [src/chain/operation.ts:261](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L261)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:261](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:262](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L262)
+Defined in: [src/chain/operation.ts:262](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L262)
 
 #### account
 

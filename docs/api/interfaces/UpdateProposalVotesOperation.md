@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / UpdateProposalVotesOperation
+[@srbde/pollen](../index.md) / UpdateProposalVotesOperation
 
 # Interface: UpdateProposalVotesOperation
 
-Defined in: [src/chain/operation.ts:915](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L915)
+Defined in: [src/chain/operation.ts:915](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L915)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"update_proposal_votes"`
 
-Defined in: [src/chain/operation.ts:916](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L916)
+Defined in: [src/chain/operation.ts:916](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L916)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:916](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:917](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L917)
+Defined in: [src/chain/operation.ts:917](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L917)
 
 #### approve
 

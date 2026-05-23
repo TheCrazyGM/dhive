@@ -2,12 +2,12 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / DEFAULT\_CHAIN\_ID
+[@srbde/pollen](../index.md) / DEFAULT\_CHAIN\_ID
 
 # Variable: DEFAULT\_CHAIN\_ID
 
 > `const` **DEFAULT\_CHAIN\_ID**: `Buffer`\<`ArrayBuffer`\>
 
-Defined in: [src/client.ts:63](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/client.ts#L63)
+Defined in: [src/client.ts:63](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/client.ts#L63)
 
 Main Hive network chain id.

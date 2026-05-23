@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / EscrowApproveOperation
+[@srbde/pollen](../index.md) / EscrowApproveOperation
 
 # Interface: EscrowApproveOperation
 
-Defined in: [src/chain/operation.ts:417](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L417)
+Defined in: [src/chain/operation.ts:417](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L417)
 
 The agent and to accounts must approve an escrow transaction for it to be valid on
 the blockchain. Once a part approves the escrow, the cannot revoke their approval.
@@ -22,7 +22,7 @@ Subsequent escrow approve operations, regardless of the approval, will be reject
 
 > **0**: `"escrow_approve"`
 
-Defined in: [src/chain/operation.ts:418](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L418)
+Defined in: [src/chain/operation.ts:418](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L418)
 
 #### Overrides
 
@@ -34,7 +34,7 @@ Defined in: [src/chain/operation.ts:418](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:419](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L419)
+Defined in: [src/chain/operation.ts:419](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L419)
 
 #### agent
 

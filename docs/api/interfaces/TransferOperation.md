@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / TransferOperation
+[@srbde/pollen](../index.md) / TransferOperation
 
 # Interface: TransferOperation
 
-Defined in: [src/chain/operation.ts:748](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L748)
+Defined in: [src/chain/operation.ts:748](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L748)
 
 Transfers asset from one account to another.
 
@@ -20,7 +20,7 @@ Transfers asset from one account to another.
 
 > **0**: `"transfer"`
 
-Defined in: [src/chain/operation.ts:749](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L749)
+Defined in: [src/chain/operation.ts:749](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L749)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:749](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:750](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L750)
+Defined in: [src/chain/operation.ts:750](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L750)
 
 #### amount
 

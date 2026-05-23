@@ -2,13 +2,13 @@
 
 ***
 
-[@srbde/pollen](../../../../globals.md) / [utils](../index.md) / retryingFetch
+[@srbde/pollen](../../../../index.md) / [utils](../index.md) / retryingFetch
 
 # Function: retryingFetch()
 
 > **retryingFetch**(`currentAddress`, `allAddresses`, `opts`, `timeout`, `failoverThreshold`, `consoleOnFailover`, `backoff`, `fetchTimeout?`, `retryContext?`): `Promise`\<\{ `currentAddress`: `string`; `response`: `any`; \}\>
 
-Defined in: [src/utils.ts:351](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/utils.ts#L351)
+Defined in: [src/utils.ts:351](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/utils.ts#L351)
 
 Smart fetch with immediate failover and per-node health tracking.
 

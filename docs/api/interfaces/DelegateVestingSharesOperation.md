@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / DelegateVestingSharesOperation
+[@srbde/pollen](../index.md) / DelegateVestingSharesOperation
 
 # Interface: DelegateVestingSharesOperation
 
-Defined in: [src/chain/operation.ts:386](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L386)
+Defined in: [src/chain/operation.ts:386](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L386)
 
 Generic operation.
 
@@ -20,7 +20,7 @@ Generic operation.
 
 > **0**: `"delegate_vesting_shares"`
 
-Defined in: [src/chain/operation.ts:387](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L387)
+Defined in: [src/chain/operation.ts:387](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L387)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:387](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:388](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L388)
+Defined in: [src/chain/operation.ts:388](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L388)
 
 #### delegatee
 

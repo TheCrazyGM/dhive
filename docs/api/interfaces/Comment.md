@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / Comment
+[@srbde/pollen](../index.md) / Comment
 
 # Interface: Comment
 
-Defined in: [src/chain/comment.ts:38](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L38)
+Defined in: [src/chain/comment.ts:38](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L38)
 
 ## Extended by
 
@@ -18,7 +18,7 @@ Defined in: [src/chain/comment.ts:38](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **abs\_rshares**: `string`
 
-Defined in: [src/chain/comment.ts:55](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L55)
+Defined in: [src/chain/comment.ts:55](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L55)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [src/chain/comment.ts:55](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **active**: `string`
 
-Defined in: [src/chain/comment.ts:50](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L50)
+Defined in: [src/chain/comment.ts:50](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L50)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [src/chain/comment.ts:50](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **allow\_curation\_rewards**: `boolean`
 
-Defined in: [src/chain/comment.ts:71](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L71)
+Defined in: [src/chain/comment.ts:71](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L71)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [src/chain/comment.ts:71](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **allow\_replies**: `boolean`
 
-Defined in: [src/chain/comment.ts:69](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L69)
+Defined in: [src/chain/comment.ts:69](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L69)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [src/chain/comment.ts:69](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **allow\_votes**: `boolean`
 
-Defined in: [src/chain/comment.ts:70](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L70)
+Defined in: [src/chain/comment.ts:70](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L70)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [src/chain/comment.ts:70](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **author**: `string`
 
-Defined in: [src/chain/comment.ts:43](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L43)
+Defined in: [src/chain/comment.ts:43](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L43)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [src/chain/comment.ts:43](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **author\_rewards**: `string`
 
-Defined in: [src/chain/comment.ts:64](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L64)
+Defined in: [src/chain/comment.ts:64](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L64)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [src/chain/comment.ts:64](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **beneficiaries**: [`BeneficiaryRoute`](BeneficiaryRoute.md)[]
 
-Defined in: [src/chain/comment.ts:72](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L72)
+Defined in: [src/chain/comment.ts:72](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L72)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [src/chain/comment.ts:72](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **body**: `string`
 
-Defined in: [src/chain/comment.ts:46](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L46)
+Defined in: [src/chain/comment.ts:46](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L46)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [src/chain/comment.ts:46](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **cashout\_time**: `string`
 
-Defined in: [src/chain/comment.ts:58](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L58)
+Defined in: [src/chain/comment.ts:58](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L58)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in: [src/chain/comment.ts:58](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **category**: `string`
 
-Defined in: [src/chain/comment.ts:40](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L40)
+Defined in: [src/chain/comment.ts:40](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L40)
 
 ***
 
@@ -106,7 +106,7 @@ Defined in: [src/chain/comment.ts:40](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **children**: `number`
 
-Defined in: [src/chain/comment.ts:53](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L53)
+Defined in: [src/chain/comment.ts:53](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L53)
 
 ***
 
@@ -114,7 +114,7 @@ Defined in: [src/chain/comment.ts:53](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **children\_abs\_rshares**: `string`
 
-Defined in: [src/chain/comment.ts:57](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L57)
+Defined in: [src/chain/comment.ts:57](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L57)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [src/chain/comment.ts:57](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **created**: `string`
 
-Defined in: [src/chain/comment.ts:49](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L49)
+Defined in: [src/chain/comment.ts:49](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L49)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [src/chain/comment.ts:49](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **curator\_payout\_value**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/comment.ts:63](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L63)
+Defined in: [src/chain/comment.ts:63](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L63)
 
 ***
 
@@ -138,7 +138,7 @@ Defined in: [src/chain/comment.ts:63](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **depth**: `number`
 
-Defined in: [src/chain/comment.ts:52](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L52)
+Defined in: [src/chain/comment.ts:52](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L52)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [src/chain/comment.ts:52](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **id**: `number`
 
-Defined in: [src/chain/comment.ts:39](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L39)
+Defined in: [src/chain/comment.ts:39](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L39)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [src/chain/comment.ts:39](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **json\_metadata**: `string`
 
-Defined in: [src/chain/comment.ts:47](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L47)
+Defined in: [src/chain/comment.ts:47](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L47)
 
 ***
 
@@ -162,7 +162,7 @@ Defined in: [src/chain/comment.ts:47](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **last\_payout**: `string`
 
-Defined in: [src/chain/comment.ts:51](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L51)
+Defined in: [src/chain/comment.ts:51](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L51)
 
 ***
 
@@ -170,7 +170,7 @@ Defined in: [src/chain/comment.ts:51](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **last\_update**: `string`
 
-Defined in: [src/chain/comment.ts:48](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L48)
+Defined in: [src/chain/comment.ts:48](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L48)
 
 ***
 
@@ -178,7 +178,7 @@ Defined in: [src/chain/comment.ts:48](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **max\_accepted\_payout**: `string`
 
-Defined in: [src/chain/comment.ts:67](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L67)
+Defined in: [src/chain/comment.ts:67](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L67)
 
 ***
 
@@ -186,7 +186,7 @@ Defined in: [src/chain/comment.ts:67](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **max\_cashout\_time**: `string`
 
-Defined in: [src/chain/comment.ts:59](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L59)
+Defined in: [src/chain/comment.ts:59](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L59)
 
 ***
 
@@ -194,7 +194,7 @@ Defined in: [src/chain/comment.ts:59](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **net\_rshares**: `string`
 
-Defined in: [src/chain/comment.ts:54](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L54)
+Defined in: [src/chain/comment.ts:54](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L54)
 
 ***
 
@@ -202,7 +202,7 @@ Defined in: [src/chain/comment.ts:54](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **net\_votes**: `number`
 
-Defined in: [src/chain/comment.ts:65](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L65)
+Defined in: [src/chain/comment.ts:65](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L65)
 
 ***
 
@@ -210,7 +210,7 @@ Defined in: [src/chain/comment.ts:65](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **parent\_author**: `string`
 
-Defined in: [src/chain/comment.ts:41](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L41)
+Defined in: [src/chain/comment.ts:41](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L41)
 
 ***
 
@@ -218,7 +218,7 @@ Defined in: [src/chain/comment.ts:41](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **parent\_permlink**: `string`
 
-Defined in: [src/chain/comment.ts:42](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L42)
+Defined in: [src/chain/comment.ts:42](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L42)
 
 ***
 
@@ -226,7 +226,7 @@ Defined in: [src/chain/comment.ts:42](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **percent\_hbd**: `number`
 
-Defined in: [src/chain/comment.ts:68](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L68)
+Defined in: [src/chain/comment.ts:68](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L68)
 
 ***
 
@@ -234,7 +234,7 @@ Defined in: [src/chain/comment.ts:68](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **permlink**: `string`
 
-Defined in: [src/chain/comment.ts:44](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L44)
+Defined in: [src/chain/comment.ts:44](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L44)
 
 ***
 
@@ -242,7 +242,7 @@ Defined in: [src/chain/comment.ts:44](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **reward\_weight**: `number`
 
-Defined in: [src/chain/comment.ts:61](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L61)
+Defined in: [src/chain/comment.ts:61](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L61)
 
 ***
 
@@ -250,7 +250,7 @@ Defined in: [src/chain/comment.ts:61](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **root\_comment**: `number`
 
-Defined in: [src/chain/comment.ts:66](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L66)
+Defined in: [src/chain/comment.ts:66](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L66)
 
 ***
 
@@ -258,7 +258,7 @@ Defined in: [src/chain/comment.ts:66](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **title**: `string`
 
-Defined in: [src/chain/comment.ts:45](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L45)
+Defined in: [src/chain/comment.ts:45](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L45)
 
 ***
 
@@ -266,7 +266,7 @@ Defined in: [src/chain/comment.ts:45](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **total\_payout\_value**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/comment.ts:62](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L62)
+Defined in: [src/chain/comment.ts:62](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L62)
 
 ***
 
@@ -274,7 +274,7 @@ Defined in: [src/chain/comment.ts:62](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **total\_vote\_weight**: `number`
 
-Defined in: [src/chain/comment.ts:60](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L60)
+Defined in: [src/chain/comment.ts:60](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L60)
 
 ***
 
@@ -282,4 +282,4 @@ Defined in: [src/chain/comment.ts:60](https://github.com/TheCrazyGM/dhive/blob/6
 
 > **vote\_rshares**: `string`
 
-Defined in: [src/chain/comment.ts:56](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/comment.ts#L56)
+Defined in: [src/chain/comment.ts:56](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/comment.ts#L56)

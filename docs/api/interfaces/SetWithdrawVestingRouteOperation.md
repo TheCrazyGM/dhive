@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / SetWithdrawVestingRouteOperation
+[@srbde/pollen](../index.md) / SetWithdrawVestingRouteOperation
 
 # Interface: SetWithdrawVestingRouteOperation
 
-Defined in: [src/chain/operation.ts:735](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L735)
+Defined in: [src/chain/operation.ts:735](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L735)
 
 Allows an account to setup a vesting withdraw but with the additional
 request for the funds to be transferred directly to another account's
@@ -24,7 +24,7 @@ vests to hive and back, guaranteeing they maintain their value.
 
 > **0**: `"set_withdraw_vesting_route"`
 
-Defined in: [src/chain/operation.ts:736](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L736)
+Defined in: [src/chain/operation.ts:736](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L736)
 
 #### Overrides
 
@@ -36,7 +36,7 @@ Defined in: [src/chain/operation.ts:736](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:737](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L737)
+Defined in: [src/chain/operation.ts:737](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L737)
 
 #### auto\_vest
 

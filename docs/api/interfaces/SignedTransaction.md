@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / SignedTransaction
+[@srbde/pollen](../index.md) / SignedTransaction
 
 # Interface: SignedTransaction
 
-Defined in: [src/chain/transaction.ts:46](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L46)
+Defined in: [src/chain/transaction.ts:46](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/transaction.ts#L46)
 
 ## Extends
 
@@ -18,7 +18,7 @@ Defined in: [src/chain/transaction.ts:46](https://github.com/TheCrazyGM/dhive/bl
 
 > **expiration**: `string`
 
-Defined in: [src/chain/transaction.ts:41](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L41)
+Defined in: [src/chain/transaction.ts:41](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/transaction.ts#L41)
 
 #### Inherited from
 
@@ -30,7 +30,7 @@ Defined in: [src/chain/transaction.ts:41](https://github.com/TheCrazyGM/dhive/bl
 
 > **extensions**: `any`[]
 
-Defined in: [src/chain/transaction.ts:43](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L43)
+Defined in: [src/chain/transaction.ts:43](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/transaction.ts#L43)
 
 #### Inherited from
 
@@ -42,7 +42,7 @@ Defined in: [src/chain/transaction.ts:43](https://github.com/TheCrazyGM/dhive/bl
 
 > **operations**: [`Operation`](Operation.md)[]
 
-Defined in: [src/chain/transaction.ts:42](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L42)
+Defined in: [src/chain/transaction.ts:42](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/transaction.ts#L42)
 
 #### Inherited from
 
@@ -54,7 +54,7 @@ Defined in: [src/chain/transaction.ts:42](https://github.com/TheCrazyGM/dhive/bl
 
 > **ref\_block\_num**: `number`
 
-Defined in: [src/chain/transaction.ts:39](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L39)
+Defined in: [src/chain/transaction.ts:39](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/transaction.ts#L39)
 
 #### Inherited from
 
@@ -66,7 +66,7 @@ Defined in: [src/chain/transaction.ts:39](https://github.com/TheCrazyGM/dhive/bl
 
 > **ref\_block\_prefix**: `number`
 
-Defined in: [src/chain/transaction.ts:40](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L40)
+Defined in: [src/chain/transaction.ts:40](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/transaction.ts#L40)
 
 #### Inherited from
 
@@ -78,4 +78,4 @@ Defined in: [src/chain/transaction.ts:40](https://github.com/TheCrazyGM/dhive/bl
 
 > **signatures**: `string`[]
 
-Defined in: [src/chain/transaction.ts:47](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/transaction.ts#L47)
+Defined in: [src/chain/transaction.ts:47](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/transaction.ts#L47)

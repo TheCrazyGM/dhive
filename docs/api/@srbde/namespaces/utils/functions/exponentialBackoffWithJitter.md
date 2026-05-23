@@ -2,13 +2,13 @@
 
 ***
 
-[@srbde/pollen](../../../../globals.md) / [utils](../index.md) / exponentialBackoffWithJitter
+[@srbde/pollen](../../../../index.md) / [utils](../index.md) / exponentialBackoffWithJitter
 
 # Function: exponentialBackoffWithJitter()
 
 > **exponentialBackoffWithJitter**(`tries`, `baseDelay?`, `maxDelay?`, `jitter?`): `number`
 
-Defined in: [src/utils.ts:328](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/utils.ts#L328)
+Defined in: [src/utils.ts:328](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/utils.ts#L328)
 
 Standard exponential backoff with jitter.
 Formula: min(maxDelay, (base * 2^tries)) + random(0, jitter)

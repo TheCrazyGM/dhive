@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / LimitOrderCreate2Operation
+[@srbde/pollen](../index.md) / LimitOrderCreate2Operation
 
 # Interface: LimitOrderCreate2Operation
 
-Defined in: [src/chain/operation.ts:559](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L559)
+Defined in: [src/chain/operation.ts:559](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L559)
 
 This operation is identical to limit_order_create except it serializes the price rather
 than calculating it from other fields.
@@ -21,7 +21,7 @@ than calculating it from other fields.
 
 > **0**: `"limit_order_create2"`
 
-Defined in: [src/chain/operation.ts:560](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L560)
+Defined in: [src/chain/operation.ts:560](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L560)
 
 #### Overrides
 
@@ -33,7 +33,7 @@ Defined in: [src/chain/operation.ts:560](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:561](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/operation.ts#L561)
+Defined in: [src/chain/operation.ts:561](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/operation.ts#L561)
 
 #### amount\_to\_sell
 

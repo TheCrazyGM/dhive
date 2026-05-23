@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / DynamicGlobalProperties
+[@srbde/pollen](../index.md) / DynamicGlobalProperties
 
 # Interface: DynamicGlobalProperties
 
-Defined in: [src/chain/misc.ts:125](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L125)
+Defined in: [src/chain/misc.ts:125](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L125)
 
 Node state.
 
@@ -16,7 +16,7 @@ Node state.
 
 > **average\_block\_size**: `number`
 
-Defined in: [src/chain/misc.ts:183](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L183)
+Defined in: [src/chain/misc.ts:183](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L183)
 
 Average block size is updated every block to be:
 
@@ -31,7 +31,7 @@ Average block size is updated every block to be:
 
 > **confidential\_hbd\_supply**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:160](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L160)
+Defined in: [src/chain/misc.ts:160](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L160)
 
 Total asset held in confidential balances.
 
@@ -41,7 +41,7 @@ Total asset held in confidential balances.
 
 > **confidential\_supply**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:155](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L155)
+Defined in: [src/chain/misc.ts:155](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L155)
 
 Total asset held in confidential balances.
 
@@ -51,7 +51,7 @@ Total asset held in confidential balances.
 
 > **current\_aslot**: `number`
 
-Defined in: [src/chain/misc.ts:198](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L198)
+Defined in: [src/chain/misc.ts:198](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L198)
 
 The current absolute slot number. Equal to the total
 number of slots since genesis. Also equal to the total
@@ -63,7 +63,7 @@ number of missed slots plus head_block_number.
 
 > **current\_hbd\_supply**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:156](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L156)
+Defined in: [src/chain/misc.ts:156](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L156)
 
 ***
 
@@ -71,7 +71,7 @@ Defined in: [src/chain/misc.ts:156](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **current\_reserve\_ratio**: `number`
 
-Defined in: [src/chain/misc.ts:221](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L221)
+Defined in: [src/chain/misc.ts:221](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L221)
 
 Any time average_block_size <= 50% maximum_block_size this value grows by 1 until it
 reaches MAX_RESERVE_RATIO.  Any time average_block_size is greater than
@@ -84,7 +84,7 @@ happen every block.
 
 > **current\_supply**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:151](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L151)
+Defined in: [src/chain/misc.ts:151](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L151)
 
 ***
 
@@ -92,7 +92,7 @@ Defined in: [src/chain/misc.ts:151](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **current\_witness**: `string`
 
-Defined in: [src/chain/misc.ts:139](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L139)
+Defined in: [src/chain/misc.ts:139](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L139)
 
 Currently elected witness.
 
@@ -102,7 +102,7 @@ Currently elected witness.
 
 > **hbd\_interest\_rate**: `number`
 
-Defined in: [src/chain/misc.ts:173](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L173)
+Defined in: [src/chain/misc.ts:173](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L173)
 
 This property defines the interest rate that HBD deposits receive.
 
@@ -112,7 +112,7 @@ This property defines the interest rate that HBD deposits receive.
 
 > **hbd\_print\_rate**: `number`
 
-Defined in: [src/chain/misc.ts:174](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L174)
+Defined in: [src/chain/misc.ts:174](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L174)
 
 ***
 
@@ -120,7 +120,7 @@ Defined in: [src/chain/misc.ts:174](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **head\_block\_id**: `string`
 
-Defined in: [src/chain/misc.ts:131](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L131)
+Defined in: [src/chain/misc.ts:131](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L131)
 
 ***
 
@@ -128,7 +128,7 @@ Defined in: [src/chain/misc.ts:131](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **head\_block\_number**: `number`
 
-Defined in: [src/chain/misc.ts:130](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L130)
+Defined in: [src/chain/misc.ts:130](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L130)
 
 Current block height.
 
@@ -138,7 +138,7 @@ Current block height.
 
 > **id**: `number`
 
-Defined in: [src/chain/misc.ts:126](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L126)
+Defined in: [src/chain/misc.ts:126](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L126)
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [src/chain/misc.ts:126](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **last\_irreversible\_block\_num**: `number`
 
-Defined in: [src/chain/misc.ts:204](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L204)
+Defined in: [src/chain/misc.ts:204](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L204)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [src/chain/misc.ts:204](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **max\_virtual\_bandwidth**: `string`
 
-Defined in: [src/chain/misc.ts:214](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L214)
+Defined in: [src/chain/misc.ts:214](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L214)
 
 The maximum bandwidth the blockchain can support is:
 
@@ -170,7 +170,7 @@ The maximum virtual bandwidth is:
 
 > **maximum\_block\_size**: `number`
 
-Defined in: [src/chain/misc.ts:192](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L192)
+Defined in: [src/chain/misc.ts:192](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L192)
 
 Maximum block size is decided by the set of active witnesses which change every round.
 Each witness posts what they think the maximum size should be as part of their witness
@@ -187,7 +187,7 @@ network from getting stuck by witnesses attempting to set this too low.
 
 > **num\_pow\_witnesses**: `number`
 
-Defined in: [src/chain/misc.ts:149](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L149)
+Defined in: [src/chain/misc.ts:149](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L149)
 
 The current count of how many pending POW witnesses there are, determines
 the difficulty of doing pow.
@@ -198,7 +198,7 @@ the difficulty of doing pow.
 
 > **participation\_count**: `number`
 
-Defined in: [src/chain/misc.ts:203](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L203)
+Defined in: [src/chain/misc.ts:203](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L203)
 
 ***
 
@@ -206,7 +206,7 @@ Defined in: [src/chain/misc.ts:203](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **pending\_rewarded\_vesting\_hive**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:169](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L169)
+Defined in: [src/chain/misc.ts:169](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L169)
 
 ***
 
@@ -214,7 +214,7 @@ Defined in: [src/chain/misc.ts:169](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **pending\_rewarded\_vesting\_shares**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:168](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L168)
+Defined in: [src/chain/misc.ts:168](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L168)
 
 ***
 
@@ -222,7 +222,7 @@ Defined in: [src/chain/misc.ts:168](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **recent\_slots\_filled**: `string`
 
-Defined in: [src/chain/misc.ts:202](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L202)
+Defined in: [src/chain/misc.ts:202](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L202)
 
 Used to compute witness participation.
 
@@ -232,7 +232,7 @@ Used to compute witness participation.
 
 > **time**: `string`
 
-Defined in: [src/chain/misc.ts:135](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L135)
+Defined in: [src/chain/misc.ts:135](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L135)
 
 UTC Server time, e.g. 2020-01-15T00:42:00
 
@@ -242,7 +242,7 @@ UTC Server time, e.g. 2020-01-15T00:42:00
 
 > **total\_pow**: `number`
 
-Defined in: [src/chain/misc.ts:144](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L144)
+Defined in: [src/chain/misc.ts:144](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L144)
 
 The total POW accumulated, aka the sum of num_pow_witness at the time
 new POW is added.
@@ -253,7 +253,7 @@ new POW is added.
 
 > **total\_reward\_fund\_hive**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:163](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L163)
+Defined in: [src/chain/misc.ts:163](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L163)
 
 ***
 
@@ -261,7 +261,7 @@ Defined in: [src/chain/misc.ts:163](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **total\_reward\_shares2**: `string`
 
-Defined in: [src/chain/misc.ts:167](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L167)
+Defined in: [src/chain/misc.ts:167](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L167)
 
 The running total of REWARD^2.
 
@@ -271,7 +271,7 @@ The running total of REWARD^2.
 
 > **total\_vesting\_fund\_hive**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:161](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L161)
+Defined in: [src/chain/misc.ts:161](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L161)
 
 ***
 
@@ -279,7 +279,7 @@ Defined in: [src/chain/misc.ts:161](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **total\_vesting\_shares**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:162](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L162)
+Defined in: [src/chain/misc.ts:162](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L162)
 
 ***
 
@@ -287,7 +287,7 @@ Defined in: [src/chain/misc.ts:162](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **virtual\_supply**: `string` \| [`Asset`](../classes/Asset.md)
 
-Defined in: [src/chain/misc.ts:150](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L150)
+Defined in: [src/chain/misc.ts:150](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L150)
 
 ***
 
@@ -295,7 +295,7 @@ Defined in: [src/chain/misc.ts:150](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **vote\_power\_reserve\_rate**: `number`
 
-Defined in: [src/chain/misc.ts:227](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/misc.ts#L227)
+Defined in: [src/chain/misc.ts:227](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/misc.ts#L227)
 
 The number of votes regenerated per day.  Any user voting slower than this rate will be
 "wasting" voting power through spillover; any user voting faster than this rate will have

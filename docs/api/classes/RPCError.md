@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / RPCError
+[@srbde/pollen](../index.md) / RPCError
 
 # Class: RPCError
 
-Defined in: [src/errors.ts:23](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L23)
+Defined in: [src/errors.ts:23](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/errors.ts#L23)
 
 Error thrown when an RPC call fails.
 
@@ -20,7 +20,7 @@ Error thrown when an RPC call fails.
 
 > **new RPCError**(`message`, `info?`): `RPCError`
 
-Defined in: [src/errors.ts:24](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L24)
+Defined in: [src/errors.ts:24](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/errors.ts#L24)
 
 #### Parameters
 
@@ -58,7 +58,7 @@ Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/li
 
 > `readonly` `optional` **info?**: `any`
 
-Defined in: [src/errors.ts:10](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/errors.ts#L10)
+Defined in: [src/errors.ts:10](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/errors.ts#L10)
 
 #### Inherited from
 

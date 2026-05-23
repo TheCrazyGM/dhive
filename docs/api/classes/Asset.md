@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../globals.md) / Asset
+[@srbde/pollen](../index.md) / Asset
 
 # Class: Asset
 
-Defined in: [src/chain/asset.ts:59](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L59)
+Defined in: [src/chain/asset.ts:59](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L59)
 
 Class representing a hive asset, e.g. `1.000 HIVE` or `12.112233 VESTS`.
 
@@ -16,7 +16,7 @@ Class representing a hive asset, e.g. `1.000 HIVE` or `12.112233 VESTS`.
 
 > **new Asset**(`amount`, `symbol`): `Asset`
 
-Defined in: [src/chain/asset.ts:60](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L60)
+Defined in: [src/chain/asset.ts:60](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L60)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/chain/asset.ts:60](https://github.com/TheCrazyGM/dhive/blob/605
 
 > `readonly` **amount**: `number`
 
-Defined in: [src/chain/asset.ts:61](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L61)
+Defined in: [src/chain/asset.ts:61](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L61)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/chain/asset.ts:61](https://github.com/TheCrazyGM/dhive/blob/605
 
 > `readonly` **symbol**: [`AssetSymbol`](../type-aliases/AssetSymbol.md)
 
-Defined in: [src/chain/asset.ts:62](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L62)
+Defined in: [src/chain/asset.ts:62](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L62)
 
 ## Methods
 
@@ -54,7 +54,7 @@ Defined in: [src/chain/asset.ts:62](https://github.com/TheCrazyGM/dhive/blob/605
 
 > **add**(`amount`): `Asset`
 
-Defined in: [src/chain/asset.ts:173](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L173)
+Defined in: [src/chain/asset.ts:173](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L173)
 
 Return a new Asset instance with amount added.
 
@@ -74,7 +74,7 @@ Return a new Asset instance with amount added.
 
 > **divide**(`divisor`): `Asset`
 
-Defined in: [src/chain/asset.ts:206](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L206)
+Defined in: [src/chain/asset.ts:206](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L206)
 
 Return a new Asset with the amount divided.
 
@@ -94,7 +94,7 @@ Return a new Asset with the amount divided.
 
 > **getPrecision**(): `number`
 
-Defined in: [src/chain/asset.ts:134](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L134)
+Defined in: [src/chain/asset.ts:134](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L134)
 
 Return asset precision.
 
@@ -108,7 +108,7 @@ Return asset precision.
 
 > **multiply**(`factor`): `Asset`
 
-Defined in: [src/chain/asset.ts:194](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L194)
+Defined in: [src/chain/asset.ts:194](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L194)
 
 Return a new Asset with the amount multiplied by factor.
 
@@ -128,7 +128,7 @@ Return a new Asset with the amount multiplied by factor.
 
 > **steem\_symbols**(): `Asset`
 
-Defined in: [src/chain/asset.ts:152](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L152)
+Defined in: [src/chain/asset.ts:152](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L152)
 
 Returns a representation of this asset using STEEM/SBD symbols
 as required by the Hive blockchain protocol-level serialization.
@@ -143,7 +143,7 @@ as required by the Hive blockchain protocol-level serialization.
 
 > **subtract**(`amount`): `Asset`
 
-Defined in: [src/chain/asset.ts:182](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L182)
+Defined in: [src/chain/asset.ts:182](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L182)
 
 Return a new Asset instance with amount subtracted.
 
@@ -163,7 +163,7 @@ Return a new Asset instance with amount subtracted.
 
 > **toJSON**(): `string`
 
-Defined in: [src/chain/asset.ts:218](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L218)
+Defined in: [src/chain/asset.ts:218](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L218)
 
 For JSON serialization, same as toString().
 
@@ -177,7 +177,7 @@ For JSON serialization, same as toString().
 
 > **toString**(): `string`
 
-Defined in: [src/chain/asset.ts:166](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L166)
+Defined in: [src/chain/asset.ts:166](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L166)
 
 Return a string representation of this asset, e.g. `42.000 HIVE`.
 
@@ -191,7 +191,7 @@ Return a string representation of this asset, e.g. `42.000 HIVE`.
 
 > `static` **from**(`value`, `symbol?`): `Asset`
 
-Defined in: [src/chain/asset.ts:92](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L92)
+Defined in: [src/chain/asset.ts:92](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L92)
 
 Convenience to create new Asset.
 
@@ -218,7 +218,7 @@ Symbol to use when created from number. Will also be used to validate
 
 > `static` **fromString**(`string`, `expectedSymbol?`): `Asset`
 
-Defined in: [src/chain/asset.ts:68](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L68)
+Defined in: [src/chain/asset.ts:68](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L68)
 
 Create a new Asset instance from a string, e.g. `42.000 HIVE`.
 
@@ -242,7 +242,7 @@ Create a new Asset instance from a string, e.g. `42.000 HIVE`.
 
 > `static` **max**(`a`, `b`): `Asset`
 
-Defined in: [src/chain/asset.ts:123](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L123)
+Defined in: [src/chain/asset.ts:123](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L123)
 
 Return the larger of the two assets.
 
@@ -266,7 +266,7 @@ Return the larger of the two assets.
 
 > `static` **min**(`a`, `b`): `Asset`
 
-Defined in: [src/chain/asset.ts:112](https://github.com/TheCrazyGM/dhive/blob/6054b90073cd532f97c7e867d7a6edea01f17e62/src/chain/asset.ts#L112)
+Defined in: [src/chain/asset.ts:112](https://github.com/TheCrazyGM/dhive/blob/b74b0c7f43f7ec8f4907c94415601732f6ab35f2/src/chain/asset.ts#L112)
 
 Return the smaller of the two assets.
 
