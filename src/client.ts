@@ -516,7 +516,10 @@ export class Client {
       typeof response.result === "object" &&
       "head_block_number" in response.result
     ) {
-      this.healthTracker.updateHeadBlock(currentAddress, (response.result as any).head_block_number);
+      this.healthTracker.updateHeadBlock(
+        currentAddress,
+        (response.result as any).head_block_number,
+      );
     }
 
     // Handle RPC-level errors.
@@ -532,12 +535,14 @@ export class Client {
             return String(value);
         }
       };
-      const data = response.error.data as {
-        stack?: {
-          data: Record<string, unknown>;
-          format: string;
-        }[];
-      } | undefined;
+      const data = response.error.data as
+        | {
+            stack?: {
+              data: Record<string, unknown>;
+              format: string;
+            }[];
+          }
+        | undefined;
       let { message } = response.error;
       if (data && data.stack && data.stack.length > 0) {
         const top = data.stack[0];

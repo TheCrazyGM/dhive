@@ -6,7 +6,7 @@
 
 # Interface: AccountUpdateOperation
 
-Defined in: [src/chain/operation.ts:281](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L281)
+Defined in: [src/chain/operation.ts:384](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L384)
 
 Updates account authorities, memo key, or legacy JSON metadata.
 
@@ -27,7 +27,7 @@ const op: AccountUpdateOperation = ['account_update', {
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -35,11 +35,11 @@ const op: AccountUpdateOperation = ['account_update', {
 
 > **0**: `"account_update"`
 
-Defined in: [src/chain/operation.ts:282](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L282)
+Defined in: [src/chain/operation.ts:385](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L385)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -47,7 +47,7 @@ Defined in: [src/chain/operation.ts:282](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:283](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L283)
+Defined in: [src/chain/operation.ts:386](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L386)
 
 #### account
 
@@ -75,4 +75,4 @@ Defined in: [src/chain/operation.ts:283](https://github.com/TheCrazyGM/dhive/blo
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

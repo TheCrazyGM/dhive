@@ -2,11 +2,11 @@
 
 ***
 
-[@srbde/pollen](../index.md) / Operation
+[@srbde/pollen](../index.md) / OperationTuple
 
-# Interface: Operation
+# Interface: OperationTuple
 
-Defined in: [src/chain/operation.ts:175](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L175)
+Defined in: [src/chain/operation.ts:184](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L184)
 
 Generic Hive operation tuple.
 
@@ -77,6 +77,49 @@ const op: Operation = ['transfer', {
 - [`UpdateProposalOperation`](UpdateProposalOperation.md)
 - [`CollateralizedConvertOperation`](CollateralizedConvertOperation.md)
 - [`RecurrentTransferOperation`](RecurrentTransferOperation.md)
+- [`FillConvertRequestOperation`](FillConvertRequestOperation.md)
+- [`AuthorRewardOperation`](AuthorRewardOperation.md)
+- [`CurationRewardOperation`](CurationRewardOperation.md)
+- [`CommentRewardOperation`](CommentRewardOperation.md)
+- [`LiquidityRewardOperation`](LiquidityRewardOperation.md)
+- [`InterestOperation`](InterestOperation.md)
+- [`FillVestingWithdrawOperation`](FillVestingWithdrawOperation.md)
+- [`FillOrderOperation`](FillOrderOperation.md)
+- [`ShutdownWitnessOperation`](ShutdownWitnessOperation.md)
+- [`FillTransferFromSavingsOperation`](FillTransferFromSavingsOperation.md)
+- [`HardforkOperation`](HardforkOperation.md)
+- [`CommentPayoutUpdateOperation`](CommentPayoutUpdateOperation.md)
+- [`ReturnVestingDelegationOperation`](ReturnVestingDelegationOperation.md)
+- [`CommentBenefactorRewardOperation`](CommentBenefactorRewardOperation.md)
+- [`ProducerRewardOperation`](ProducerRewardOperation.md)
+- [`ClearNullAccountBalanceOperation`](ClearNullAccountBalanceOperation.md)
+- [`ProposalPayOperation`](ProposalPayOperation.md)
+- [`SpsFundOperation`](SpsFundOperation.md)
+- [`HardforkHiveOperation`](HardforkHiveOperation.md)
+- [`HardforkHiveRestoreOperation`](HardforkHiveRestoreOperation.md)
+- [`DelayedVotingOperation`](DelayedVotingOperation.md)
+- [`ConsolidateTreasuryBalanceOperation`](ConsolidateTreasuryBalanceOperation.md)
+- [`EffectiveCommentVoteOperation`](EffectiveCommentVoteOperation.md)
+- [`IneffectiveDeleteCommentOperation`](IneffectiveDeleteCommentOperation.md)
+- [`SpsConvertOperation`](SpsConvertOperation.md)
+- [`ExpiredAccountNotificationOperation`](ExpiredAccountNotificationOperation.md)
+- [`ChangedRecoveryAccountOperation`](ChangedRecoveryAccountOperation.md)
+- [`TransferToVestingCompletedOperation`](TransferToVestingCompletedOperation.md)
+- [`PowRewardOperation`](PowRewardOperation.md)
+- [`VestingSharesSplitOperation`](VestingSharesSplitOperation.md)
+- [`AccountCreatedOperation`](AccountCreatedOperation.md)
+- [`FillCollateralizedConvertRequestOperation`](FillCollateralizedConvertRequestOperation.md)
+- [`SystemWarningOperation`](SystemWarningOperation.md)
+- [`FillRecurrentTransferOperation`](FillRecurrentTransferOperation.md)
+- [`FailedRecurrentTransferOperation`](FailedRecurrentTransferOperation.md)
+- [`LimitOrderCancelledOperation`](LimitOrderCancelledOperation.md)
+- [`ProducerMissedOperation`](ProducerMissedOperation.md)
+- [`ProposalFeeOperation`](ProposalFeeOperation.md)
+- [`CollateralizedConvertImmediateConversionOperation`](CollateralizedConvertImmediateConversionOperation.md)
+- [`EscrowApprovedOperation`](EscrowApprovedOperation.md)
+- [`EscrowRejectedOperation`](EscrowRejectedOperation.md)
+- [`ProxyClearedOperation`](ProxyClearedOperation.md)
+- [`DeclinedVotingRightsOperation`](DeclinedVotingRightsOperation.md)
 
 ## Properties
 
@@ -84,7 +127,7 @@ const op: Operation = ['transfer', {
 
 > **0**: [`OperationName`](../type-aliases/OperationName.md) \| [`VirtualOperationName`](../type-aliases/VirtualOperationName.md)
 
-Defined in: [src/chain/operation.ts:176](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L176)
+Defined in: [src/chain/operation.ts:185](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L185)
 
 ***
 
@@ -92,7 +135,7 @@ Defined in: [src/chain/operation.ts:176](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:177](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L177)
+Defined in: [src/chain/operation.ts:186](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L186)
 
 #### Index Signature
 

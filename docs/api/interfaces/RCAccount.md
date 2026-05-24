@@ -6,7 +6,7 @@
 
 # Interface: RCAccount
 
-Defined in: [src/chain/rc.ts:94](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/rc.ts#L94)
+Defined in: [src/chain/rc.ts:94](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/rc.ts#L94)
 
 RC account state returned by `find_rc_accounts`.
 
@@ -29,7 +29,7 @@ console.log(account.max_rc)
 
 > **account**: `string`
 
-Defined in: [src/chain/rc.ts:95](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/rc.ts#L95)
+Defined in: [src/chain/rc.ts:95](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/rc.ts#L95)
 
 ***
 
@@ -37,7 +37,7 @@ Defined in: [src/chain/rc.ts:95](https://github.com/TheCrazyGM/dhive/blob/0ed1b4
 
 > **max\_rc**: `string`
 
-Defined in: [src/chain/rc.ts:101](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/rc.ts#L101)
+Defined in: [src/chain/rc.ts:101](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/rc.ts#L101)
 
 ***
 
@@ -45,7 +45,7 @@ Defined in: [src/chain/rc.ts:101](https://github.com/TheCrazyGM/dhive/blob/0ed1b
 
 > **max\_rc\_creation\_adjustment**: `string` \| [`SMTAsset`](SMTAsset.md)
 
-Defined in: [src/chain/rc.ts:100](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/rc.ts#L100)
+Defined in: [src/chain/rc.ts:100](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/rc.ts#L100)
 
 ***
 
@@ -53,7 +53,7 @@ Defined in: [src/chain/rc.ts:100](https://github.com/TheCrazyGM/dhive/blob/0ed1b
 
 > **rc\_manabar**: `object`
 
-Defined in: [src/chain/rc.ts:96](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/rc.ts#L96)
+Defined in: [src/chain/rc.ts:96](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/rc.ts#L96)
 
 #### current\_mana
 

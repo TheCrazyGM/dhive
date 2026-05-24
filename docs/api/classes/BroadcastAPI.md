@@ -6,7 +6,7 @@
 
 # Class: BroadcastAPI
 
-Defined in: [src/helpers/broadcast.ts:148](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L148)
+Defined in: [src/helpers/broadcast.ts:148](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L148)
 
 Helper for signing and broadcasting Hive operations.
 
@@ -50,7 +50,7 @@ console.log(confirmation.id)
 
 > **new BroadcastAPI**(`client`): `BroadcastAPI`
 
-Defined in: [src/helpers/broadcast.ts:161](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L161)
+Defined in: [src/helpers/broadcast.ts:161](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L161)
 
 Creates a broadcast helper bound to a client.
 
@@ -73,7 +73,7 @@ submission.
 
 > `readonly` **client**: [`Client`](Client.md)
 
-Defined in: [src/helpers/broadcast.ts:161](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L161)
+Defined in: [src/helpers/broadcast.ts:161](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L161)
 
 Client used for chain-property reads and transaction
 submission.
@@ -84,7 +84,7 @@ submission.
 
 > **expireTime**: `number`
 
-Defined in: [src/helpers/broadcast.ts:153](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L153)
+Defined in: [src/helpers/broadcast.ts:153](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L153)
 
 How many milliseconds in the future to set the expiry time to when
 broadcasting a transaction, defaults to 1 minute.
@@ -93,11 +93,17 @@ broadcasting a transaction, defaults to 1 minute.
 
 ### call()
 
-> **call**(`method`, `params?`): `Promise`\<`any`\>
+> **call**\<`T`\>(`method`, `params?`): `Promise`\<`T`\>
 
-Defined in: [src/helpers/broadcast.ts:630](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L630)
+Defined in: [src/helpers/broadcast.ts:632](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L632)
 
 Sends a raw broadcast-related condenser API call.
+
+#### Type Parameters
+
+##### T
+
+`T` = `unknown`
 
 #### Parameters
 
@@ -109,13 +115,13 @@ Condenser method name.
 
 ##### params?
 
-`any`[]
+`unknown`[]
 
 Positional method parameters.
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise`\<`T`\>
 
 The decoded RPC result.
 
@@ -136,7 +142,7 @@ const result = await client.broadcast.call('broadcast_transaction', [signed])
 
 > **comment**(`comment`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:191](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L191)
+Defined in: [src/helpers/broadcast.ts:191](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L191)
 
 Broadcasts a Hive `comment` operation.
 
@@ -216,7 +222,7 @@ await client.broadcast.comment(
 
 > **commentWithOptions**(`comment`, `options`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:225](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L225)
+Defined in: [src/helpers/broadcast.ts:225](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L225)
 
 Broadcasts a comment together with its payout and beneficiary options.
 
@@ -337,7 +343,7 @@ await client.broadcast.commentWithOptions(comment, {
 
 > **createTestAccount**(`options`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:359](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L359)
+Defined in: [src/helpers/broadcast.ts:359](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L359)
 
 Creates and optionally delegates to a new account in test environments.
 
@@ -404,7 +410,7 @@ await testnet.broadcast.createTestAccount(
 
 > **delegateVestingShares**(`options`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:505](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L505)
+Defined in: [src/helpers/broadcast.ts:505](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L505)
 
 Delegates vesting shares from one account to another.
 
@@ -477,7 +483,7 @@ await client.broadcast.delegateVestingShares(
 
 > **json**(`data`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:320](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L320)
+Defined in: [src/helpers/broadcast.ts:320](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L320)
 
 Broadcasts a `custom_json` operation for application-level protocols.
 
@@ -546,7 +552,7 @@ await client.broadcast.json(
 
 > **send**(`transaction`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:609](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L609)
+Defined in: [src/helpers/broadcast.ts:609](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L609)
 
 Broadcasts an already signed transaction to the active RPC node.
 
@@ -583,7 +589,7 @@ console.log(confirmation.id)
 
 > **sendOperations**(`operations`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:538](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L538)
+Defined in: [src/helpers/broadcast.ts:538](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L538)
 
 Builds, signs, and broadcasts a transaction containing one or more operations.
 
@@ -591,7 +597,7 @@ Builds, signs, and broadcasts a transaction containing one or more operations.
 
 ##### operations
 
-[`Operation`](../interfaces/Operation.md)[]
+[`Operation`](../type-aliases/Operation.md)[]
 
 Ordered Hive operations to include in the transaction.
 
@@ -638,7 +644,7 @@ await client.broadcast.sendOperations(
 
 > **sign**(`transaction`, `key`): [`SignedTransaction`](../interfaces/SignedTransaction.md)
 
-Defined in: [src/helpers/broadcast.ts:589](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L589)
+Defined in: [src/helpers/broadcast.ts:589](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L589)
 
 Signs a transaction with one or more private keys.
 
@@ -684,7 +690,7 @@ console.log(signed.signatures)
 
 > **transfer**(`data`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:290](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L290)
+Defined in: [src/helpers/broadcast.ts:290](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L290)
 
 Broadcasts a liquid HIVE or HBD transfer.
 
@@ -756,7 +762,7 @@ await client.broadcast.transfer(
 
 > **updateAccount**(`data`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:470](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L470)
+Defined in: [src/helpers/broadcast.ts:470](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L470)
 
 Broadcasts an `account_update` operation.
 
@@ -831,7 +837,7 @@ await client.broadcast.updateAccount(
 
 > **vote**(`vote`, `key`): `Promise`\<[`TransactionConfirmation`](../interfaces/TransactionConfirmation.md)\>
 
-Defined in: [src/helpers/broadcast.ts:261](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/broadcast.ts#L261)
+Defined in: [src/helpers/broadcast.ts:261](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/broadcast.ts#L261)
 
 Broadcasts a vote operation.
 

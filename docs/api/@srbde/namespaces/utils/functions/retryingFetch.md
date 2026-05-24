@@ -8,7 +8,7 @@
 
 > **retryingFetch**(`currentAddress`, `allAddresses`, `opts`, `timeout`, `failoverThreshold`, `consoleOnFailover`, `backoff`, `fetchTimeout?`, `retryContext?`): `Promise`\<\{ `currentAddress`: `string`; `response`: `any`; \}\>
 
-Defined in: [src/utils.ts:477](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L477)
+Defined in: [src/utils.ts:479](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L479)
 
 Sends an RPC request with ordered node failover and health tracking.
 
@@ -24,7 +24,7 @@ Sends an RPC request with ordered node failover and health tracking.
 
 ### opts
 
-`any`
+`RequestInit` & `object`
 
 ### timeout
 

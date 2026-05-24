@@ -6,7 +6,7 @@
 
 # Interface: WitnessProps
 
-Defined in: [src/utils.ts:635](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L635)
+Defined in: [src/utils.ts:637](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L637)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/utils.ts:635](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > `optional` **account\_creation\_fee?**: `string` \| [`Asset`](../../../../classes/Asset.md)
 
-Defined in: [src/utils.ts:636](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L636)
+Defined in: [src/utils.ts:638](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L638)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/utils.ts:636](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > `optional` **account\_subsidy\_budget?**: `number`
 
-Defined in: [src/utils.ts:637](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L637)
+Defined in: [src/utils.ts:639](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L639)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/utils.ts:637](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > `optional` **account\_subsidy\_decay?**: `number`
 
-Defined in: [src/utils.ts:638](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L638)
+Defined in: [src/utils.ts:640](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L640)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [src/utils.ts:638](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > `optional` **hbd\_exchange\_rate?**: [`PriceType`](../../../../type-aliases/PriceType.md)
 
-Defined in: [src/utils.ts:642](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L642)
+Defined in: [src/utils.ts:644](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L644)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/utils.ts:642](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > `optional` **hbd\_interest\_rate?**: `number`
 
-Defined in: [src/utils.ts:643](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L643)
+Defined in: [src/utils.ts:645](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L645)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [src/utils.ts:643](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > **key**: `string` \| [`PublicKey`](../../../../classes/PublicKey.md)
 
-Defined in: [src/utils.ts:639](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L639)
+Defined in: [src/utils.ts:641](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L641)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [src/utils.ts:639](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > `optional` **maximum\_block\_size?**: `number`
 
-Defined in: [src/utils.ts:640](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L640)
+Defined in: [src/utils.ts:642](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L642)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [src/utils.ts:640](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > `optional` **new\_signing\_key?**: `string` \| [`PublicKey`](../../../../classes/PublicKey.md) \| `null`
 
-Defined in: [src/utils.ts:641](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L641)
+Defined in: [src/utils.ts:643](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L643)
 
 ***
 
@@ -78,4 +78,4 @@ Defined in: [src/utils.ts:641](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad
 
 > `optional` **url?**: `string`
 
-Defined in: [src/utils.ts:644](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/utils.ts#L644)
+Defined in: [src/utils.ts:646](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/utils.ts#L646)

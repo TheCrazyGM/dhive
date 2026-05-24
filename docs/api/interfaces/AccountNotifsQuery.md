@@ -6,7 +6,7 @@
 
 # Interface: AccountNotifsQuery
 
-Defined in: [src/helpers/hivemind.ts:104](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/hivemind.ts#L104)
+Defined in: [src/helpers/hivemind.ts:104](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/hivemind.ts#L104)
 
 Query options for an account notification feed.
 
@@ -25,7 +25,7 @@ const query: AccountNotifsQuery = {
 
 > **account**: `string`
 
-Defined in: [src/helpers/hivemind.ts:105](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/hivemind.ts#L105)
+Defined in: [src/helpers/hivemind.ts:105](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/hivemind.ts#L105)
 
 ***
 
@@ -33,7 +33,7 @@ Defined in: [src/helpers/hivemind.ts:105](https://github.com/TheCrazyGM/dhive/bl
 
 > **limit**: `number`
 
-Defined in: [src/helpers/hivemind.ts:106](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/hivemind.ts#L106)
+Defined in: [src/helpers/hivemind.ts:106](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/hivemind.ts#L106)
 
 ***
 
@@ -41,4 +41,4 @@ Defined in: [src/helpers/hivemind.ts:106](https://github.com/TheCrazyGM/dhive/bl
 
 > `optional` **type?**: `"new_community"` \| `"pin_post"`
 
-Defined in: [src/helpers/hivemind.ts:107](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/hivemind.ts#L107)
+Defined in: [src/helpers/hivemind.ts:107](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/hivemind.ts#L107)

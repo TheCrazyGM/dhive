@@ -6,7 +6,7 @@
 
 # Interface: Transaction
 
-Defined in: [src/chain/transaction.ts:57](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/transaction.ts#L57)
+Defined in: [src/chain/transaction.ts:57](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/transaction.ts#L57)
 
 Unsigned Hive transaction ready for serialization and signing.
 
@@ -38,7 +38,7 @@ const transaction: Transaction = {
 
 > **expiration**: `string`
 
-Defined in: [src/chain/transaction.ts:69](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/transaction.ts#L69)
+Defined in: [src/chain/transaction.ts:69](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/transaction.ts#L69)
 
 UTC expiration timestamp without a trailing timezone suffix.
 
@@ -46,9 +46,9 @@ UTC expiration timestamp without a trailing timezone suffix.
 
 ### extensions
 
-> **extensions**: `any`[]
+> **extensions**: `unknown`[]
 
-Defined in: [src/chain/transaction.ts:78](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/transaction.ts#L78)
+Defined in: [src/chain/transaction.ts:78](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/transaction.ts#L78)
 
 Transaction extension values. Hive currently expects this to be empty for
 the operations supported by Pollen.
@@ -57,9 +57,9 @@ the operations supported by Pollen.
 
 ### operations
 
-> **operations**: [`Operation`](Operation.md)[]
+> **operations**: [`Operation`](../type-aliases/Operation.md)[]
 
-Defined in: [src/chain/transaction.ts:73](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/transaction.ts#L73)
+Defined in: [src/chain/transaction.ts:73](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/transaction.ts#L73)
 
 Ordered operation list executed atomically by the chain.
 
@@ -69,7 +69,7 @@ Ordered operation list executed atomically by the chain.
 
 > **ref\_block\_num**: `number`
 
-Defined in: [src/chain/transaction.ts:61](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/transaction.ts#L61)
+Defined in: [src/chain/transaction.ts:61](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/transaction.ts#L61)
 
 Lower 16 bits of the referenced head block number.
 
@@ -79,6 +79,6 @@ Lower 16 bits of the referenced head block number.
 
 > **ref\_block\_prefix**: `number`
 
-Defined in: [src/chain/transaction.ts:65](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/transaction.ts#L65)
+Defined in: [src/chain/transaction.ts:65](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/transaction.ts#L65)
 
 Prefix extracted from the referenced block id.

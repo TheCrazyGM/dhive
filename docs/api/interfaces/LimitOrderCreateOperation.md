@@ -6,13 +6,13 @@
 
 # Interface: LimitOrderCreateOperation
 
-Defined in: [src/chain/operation.ts:750](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L750)
+Defined in: [src/chain/operation.ts:853](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L853)
 
 This operation creates a limit order and matches it against existing open orders.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -20,11 +20,11 @@ This operation creates a limit order and matches it against existing open orders
 
 > **0**: `"limit_order_create"`
 
-Defined in: [src/chain/operation.ts:751](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L751)
+Defined in: [src/chain/operation.ts:854](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L854)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:751](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:752](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L752)
+Defined in: [src/chain/operation.ts:855](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L855)
 
 #### amount\_to\_sell
 
@@ -60,4 +60,4 @@ Defined in: [src/chain/operation.ts:752](https://github.com/TheCrazyGM/dhive/blo
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

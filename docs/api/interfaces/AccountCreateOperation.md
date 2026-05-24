@@ -6,7 +6,7 @@
 
 # Interface: AccountCreateOperation
 
-Defined in: [src/chain/operation.ts:225](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L225)
+Defined in: [src/chain/operation.ts:328](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L328)
 
 Legacy paid account creation operation.
 
@@ -33,7 +33,7 @@ const op: AccountCreateOperation = ['account_create', {
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -41,11 +41,11 @@ const op: AccountCreateOperation = ['account_create', {
 
 > **0**: `"account_create"`
 
-Defined in: [src/chain/operation.ts:226](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L226)
+Defined in: [src/chain/operation.ts:329](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L329)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -53,7 +53,7 @@ Defined in: [src/chain/operation.ts:226](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:227](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L227)
+Defined in: [src/chain/operation.ts:330](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L330)
 
 #### active
 
@@ -89,4 +89,4 @@ Defined in: [src/chain/operation.ts:227](https://github.com/TheCrazyGM/dhive/blo
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

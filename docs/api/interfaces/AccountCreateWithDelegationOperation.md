@@ -6,7 +6,7 @@
 
 # Interface: AccountCreateWithDelegationOperation
 
-Defined in: [src/chain/operation.ts:246](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L246)
+Defined in: [src/chain/operation.ts:349](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L349)
 
 Account creation operation that also delegates initial VESTS.
 
@@ -17,7 +17,7 @@ transferring ownership of the underlying vesting shares.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -25,11 +25,11 @@ transferring ownership of the underlying vesting shares.
 
 > **0**: `"account_create_with_delegation"`
 
-Defined in: [src/chain/operation.ts:247](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L247)
+Defined in: [src/chain/operation.ts:350](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L350)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -37,7 +37,7 @@ Defined in: [src/chain/operation.ts:247](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:248](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L248)
+Defined in: [src/chain/operation.ts:351](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L351)
 
 #### active
 
@@ -83,4 +83,4 @@ Extensions. Not currently used.
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

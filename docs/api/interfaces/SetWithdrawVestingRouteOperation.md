@@ -6,7 +6,7 @@
 
 # Interface: SetWithdrawVestingRouteOperation
 
-Defined in: [src/chain/operation.ts:943](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L943)
+Defined in: [src/chain/operation.ts:1046](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1046)
 
 Allows an account to setup a vesting withdraw but with the additional
 request for the funds to be transferred directly to another account's
@@ -16,7 +16,7 @@ vests to hive and back, guaranteeing they maintain their value.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -24,11 +24,11 @@ vests to hive and back, guaranteeing they maintain their value.
 
 > **0**: `"set_withdraw_vesting_route"`
 
-Defined in: [src/chain/operation.ts:944](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L944)
+Defined in: [src/chain/operation.ts:1047](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1047)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/chain/operation.ts:944](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:945](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L945)
+Defined in: [src/chain/operation.ts:1048](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1048)
 
 #### auto\_vest
 
@@ -56,4 +56,4 @@ Defined in: [src/chain/operation.ts:945](https://github.com/TheCrazyGM/dhive/blo
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

@@ -6,13 +6,13 @@
 
 # Interface: CollateralizedConvertOperation
 
-Defined in: [src/chain/operation.ts:1221](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1221)
+Defined in: [src/chain/operation.ts:1324](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1324)
 
 Converts HIVE to HBD through the collateralized conversion flow.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -20,11 +20,11 @@ Converts HIVE to HBD through the collateralized conversion flow.
 
 > **0**: `"collateralized_convert"`
 
-Defined in: [src/chain/operation.ts:1222](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1222)
+Defined in: [src/chain/operation.ts:1325](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1325)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:1222](https://github.com/TheCrazyGM/dhive/bl
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:1223](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1223)
+Defined in: [src/chain/operation.ts:1326](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1326)
 
 #### amount
 
@@ -48,4 +48,4 @@ Defined in: [src/chain/operation.ts:1223](https://github.com/TheCrazyGM/dhive/bl
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

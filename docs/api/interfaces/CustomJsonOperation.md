@@ -6,7 +6,7 @@
 
 # Interface: CustomJsonOperation
 
-Defined in: [src/chain/operation.ts:550](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L550)
+Defined in: [src/chain/operation.ts:653](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L653)
 
 JSON custom operation used by Hive application protocols.
 
@@ -29,7 +29,7 @@ const op: CustomJsonOperation = ['custom_json', {
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -37,11 +37,11 @@ const op: CustomJsonOperation = ['custom_json', {
 
 > **0**: `"custom_json"`
 
-Defined in: [src/chain/operation.ts:551](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L551)
+Defined in: [src/chain/operation.ts:654](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L654)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -49,7 +49,7 @@ Defined in: [src/chain/operation.ts:551](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:552](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L552)
+Defined in: [src/chain/operation.ts:655](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L655)
 
 #### id
 
@@ -73,4 +73,4 @@ JSON encoded string, must be valid JSON.
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

@@ -6,7 +6,7 @@
 
 # Class: AccountByKeyAPI
 
-Defined in: [src/helpers/key.ts:33](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/key.ts#L33)
+Defined in: [src/helpers/key.ts:33](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/key.ts#L33)
 
 Helper for resolving Hive accounts by authority public key.
 
@@ -28,7 +28,7 @@ console.log(references.accounts[0])
 
 > **new AccountByKeyAPI**(`client`): `AccountByKeyAPI`
 
-Defined in: [src/helpers/key.ts:39](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/key.ts#L39)
+Defined in: [src/helpers/key.ts:39](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/key.ts#L39)
 
 Creates an account-by-key helper bound to a client.
 
@@ -50,7 +50,7 @@ Client used to call `account_by_key_api`.
 
 > `readonly` **client**: [`Client`](Client.md)
 
-Defined in: [src/helpers/key.ts:39](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/key.ts#L39)
+Defined in: [src/helpers/key.ts:39](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/key.ts#L39)
 
 Client used to call `account_by_key_api`.
 
@@ -58,11 +58,17 @@ Client used to call `account_by_key_api`.
 
 ### call()
 
-> **call**(`method`, `params?`): `Promise`\<`any`\>
+> **call**\<`T`\>(`method`, `params?`): `Promise`\<`T`\>
 
-Defined in: [src/helpers/key.ts:58](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/key.ts#L58)
+Defined in: [src/helpers/key.ts:58](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/key.ts#L58)
 
 Sends a raw `account_by_key_api` call.
+
+#### Type Parameters
+
+##### T
+
+`T` = `unknown`
 
 #### Parameters
 
@@ -74,13 +80,13 @@ API method name.
 
 ##### params?
 
-`any`
+`unknown`
 
 Method-specific parameter object.
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise`\<`T`\>
 
 The decoded RPC result.
 
@@ -103,7 +109,7 @@ const result = await client.keys.call('get_key_references', {
 
 > **getKeyReferences**(`keys`): `Promise`\<[`AccountsByKey`](../interfaces/AccountsByKey.md)\>
 
-Defined in: [src/helpers/key.ts:85](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/key.ts#L85)
+Defined in: [src/helpers/key.ts:85](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/key.ts#L85)
 
 Fetches accounts that reference the supplied public keys.
 

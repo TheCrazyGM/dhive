@@ -6,7 +6,7 @@
 
 # Interface: WitnessUpdateOperation
 
-Defined in: [src/chain/operation.ts:1110](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1110)
+Defined in: [src/chain/operation.ts:1213](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1213)
 
 Users who wish to become a witness must pay a fee acceptable to
 the current witnesses to apply for the position and allow voting
@@ -23,7 +23,7 @@ producing blocks.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -31,11 +31,11 @@ producing blocks.
 
 > **0**: `"witness_update"`
 
-Defined in: [src/chain/operation.ts:1111](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1111)
+Defined in: [src/chain/operation.ts:1214](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1214)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -43,7 +43,7 @@ Defined in: [src/chain/operation.ts:1111](https://github.com/TheCrazyGM/dhive/bl
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:1112](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1112)
+Defined in: [src/chain/operation.ts:1215](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1215)
 
 #### block\_signing\_key
 
@@ -71,4 +71,4 @@ URL for witness, usually a link to a post in the witness-category tag.
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

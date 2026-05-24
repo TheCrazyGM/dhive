@@ -8,7 +8,7 @@
 
 > `const` **Types**: `object`
 
-Defined in: [src/chain/serializer.ts:670](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/serializer.ts#L670)
+Defined in: [src/chain/serializer.ts:676](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/serializer.ts#L676)
 
 Hive protocol serializer registry.
 
@@ -64,6 +64,8 @@ Should not be a problem in real-world usage.
 [`BinaryWriter`](../@srbde/namespaces/utils/classes/BinaryWriter.md)
 
 ##### data
+
+`any`
 
 #### Returns
 
@@ -130,6 +132,8 @@ Should not be a problem in real-world usage.
 [`BinaryWriter`](../@srbde/namespaces/utils/classes/BinaryWriter.md)
 
 ##### data
+
+`any`
 
 #### Returns
 
@@ -251,7 +255,7 @@ Should not be a problem in real-world usage.
 
 ##### operation
 
-[`Operation`](../interfaces/Operation.md)
+[`Operation`](../type-aliases/Operation.md)
 
 #### Returns
 
@@ -282,6 +286,8 @@ Should not be a problem in real-world usage.
 [`BinaryWriter`](../@srbde/namespaces/utils/classes/BinaryWriter.md)
 
 ##### data
+
+`any`
 
 #### Returns
 
@@ -348,6 +354,8 @@ Should not be a problem in real-world usage.
 [`BinaryWriter`](../@srbde/namespaces/utils/classes/BinaryWriter.md)
 
 ##### data
+
+`any`
 
 #### Returns
 

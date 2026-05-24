@@ -6,7 +6,7 @@
 
 # Interface: CommentOperation
 
-Defined in: [src/chain/operation.ts:433](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L433)
+Defined in: [src/chain/operation.ts:536](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L536)
 
 Creates or updates a post or reply.
 
@@ -31,7 +31,7 @@ const op: CommentOperation = ['comment', {
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -39,11 +39,11 @@ const op: CommentOperation = ['comment', {
 
 > **0**: `"comment"`
 
-Defined in: [src/chain/operation.ts:434](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L434)
+Defined in: [src/chain/operation.ts:537](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L537)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -51,7 +51,7 @@ Defined in: [src/chain/operation.ts:434](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:435](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L435)
+Defined in: [src/chain/operation.ts:538](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L538)
 
 #### author
 
@@ -83,4 +83,4 @@ Defined in: [src/chain/operation.ts:435](https://github.com/TheCrazyGM/dhive/blo
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

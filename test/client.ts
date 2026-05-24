@@ -11,7 +11,9 @@ describe("client", function () {
     const bclient = new Client(["https://wrongapi.hive.blog", "https://api.hive.blog"], {
       timeout: 5000,
     });
-    const result = await bclient.call<{ name: string }[]>("condenser_api", "get_accounts", [["initminer"]]);
+    const result = await bclient.call<{ name: string }[]>("condenser_api", "get_accounts", [
+      ["initminer"],
+    ]);
     assert.equal(result.length, 1);
     assert.equal(result[0].name, "initminer");
   }, 30000);

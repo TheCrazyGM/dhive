@@ -6,13 +6,13 @@
 
 # Interface: DeclineVotingRightsOperation
 
-Defined in: [src/chain/operation.ts:569](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L569)
+Defined in: [src/chain/operation.ts:672](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L672)
 
 Enables or disables an account's ability to vote.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -20,11 +20,11 @@ Enables or disables an account's ability to vote.
 
 > **0**: `"decline_voting_rights"`
 
-Defined in: [src/chain/operation.ts:570](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L570)
+Defined in: [src/chain/operation.ts:673](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L673)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:570](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:571](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L571)
+Defined in: [src/chain/operation.ts:674](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L674)
 
 #### account
 
@@ -44,4 +44,4 @@ Defined in: [src/chain/operation.ts:571](https://github.com/TheCrazyGM/dhive/blo
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

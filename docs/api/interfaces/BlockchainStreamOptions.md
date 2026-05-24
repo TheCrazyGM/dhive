@@ -6,7 +6,7 @@
 
 # Interface: BlockchainStreamOptions
 
-Defined in: [src/helpers/blockchain.ts:76](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L76)
+Defined in: [src/helpers/blockchain.ts:76](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L76)
 
 Controls the block range and finality policy used by blockchain streams.
 
@@ -32,7 +32,7 @@ for await (const block of client.blockchain.getBlocks({
 
 > `optional` **from?**: `number`
 
-Defined in: [src/helpers/blockchain.ts:80](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L80)
+Defined in: [src/helpers/blockchain.ts:80](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L80)
 
 Start block number, inclusive. If omitted generation will start from current block height.
 
@@ -42,7 +42,7 @@ Start block number, inclusive. If omitted generation will start from current blo
 
 > `optional` **mode?**: [`BlockchainMode`](../enumerations/BlockchainMode.md)
 
-Defined in: [src/helpers/blockchain.ts:89](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L89)
+Defined in: [src/helpers/blockchain.ts:89](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L89)
 
 Streaming mode, if set to `Latest` may include blocks that are not applied to the final chain.
 Defaults to `Irreversible`.
@@ -53,6 +53,6 @@ Defaults to `Irreversible`.
 
 > `optional` **to?**: `number`
 
-Defined in: [src/helpers/blockchain.ts:84](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L84)
+Defined in: [src/helpers/blockchain.ts:84](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L84)
 
 End block number, inclusive. If omitted stream will continue indefinitely.

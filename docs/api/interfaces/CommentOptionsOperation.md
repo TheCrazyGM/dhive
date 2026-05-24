@@ -6,7 +6,7 @@
 
 # Interface: CommentOptionsOperation
 
-Defined in: [src/chain/operation.ts:453](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L453)
+Defined in: [src/chain/operation.ts:556](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L556)
 
 Sets payout, vote, curation, and beneficiary options for a comment.
 
@@ -17,7 +17,7 @@ new post never exists with unintended payout settings.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -25,11 +25,11 @@ new post never exists with unintended payout settings.
 
 > **0**: `"comment_options"`
 
-Defined in: [src/chain/operation.ts:454](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L454)
+Defined in: [src/chain/operation.ts:557](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L557)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -37,7 +37,7 @@ Defined in: [src/chain/operation.ts:454](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:455](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L455)
+Defined in: [src/chain/operation.ts:558](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L558)
 
 #### allow\_curation\_rewards
 
@@ -77,4 +77,4 @@ The percent of Hive Dollars to key, unkept amounts will be received as Hive Powe
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

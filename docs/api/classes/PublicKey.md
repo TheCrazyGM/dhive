@@ -6,7 +6,7 @@
 
 # Class: PublicKey
 
-Defined in: [src/crypto.ts:162](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L162)
+Defined in: [src/crypto.ts:162](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L162)
 
 Hive public key backed by the secp256k1 elliptic curve.
 
@@ -16,7 +16,7 @@ Hive public key backed by the secp256k1 elliptic curve.
 
 > **new PublicKey**(`key`, `prefix?`): `PublicKey`
 
-Defined in: [src/crypto.ts:165](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L165)
+Defined in: [src/crypto.ts:165](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L165)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/crypto.ts:165](https://github.com/TheCrazyGM/dhive/blob/0ed1b4a
 
 > `readonly` **key**: `Uint8Array`
 
-Defined in: [src/crypto.ts:166](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L166)
+Defined in: [src/crypto.ts:166](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L166)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/crypto.ts:166](https://github.com/TheCrazyGM/dhive/blob/0ed1b4a
 
 > `readonly` **prefix**: `string` = `DEFAULT_ADDRESS_PREFIX`
 
-Defined in: [src/crypto.ts:167](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L167)
+Defined in: [src/crypto.ts:167](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L167)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [src/crypto.ts:167](https://github.com/TheCrazyGM/dhive/blob/0ed1b4a
 
 > `readonly` **uncompressed**: `Uint8Array`
 
-Defined in: [src/crypto.ts:163](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L163)
+Defined in: [src/crypto.ts:163](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L163)
 
 ## Methods
 
@@ -62,7 +62,7 @@ Defined in: [src/crypto.ts:163](https://github.com/TheCrazyGM/dhive/blob/0ed1b4a
 
 > **inspect**(): `string`
 
-Defined in: [src/crypto.ts:234](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L234)
+Defined in: [src/crypto.ts:234](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L234)
 
 Used by `utils.inspect` and `console.log` in node.js.
 
@@ -76,7 +76,7 @@ Used by `utils.inspect` and `console.log` in node.js.
 
 > **toJSON**(): `string`
 
-Defined in: [src/crypto.ts:227](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L227)
+Defined in: [src/crypto.ts:227](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L227)
 
 Return JSON representation of this key, same as toString().
 
@@ -90,7 +90,7 @@ Return JSON representation of this key, same as toString().
 
 > **toString**(): `string`
 
-Defined in: [src/crypto.ts:220](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L220)
+Defined in: [src/crypto.ts:220](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L220)
 
 Renders the key as a Hive public-key string.
 
@@ -104,7 +104,7 @@ Renders the key as a Hive public-key string.
 
 > **verify**(`message`, `signature`): `boolean`
 
-Defined in: [src/crypto.ts:205](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L205)
+Defined in: [src/crypto.ts:205](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L205)
 
 Verifies a compact ECDSA signature against a 32-byte digest.
 
@@ -128,7 +128,7 @@ Verifies a compact ECDSA signature against a 32-byte digest.
 
 > `static` **from**(`value`): `PublicKey`
 
-Defined in: [src/crypto.ts:194](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L194)
+Defined in: [src/crypto.ts:194](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L194)
 
 Normalizes a public-key input into a PublicKey instance.
 
@@ -148,7 +148,7 @@ Normalizes a public-key input into a PublicKey instance.
 
 > `static` **fromBuffer**(`key`): `PublicKey`
 
-Defined in: [src/crypto.ts:179](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L179)
+Defined in: [src/crypto.ts:179](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L179)
 
 #### Parameters
 
@@ -166,7 +166,7 @@ Defined in: [src/crypto.ts:179](https://github.com/TheCrazyGM/dhive/blob/0ed1b4a
 
 > `static` **fromString**(`wif`): `PublicKey`
 
-Defined in: [src/crypto.ts:186](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/crypto.ts#L186)
+Defined in: [src/crypto.ts:186](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/crypto.ts#L186)
 
 Creates a public key from its Hive string representation.
 

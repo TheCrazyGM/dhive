@@ -172,7 +172,10 @@ describe("operations", function () {
       postingWif,
     );
 
-    const post = await client.call<ds.Discussion>("condenser_api", "get_content", [username, permlink]);
+    const post = await client.call<ds.Discussion>("condenser_api", "get_content", [
+      username,
+      permlink,
+    ]);
     assert.deepEqual(post.beneficiaries, [{ account: acc1.username, weight: 10000 }]);
     assert.equal(post.max_accepted_payout, "10.000 HBD");
     assert.equal(post.allow_votes, true);

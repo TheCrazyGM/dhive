@@ -6,7 +6,7 @@
 
 # Interface: CreateProposalOperation
 
-Defined in: [src/chain/operation.ts:1164](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1164)
+Defined in: [src/chain/operation.ts:1267](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1267)
 
 Creates a Decentralized Hive Fund proposal.
 
@@ -17,7 +17,7 @@ when the proposal receives sufficient stake-weighted approval.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -25,11 +25,11 @@ when the proposal receives sufficient stake-weighted approval.
 
 > **0**: `"create_proposal"`
 
-Defined in: [src/chain/operation.ts:1165](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1165)
+Defined in: [src/chain/operation.ts:1268](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1268)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -37,7 +37,7 @@ Defined in: [src/chain/operation.ts:1165](https://github.com/TheCrazyGM/dhive/bl
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:1166](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L1166)
+Defined in: [src/chain/operation.ts:1269](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L1269)
 
 #### creator
 
@@ -73,4 +73,4 @@ Defined in: [src/chain/operation.ts:1166](https://github.com/TheCrazyGM/dhive/bl
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

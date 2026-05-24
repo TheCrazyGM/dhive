@@ -6,7 +6,7 @@
 
 # Interface: AppliedOperation
 
-Defined in: [src/chain/operation.ts:193](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L193)
+Defined in: [src/chain/operation.ts:296](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L296)
 
 Operation record annotated with block and transaction position.
 
@@ -28,15 +28,15 @@ console.log(operations[0].block, operations[0].op[0])
 
 > **block**: `number`
 
-Defined in: [src/chain/operation.ts:195](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L195)
+Defined in: [src/chain/operation.ts:298](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L298)
 
 ***
 
 ### op
 
-> **op**: [`Operation`](Operation.md)
+> **op**: [`Operation`](../type-aliases/Operation.md)
 
-Defined in: [src/chain/operation.ts:200](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L200)
+Defined in: [src/chain/operation.ts:303](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L303)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: [src/chain/operation.ts:200](https://github.com/TheCrazyGM/dhive/blo
 
 > **op\_in\_trx**: `number`
 
-Defined in: [src/chain/operation.ts:197](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L197)
+Defined in: [src/chain/operation.ts:300](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L300)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: [src/chain/operation.ts:197](https://github.com/TheCrazyGM/dhive/blo
 
 > **timestamp**: `string`
 
-Defined in: [src/chain/operation.ts:199](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L199)
+Defined in: [src/chain/operation.ts:302](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L302)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: [src/chain/operation.ts:199](https://github.com/TheCrazyGM/dhive/blo
 
 > **trx\_id**: `string`
 
-Defined in: [src/chain/operation.ts:194](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L194)
+Defined in: [src/chain/operation.ts:297](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L297)
 
 ***
 
@@ -68,7 +68,7 @@ Defined in: [src/chain/operation.ts:194](https://github.com/TheCrazyGM/dhive/blo
 
 > **trx\_in\_block**: `number`
 
-Defined in: [src/chain/operation.ts:196](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L196)
+Defined in: [src/chain/operation.ts:299](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L299)
 
 ***
 
@@ -76,4 +76,4 @@ Defined in: [src/chain/operation.ts:196](https://github.com/TheCrazyGM/dhive/blo
 
 > **virtual\_op**: `number`
 
-Defined in: [src/chain/operation.ts:198](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L198)
+Defined in: [src/chain/operation.ts:301](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L301)

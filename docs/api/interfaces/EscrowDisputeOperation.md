@@ -6,7 +6,7 @@
 
 # Interface: EscrowDisputeOperation
 
-Defined in: [src/chain/operation.ts:637](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L637)
+Defined in: [src/chain/operation.ts:740](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L740)
 
 If either the sender or receiver of an escrow payment has an issue, they can
 raise it for dispute. Once a payment is in dispute, the agent has authority over
@@ -14,7 +14,7 @@ who gets what.
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -22,11 +22,11 @@ who gets what.
 
 > **0**: `"escrow_dispute"`
 
-Defined in: [src/chain/operation.ts:638](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L638)
+Defined in: [src/chain/operation.ts:741](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L741)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -34,7 +34,7 @@ Defined in: [src/chain/operation.ts:638](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:639](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L639)
+Defined in: [src/chain/operation.ts:742](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L742)
 
 #### agent
 
@@ -58,4 +58,4 @@ Defined in: [src/chain/operation.ts:639](https://github.com/TheCrazyGM/dhive/blo
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

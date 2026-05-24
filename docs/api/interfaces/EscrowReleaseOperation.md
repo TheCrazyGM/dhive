@@ -6,7 +6,7 @@
 
 # Interface: EscrowReleaseOperation
 
-Defined in: [src/chain/operation.ts:658](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L658)
+Defined in: [src/chain/operation.ts:761](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L761)
 
 This operation can be used by anyone associated with the escrow transfer to
 release funds if they have permission.
@@ -19,7 +19,7 @@ If there is a dispute regardless of expiration, the agent can release funds to e
 
 ## Extends
 
-- [`Operation`](Operation.md)
+- [`OperationTuple`](OperationTuple.md)
 
 ## Properties
 
@@ -27,11 +27,11 @@ If there is a dispute regardless of expiration, the agent can release funds to e
 
 > **0**: `"escrow_release"`
 
-Defined in: [src/chain/operation.ts:659](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L659)
+Defined in: [src/chain/operation.ts:762](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L762)
 
 #### Overrides
 
-[`Operation`](Operation.md).[`0`](Operation.md#0)
+[`OperationTuple`](OperationTuple.md).[`0`](OperationTuple.md#0)
 
 ***
 
@@ -39,7 +39,7 @@ Defined in: [src/chain/operation.ts:659](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:660](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/operation.ts#L660)
+Defined in: [src/chain/operation.ts:763](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/operation.ts#L763)
 
 #### agent
 
@@ -85,4 +85,4 @@ The account that is attempting to release the funds, determines valid 'receiver'
 
 #### Overrides
 
-[`Operation`](Operation.md).[`1`](Operation.md#1)
+[`OperationTuple`](OperationTuple.md).[`1`](OperationTuple.md#1)

@@ -6,7 +6,7 @@
 
 # Interface: Notifications
 
-Defined in: [src/chain/hivemind.ts:58](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/hivemind.ts#L58)
+Defined in: [src/chain/hivemind.ts:58](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/hivemind.ts#L58)
 
 Hivemind notification record for an account feed.
 
@@ -33,7 +33,7 @@ console.log(notifications[0]?.msg)
 
 > **date**: `string`
 
-Defined in: [src/chain/hivemind.ts:62](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/hivemind.ts#L62)
+Defined in: [src/chain/hivemind.ts:62](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/hivemind.ts#L62)
 
 ***
 
@@ -41,7 +41,7 @@ Defined in: [src/chain/hivemind.ts:62](https://github.com/TheCrazyGM/dhive/blob/
 
 > **id**: `number`
 
-Defined in: [src/chain/hivemind.ts:59](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/hivemind.ts#L59)
+Defined in: [src/chain/hivemind.ts:59](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/hivemind.ts#L59)
 
 ***
 
@@ -49,7 +49,7 @@ Defined in: [src/chain/hivemind.ts:59](https://github.com/TheCrazyGM/dhive/blob/
 
 > **msg**: `string`
 
-Defined in: [src/chain/hivemind.ts:63](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/hivemind.ts#L63)
+Defined in: [src/chain/hivemind.ts:63](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/hivemind.ts#L63)
 
 ***
 
@@ -57,7 +57,7 @@ Defined in: [src/chain/hivemind.ts:63](https://github.com/TheCrazyGM/dhive/blob/
 
 > **score**: `number`
 
-Defined in: [src/chain/hivemind.ts:61](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/hivemind.ts#L61)
+Defined in: [src/chain/hivemind.ts:61](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/hivemind.ts#L61)
 
 ***
 
@@ -65,7 +65,7 @@ Defined in: [src/chain/hivemind.ts:61](https://github.com/TheCrazyGM/dhive/blob/
 
 > **type**: `string`
 
-Defined in: [src/chain/hivemind.ts:60](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/hivemind.ts#L60)
+Defined in: [src/chain/hivemind.ts:60](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/hivemind.ts#L60)
 
 ***
 
@@ -73,4 +73,4 @@ Defined in: [src/chain/hivemind.ts:60](https://github.com/TheCrazyGM/dhive/blob/
 
 > **url**: `string`
 
-Defined in: [src/chain/hivemind.ts:64](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/chain/hivemind.ts#L64)
+Defined in: [src/chain/hivemind.ts:64](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/chain/hivemind.ts#L64)

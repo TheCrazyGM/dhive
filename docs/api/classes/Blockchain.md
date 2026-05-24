@@ -6,7 +6,7 @@
 
 # Class: Blockchain
 
-Defined in: [src/helpers/blockchain.ts:116](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L116)
+Defined in: [src/helpers/blockchain.ts:116](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L116)
 
 Convenience helper for reading Hive blocks and operations as async iterators
 or Node streams.
@@ -41,7 +41,7 @@ for await (const op of client.blockchain.getOperations({ from: 90_000_000 })) {
 
 > **new Blockchain**(`client`): `Blockchain`
 
-Defined in: [src/helpers/blockchain.ts:122](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L122)
+Defined in: [src/helpers/blockchain.ts:122](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L122)
 
 Creates a blockchain helper bound to a client.
 
@@ -63,7 +63,7 @@ Client used for database API reads.
 
 > `readonly` **client**: [`Client`](Client.md)
 
-Defined in: [src/helpers/blockchain.ts:122](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L122)
+Defined in: [src/helpers/blockchain.ts:122](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L122)
 
 Client used for database API reads.
 
@@ -73,7 +73,7 @@ Client used for database API reads.
 
 > **getBlockNumbers**(`options?`): `AsyncGenerator`\<`number`, `void`, `unknown`\>
 
-Defined in: [src/helpers/blockchain.ts:214](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L214)
+Defined in: [src/helpers/blockchain.ts:214](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L214)
 
 Creates an async iterator that yields block numbers as they become available.
 
@@ -124,7 +124,7 @@ for await (const blockNum of client.blockchain.getBlockNumbers({
 
 > **getBlockNumberStream**(`options?`): `ReadableStream`
 
-Defined in: [src/helpers/blockchain.ts:252](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L252)
+Defined in: [src/helpers/blockchain.ts:252](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L252)
 
 Creates a Node readable stream of block numbers.
 
@@ -155,7 +155,7 @@ stream.on('data', (blockNum) => console.log(blockNum))
 
 > **getBlocks**(`options?`): `AsyncGenerator`\<[`SignedBlock`](../interfaces/SignedBlock.md), `void`, `unknown`\>
 
-Defined in: [src/helpers/blockchain.ts:272](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L272)
+Defined in: [src/helpers/blockchain.ts:272](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L272)
 
 Creates an async iterator that yields full signed blocks.
 
@@ -192,7 +192,7 @@ for await (const block of client.blockchain.getBlocks(90_000_000)) {
 
 > **getBlockStream**(`options?`): `ReadableStream`
 
-Defined in: [src/helpers/blockchain.ts:291](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L291)
+Defined in: [src/helpers/blockchain.ts:291](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L291)
 
 Creates a Node readable stream of full signed blocks.
 
@@ -224,7 +224,7 @@ client.blockchain
 
 > **getCurrentBlock**(`mode?`): `Promise`\<[`SignedBlock`](../interfaces/SignedBlock.md)\>
 
-Defined in: [src/helpers/blockchain.ts:184](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L184)
+Defined in: [src/helpers/blockchain.ts:184](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L184)
 
 Fetches the current block for the selected finality mode.
 
@@ -260,7 +260,7 @@ console.log(block.transactions.length)
 
 > **getCurrentBlockHeader**(`mode?`): `Promise`\<[`BlockHeader`](../interfaces/BlockHeader.md)\>
 
-Defined in: [src/helpers/blockchain.ts:165](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L165)
+Defined in: [src/helpers/blockchain.ts:165](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L165)
 
 Fetches the current block header for the selected finality mode.
 
@@ -296,7 +296,7 @@ console.log(header.timestamp)
 
 > **getCurrentBlockNum**(`mode?`): `Promise`\<`number`\>
 
-Defined in: [src/helpers/blockchain.ts:140](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L140)
+Defined in: [src/helpers/blockchain.ts:140](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L140)
 
 Resolves the current block number for the selected finality mode.
 
@@ -333,7 +333,7 @@ const latest = await client.blockchain.getCurrentBlockNum(BlockchainMode.Latest)
 
 > **getOperations**(`options?`): `AsyncGenerator`\<[`AppliedOperation`](../interfaces/AppliedOperation.md), `void`, `unknown`\>
 
-Defined in: [src/helpers/blockchain.ts:321](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L321)
+Defined in: [src/helpers/blockchain.ts:321](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L321)
 
 Creates an async iterator that yields applied operations from each block.
 
@@ -381,7 +381,7 @@ for await (const applied of client.blockchain.getOperations({
 
 > **getOperationsStream**(`options?`): `ReadableStream`
 
-Defined in: [src/helpers/blockchain.ts:342](https://github.com/TheCrazyGM/dhive/blob/0ed1b4ad88b2fc94d193020c03d6253503431e9e/src/helpers/blockchain.ts#L342)
+Defined in: [src/helpers/blockchain.ts:342](https://github.com/TheCrazyGM/dhive/blob/06f00c49db099e36d53bf072dac0943ba256d1a1/src/helpers/blockchain.ts#L342)
 
 Creates a Node readable stream of applied operations.
 

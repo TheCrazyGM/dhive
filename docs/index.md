@@ -8,7 +8,7 @@ hero:
   tagline: Modern, secure, and zero-dependency TypeScript library for the Hive blockchain.
   image:
     src: /pollen-logo.svg
-    alt: Pollen 🌸
+    alt: Pollen
   actions:
     - theme: brand
       text: Get Started
