@@ -8,7 +8,7 @@
 
 > `const` **DEFAULT\_CHAIN\_ID**: `Uint8Array`\<`ArrayBufferLike`\>
 
-Defined in: [src/client.ts:87](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/client.ts#L87)
+Defined in: [src/client.ts:87](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/client.ts#L87)
 
 Main Hive network chain id as 32 raw bytes.
 

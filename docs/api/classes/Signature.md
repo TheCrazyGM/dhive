@@ -6,7 +6,7 @@
 
 # Class: Signature
 
-Defined in: [src/crypto.ts:350](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L350)
+Defined in: [src/crypto.ts:350](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L350)
 
 Compact recoverable secp256k1 signature.
 
@@ -16,7 +16,7 @@ Compact recoverable secp256k1 signature.
 
 > **new Signature**(`data`, `recovery`): `Signature`
 
-Defined in: [src/crypto.ts:351](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L351)
+Defined in: [src/crypto.ts:351](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L351)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/crypto.ts:351](https://github.com/TheCrazyGM/dhive/blob/30e513f
 
 > **data**: `Uint8Array`
 
-Defined in: [src/crypto.ts:352](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L352)
+Defined in: [src/crypto.ts:352](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L352)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/crypto.ts:352](https://github.com/TheCrazyGM/dhive/blob/30e513f
 
 > **recovery**: `number`
 
-Defined in: [src/crypto.ts:353](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L353)
+Defined in: [src/crypto.ts:353](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L353)
 
 ## Methods
 
@@ -54,7 +54,7 @@ Defined in: [src/crypto.ts:353](https://github.com/TheCrazyGM/dhive/blob/30e513f
 
 > **recover**(`message`, `prefix?`): [`PublicKey`](PublicKey.md)
 
-Defined in: [src/crypto.ts:376](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L376)
+Defined in: [src/crypto.ts:376](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L376)
 
 Recovers the public key that produced this signature.
 
@@ -78,7 +78,7 @@ Recovers the public key that produced this signature.
 
 > **toBuffer**(): `Uint8Array`\<`ArrayBuffer`\>
 
-Defined in: [src/crypto.ts:384](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L384)
+Defined in: [src/crypto.ts:384](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L384)
 
 #### Returns
 
@@ -90,7 +90,7 @@ Defined in: [src/crypto.ts:384](https://github.com/TheCrazyGM/dhive/blob/30e513f
 
 > **toString**(): `string`
 
-Defined in: [src/crypto.ts:392](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L392)
+Defined in: [src/crypto.ts:392](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L392)
 
 #### Returns
 
@@ -102,7 +102,7 @@ Defined in: [src/crypto.ts:392](https://github.com/TheCrazyGM/dhive/blob/30e513f
 
 > `static` **fromBuffer**(`buffer`): `Signature`
 
-Defined in: [src/crypto.ts:358](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L358)
+Defined in: [src/crypto.ts:358](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L358)
 
 #### Parameters
 
@@ -120,7 +120,7 @@ Defined in: [src/crypto.ts:358](https://github.com/TheCrazyGM/dhive/blob/30e513f
 
 > `static` **fromString**(`string`): `Signature`
 
-Defined in: [src/crypto.ts:369](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/crypto.ts#L369)
+Defined in: [src/crypto.ts:369](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/crypto.ts#L369)
 
 #### Parameters
 

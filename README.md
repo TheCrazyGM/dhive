@@ -120,7 +120,7 @@ Pollen is a modernized fork of [dhive](https://github.com/openhive-network/dhive
 
 ## 🌐 Built by SRBDE
 
-Nectar is developed and maintained by the **Sustainable Resource and Business Development Enterprise (SRBDE)** — an open-source infrastructure organization building tools and platforms for communities that build things together.
+**Pollen** is developed and maintained by the **Sustainable Resource and Business Development Enterprise (SRBDE)** — an open-source infrastructure organization building tools and platforms for communities that build things together.
 
 We apply the logic of agricultural sustainability to software: the goal is always to return more to the ecosystem than we extract.
 
@@ -139,4 +139,4 @@ We apply the logic of agricultural sustainability to software: the goal is alway
 
 ## 🤝 Contributing
 
-Audits, forks, and pull requests are welcome. Nectar is built to last for the decade, not the quarter. If you find a security issue, please open a private advisory rather than a public issue.
+Audits, forks, and pull requests are welcome. **Pollen** is built to last for the decade, not the quarter. If you find a security issue, please open a private advisory rather than a public issue.

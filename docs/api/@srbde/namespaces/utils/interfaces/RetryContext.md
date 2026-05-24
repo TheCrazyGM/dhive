@@ -6,7 +6,7 @@
 
 # Interface: RetryContext
 
-Defined in: [src/utils.ts:57](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/utils.ts#L57)
+Defined in: [src/utils.ts:57](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/utils.ts#L57)
 
 Context for smart retry and failover decisions.
 
@@ -16,7 +16,7 @@ Context for smart retry and failover decisions.
 
 > `optional` **api?**: `string`
 
-Defined in: [src/utils.ts:59](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/utils.ts#L59)
+Defined in: [src/utils.ts:59](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/utils.ts#L59)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/utils.ts:59](https://github.com/TheCrazyGM/dhive/blob/30e513f70
 
 > `optional` **consoleOnFailover?**: `boolean`
 
-Defined in: [src/utils.ts:61](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/utils.ts#L61)
+Defined in: [src/utils.ts:61](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/utils.ts#L61)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/utils.ts:61](https://github.com/TheCrazyGM/dhive/blob/30e513f70
 
 > `optional` **healthTracker?**: [`NodeHealthTracker`](../../../../classes/NodeHealthTracker.md)
 
-Defined in: [src/utils.ts:58](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/utils.ts#L58)
+Defined in: [src/utils.ts:58](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/utils.ts#L58)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/utils.ts:58](https://github.com/TheCrazyGM/dhive/blob/30e513f70
 
 > `optional` **isBroadcast?**: `boolean`
 
-Defined in: [src/utils.ts:60](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/utils.ts#L60)
+Defined in: [src/utils.ts:60](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/utils.ts#L60)

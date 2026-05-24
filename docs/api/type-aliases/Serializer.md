@@ -8,7 +8,7 @@
 
 > **Serializer** = (`buffer`, `data`) => `void`
 
-Defined in: [src/chain/serializer.ts:60](https://github.com/TheCrazyGM/dhive/blob/30e513f7071b156ae2048e0f9aa531643a28717f/src/chain/serializer.ts#L60)
+Defined in: [src/chain/serializer.ts:60](https://github.com/TheCrazyGM/dhive/blob/b7fee73ff5fdd26e45fb6f64011ce38836188cc9/src/chain/serializer.ts#L60)
 
 Function signature for writing one Hive protocol value to Pollen's native
 byte writer.
