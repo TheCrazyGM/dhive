@@ -6,6 +6,9 @@ export default defineConfig({
   description: "Modern, secure, and zero-dependency TypeScript SDK for the Hive blockchain",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    search: {
+      provider: "local",
+    },
     logo: "/pollen-logo.svg",
     nav: [
       { text: "Home", link: "/" },

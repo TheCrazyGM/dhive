@@ -54,7 +54,7 @@
     "docs:build": "pnpm run docs:api && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs": "pnpm run docs:build",
-    "prepare": "pnpm run build"
+    "prepare": "pnpm run build && husky"
   },
   "dependencies": {
     "@noble/ciphers": "^2.2.0",
@@ -79,6 +79,7 @@
     "stream-browserify": "^3.0.0",
     "typedoc": "^0.28.19",
     "typedoc-plugin-markdown": "^4.11.0",
+    "husky": "^9.1.7",
     "typescript": "^6.0.3",
     "vitepress": "^1.6.4",
     "vitest": "^4.1.7"
