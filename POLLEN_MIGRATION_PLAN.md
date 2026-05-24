@@ -33,17 +33,30 @@ This document outlines the strategic roadmap for **`@srbde/pollen`**.
 - [x] **Vite Integration:** Created a modern, high-performance `comment-feed` example using React + TypeScript + Vite.
 - [x] **ESM Examples:** Modernized all legacy examples to use Pure ESM and the new Pollen identity.
 
-## ✅ Phase 7: The Knowledge Garden (IN PROGRESS)
-
-**Goal:** Transform the technical API "dictionary" into a unified, world-class developer portal using **VitePress**.
-
-- [x] **VitePress Scaffolding:** Initialize a new documentation site in the `docs/` directory.
-- [x] **Branding & Theming:** Customize the landing page and navigation to align with SRBDE/Pollen branding.
+## ✅ Phase 7: The Knowledge Garden (COMPLETED)
+- [x] **VitePress Scaffolding:** Initialized a new documentation site in the `docs/` directory.
+- [x] **Branding & Theming:** Customized the landing page and navigation to align with SRBDE/Pollen branding.
 - [x] **Conceptual Guides:** Authored handwritten guides for Getting Started, Migration, and Security.
 - [x] **Markdown API Generation:** Integrated `typedoc-plugin-markdown` to automatically generate technical references.
-- [ ] **Unified Search:** Enable high-quality, localized search for all documentation.
-- [ ] **Refine API Sidebar:** Improve the auto-generated sidebar structure for the API reference.
 
+## 🛠️ Phase 8: The Native Purge (NEXT STEPS)
+
+**Goal:** Achieve true zero-dependency status and maximum performance by eliminating legacy Node.js primitives and polyfills.
+
+- [ ] **Native BigInt Migration:** Replace the `JSBI` library with native JavaScript `BigInt` (96%+ browser support).
+- [ ] **Uint8Array Everywhere:** Migrate all remaining `Buffer` usage to native `Uint8Array`.
+- [ ] **Noble Crypto Consolidation:** Use `@noble` for AES and SHA hashing, eliminating `crypto-browserify`.
+- [ ] **Native Fetch:** Remove `cross-fetch` and `node-fetch` in favor of native `globalThis.fetch`.
+- [ ] **Bundle Pruning:** Shrink the browser bundle by removing the now-unnecessary polyfills.
+
+## 🛠️ Phase 9: Data Integrity (ULTIMATE SAFETY)
+
+**Goal:** Reach 0 `any` occurrences and provide perfect developer IntelliSense for the entire Hive protocol.
+
+- [ ] **Hive Type Lab:** Author strict TypeScript interfaces for every Hive Operation (Transfer, Vote, CustomJSON, etc).
+- [ ] **Zero-Any Core:** Refactor blockchain data structures (Account, Transaction, Block) to be 100% strictly typed.
+- [ ] **Operation Enrichment:** Document every field of every operation using the "Documentation Architect" persona.
+- [ ] **Validation Layer:** (Optional) Implement Zod-like runtime validation for incoming RPC data to ensure type integrity.
 
 ---
-*Document updated on Saturday, May 23, 2026. Phase 7 is ready for initiation.*
+*Document updated on Saturday, May 23, 2026. Phase 8 and 9 are ready for surgical execution.*
