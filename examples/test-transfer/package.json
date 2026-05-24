@@ -10,6 +10,6 @@
     "test": "node index.js"
   },
   "dependencies": {
-    "@srbde/pollen": "link:../.."
+    "@srbde/pollen": "workspace:*"
   }
 }

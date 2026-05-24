@@ -31,25 +31,33 @@ if (!POSTING_KEY) {
     `🌸 Pollen Vote Bot active. Following ${FOLLOW_USER} with ${VOTE_WEIGHT / 100}% weight`,
   );
 
-  stream.on("data", (operation) => {
-    if (operation.op[0] === "vote") {
-      const vote = operation.op[1];
-      if (vote.voter === FOLLOW_USER) {
-        console.log(`${vote.voter} voted, following...`);
+  const run = async () => {
+    try {
+      for await (const operation of stream) {
+        if (operation.op[0] === "vote") {
+          const vote = operation.op[1];
+          if (vote.voter === FOLLOW_USER) {
+            console.log(`${vote.voter} voted, following...`);
 
-        const myVote = { ...vote };
-        myVote.voter = BOT_USER;
-        myVote.weight = vote.weight > 0 ? VOTE_WEIGHT : -VOTE_WEIGHT;
+            const myVote = { ...vote };
+            myVote.voter = BOT_USER;
+            myVote.weight = vote.weight > 0 ? VOTE_WEIGHT : -VOTE_WEIGHT;
 
-        client.broadcast
-          .vote(myVote, key)
-          .then(() => {
-            console.log(`Success! Voted for https://hive.blog/@${vote.author}/${vote.permlink}`);
-          })
-          .catch((error) => {
-            console.warn("Vote failed:", error.message);
-          });
+            client.broadcast
+              .vote(myVote, key)
+              .then(() => {
+                console.log(`Success! Voted for https://hive.blog/@${vote.author}/${vote.permlink}`);
+              })
+              .catch((error) => {
+                console.warn("Vote failed:", error.message);
+              });
+          }
+        }
       }
+    } catch (error) {
+      console.error("Stream error:", error.message);
     }
-  });
+  };
+
+  run();
 }

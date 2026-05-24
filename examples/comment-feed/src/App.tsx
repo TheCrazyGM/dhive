@@ -20,45 +20,54 @@ function App() {
   useEffect(() => {
     const client = new Client(NODES);
     let isMounted = true;
+    let reader: ReadableStreamDefaultReader<any> | undefined;
 
-    const stream = client.blockchain.getOperationsStream({
-      mode: BlockchainMode.Latest,
-    });
+    const startStreaming = async () => {
+      const stream = client.blockchain.getOperationsStream({
+        mode: BlockchainMode.Latest,
+      });
 
-    setIsConnected(true);
+      reader = stream.getReader();
+      setIsConnected(true);
 
-    stream.on("data", (op: any) => {
-      if (!isMounted) return;
+      try {
+        while (true) {
+          const { value: op, done } = await reader.read();
+          if (done || !isMounted) break;
 
-      if (op.op[0] === "comment") {
-        const commentData = op.op[1];
+          if (op.op[0] === "comment") {
+            const commentData = op.op[1];
 
-        // Filter out edits (they start with @@)
-        if (commentData.body.startsWith("@@")) return;
+            // Filter out edits (they start with @@)
+            if (commentData.body.startsWith("@@")) continue;
 
-        const newComment: HiveComment = {
-          id: `${op.trx_id}-${op.block_num}`,
-          author: commentData.author,
-          permlink: commentData.permlink,
-          body:
-            commentData.body.length > 280
-              ? commentData.body.substring(0, 280) + "..."
-              : commentData.body,
-          timestamp: new Date().toLocaleTimeString(),
-        };
+            const newComment: HiveComment = {
+              id: `${op.trx_id}-${op.block_num}`,
+              author: commentData.author,
+              permlink: commentData.permlink,
+              body:
+                commentData.body.length > 280
+                  ? commentData.body.substring(0, 280) + "..."
+                  : commentData.body,
+              timestamp: new Date().toLocaleTimeString(),
+            };
 
-        setComments((prev) => [newComment, ...prev].slice(0, 50));
+            setComments((prev) => [newComment, ...prev].slice(0, 50));
+          }
+        }
+      } catch (err) {
+        console.error("Stream error:", err);
+        if (isMounted) setIsConnected(false);
       }
-    });
+    };
 
-    stream.on("error", (err: any) => {
-      console.error("Stream error:", err);
-      if (isMounted) setIsConnected(false);
-    });
+    startStreaming();
 
     return () => {
       isMounted = false;
-      // In a real app we would close the stream, but dhive handles it on destroy
+      if (reader) {
+        reader.cancel().catch(() => {});
+      }
     };
   }, []);
 
