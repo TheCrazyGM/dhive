@@ -10,8 +10,6 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      // Direct aliases for browser-safe versions
-      crypto: "crypto-browserify",
       stream: "stream-browserify",
       buffer: "buffer",
     },
