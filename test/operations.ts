@@ -62,7 +62,9 @@ describe("operations", function () {
     const tx = await client.database.getTransaction(rv.id);
     const rop = tx.operations[0];
     assert.equal(rop[0], "custom");
-    assert.equal(rop[1].data, HexBuffer.from(op[1].data).toString());
+    if (rop[0] === "custom") {
+      assert.equal(rop[1].data, HexBuffer.from(op[1].data).toString());
+    }
   }, 60000);
 
   it("should send custom json", async function () {
@@ -81,7 +83,11 @@ describe("operations", function () {
       acc1Key,
     );
     const tx = await client.database.getTransaction(rv.id);
-    assert.deepEqual(JSON.parse(tx.operations[0][1].json), data);
+    const rop = tx.operations[0];
+    assert.equal(rop[0], "custom_json");
+    if (rop[0] === "custom_json") {
+      assert.deepEqual(JSON.parse(rop[1].json), data);
+    }
   }, 60000);
 
   it("should transfer hive", async function () {
@@ -166,7 +172,7 @@ describe("operations", function () {
       postingWif,
     );
 
-    const post = await client.call("condenser_api", "get_content", [username, permlink]);
+    const post = await client.call<ds.Discussion>("condenser_api", "get_content", [username, permlink]);
     assert.deepEqual(post.beneficiaries, [{ account: acc1.username, weight: 10000 }]);
     assert.equal(post.max_accepted_payout, "10.000 HBD");
     assert.equal(post.allow_votes, true);

@@ -1,7 +1,7 @@
 import { cbc } from "@noble/ciphers/aes.js";
 import { randomBytes } from "@noble/hashes/utils.js";
 import { PrivateKey, PublicKey } from "../crypto.js";
-import { BinaryReader, BinaryWriter, concat } from "../utils.js";
+import { BinaryReader, BinaryWriter } from "../utils.js";
 import { sha256 as nobleSha256, sha512 as nobleSha512 } from "@noble/hashes/sha2.js";
 
 /**

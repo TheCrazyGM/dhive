@@ -55,8 +55,8 @@ export class AccountByKeyAPI {
    * })
    * ```
    */
-  public call(method: string, params?: any) {
-    return this.client.call("account_by_key_api", method, params);
+  public call<T = unknown>(method: string, params?: unknown) {
+    return this.client.call<T>("account_by_key_api", method, params);
   }
 
   /**
@@ -83,6 +83,8 @@ export class AccountByKeyAPI {
    * ```
    */
   public async getKeyReferences(keys: (PublicKey | string)[]): Promise<AccountsByKey> {
-    return this.call("get_key_references", { keys: keys.map((key) => key.toString()) });
+    return this.call<AccountsByKey>("get_key_references", {
+      keys: keys.map((key) => key.toString()),
+    });
   }
 }

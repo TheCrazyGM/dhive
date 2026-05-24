@@ -75,7 +75,7 @@ export interface Transaction {
    * Transaction extension values. Hive currently expects this to be empty for
    * the operations supported by Pollen.
    */
-  extensions: any[];
+  extensions: unknown[];
 }
 
 /**

@@ -91,6 +91,15 @@ export interface Comment {
   beneficiaries: BeneficiaryRoute[];
 }
 
+export interface VoteState {
+  voter: string;
+  weight: number | string;
+  rshares: number | string;
+  percent: number;
+  reputation: number | string;
+  time: string;
+}
+
 /**
  * Hivemind/condenser discussion record for posts and enriched comments.
  *
@@ -115,14 +124,14 @@ export interface Discussion extends Comment {
   root_title: string;
   pending_payout_value: Asset | string;
   total_pending_payout_value: Asset | string;
-  active_votes: any[]; // vote_state[]
+  active_votes: VoteState[]; // vote_state[]
   replies: string[]; // / author/slug mapping
   author_reputation: number; // share_type
   promoted: Asset | string;
   body_length: string; // Bignum
-  reblogged_by: any[]; // account_name_type[]
-  first_reblogged_by?: any; // account_name_type
-  first_reblogged_on?: any; // time_point_sec
+  reblogged_by: string[]; // account_name_type[]
+  first_reblogged_by?: string; // account_name_type
+  first_reblogged_on?: string; // time_point_sec
 }
 
 /**

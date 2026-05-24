@@ -19,7 +19,7 @@ import { PublicKey } from "../crypto.js";
  * console.log(memo.from.toString())
  * ```
  */
-export type Deserializer = (reader: BinaryReader) => any;
+export type Deserializer = (reader: BinaryReader) => unknown;
 
 const PublicKeyDeserializer = (reader: BinaryReader) => {
   const bytes = reader.readBytes(33);
@@ -37,22 +37,25 @@ const BinaryDeserializer = (reader: BinaryReader) => {
 const BufferDeserializer =
   (keyDeserializers: [string, Deserializer][]) => (buffer: Uint8Array | BinaryReader) => {
     const reader =
-      typeof (buffer as any).readBytes === "function"
+      typeof (buffer as BinaryReader).readBytes === "function"
         ? (buffer as BinaryReader)
         : new BinaryReader(buffer as Uint8Array);
-    const obj: any = {};
+    const obj: Record<string, unknown> = {};
     for (const [key, deserializer] of keyDeserializers) {
       try {
         obj[key] = deserializer(reader);
-      } catch (error: any) {
-        error.message = `${key}: ${error.message}`;
-        throw error;
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          error.message = `${key}: ${error.message}`;
+          throw error;
+        }
+        throw new Error(`${key}: ${String(error)}`);
       }
     }
     return obj;
   };
 
-const EncryptedMemoDeserializer: any = BufferDeserializer([
+const EncryptedMemoDeserializer: Deserializer = BufferDeserializer([
   ["from", PublicKeyDeserializer],
   ["to", PublicKeyDeserializer],
   ["nonce", UInt64Deserializer],

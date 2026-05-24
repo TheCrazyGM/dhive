@@ -35,6 +35,7 @@
 
 import { PublicKey } from "../crypto.js";
 import { Asset } from "./asset.js";
+import { AppliedOperation } from "./operation.js";
 
 /**
  * Raw Hive authority object.
@@ -219,21 +220,21 @@ export interface ExtendedAccount extends Account {
   /**
    * Transfer and vesting operation history.
    */
-  transfer_history: any[]; // map<uint64_t,applied_operation>
+  transfer_history: [number, AppliedOperation][]; // map<uint64_t,applied_operation>
   /**
    * Limit order, cancel, and fill history.
    */
-  market_history: any[]; // map<uint64_t,applied_operation>
-  post_history: any[]; // map<uint64_t,applied_operation>
-  vote_history: any[]; // map<uint64_t,applied_operation>
-  other_history: any[]; // map<uint64_t,applied_operation>
+  market_history: [number, AppliedOperation][]; // map<uint64_t,applied_operation>
+  post_history: [number, AppliedOperation][]; // map<uint64_t,applied_operation>
+  vote_history: [number, AppliedOperation][]; // map<uint64_t,applied_operation>
+  other_history: [number, AppliedOperation][]; // map<uint64_t,applied_operation>
   witness_votes: string[]; // set<string>
   tags_usage: string[]; // vector<pair<string,uint32_t>>
   guest_bloggers: string[]; // vector<pair<account_name_type,uint32_t>>
-  open_orders?: any[]; // optional<map<uint32_t,extended_limit_order>>
-  comments?: any[]; // / permlinks for this user // optional<vector<string>>
-  blog?: any[]; // / blog posts for this user // optional<vector<string>>
-  feed?: any[]; // / feed posts for this user // optional<vector<string>>
-  recent_replies?: any[]; // / blog posts for this user // optional<vector<string>>
-  recommended?: any[]; // / posts recommened for this user // optional<vector<string>>
+  open_orders?: unknown[]; // optional<map<uint32_t,extended_limit_order>>
+  comments?: string[]; // / permlinks for this user // optional<vector<string>>
+  blog?: string[]; // / blog posts for this user // optional<vector<string>>
+  feed?: string[]; // / feed posts for this user // optional<vector<string>>
+  recent_replies?: string[]; // / blog posts for this user // optional<vector<string>>
+  recommended?: string[]; // / posts recommened for this user // optional<vector<string>>
 }

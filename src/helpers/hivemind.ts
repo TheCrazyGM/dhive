@@ -184,8 +184,8 @@ export class HivemindAPI {
    * })
    * ```
    */
-  public call(method: string, params?: any) {
-    return this.client.call("bridge", method, params);
+  public call<T = unknown>(method: string, params?: unknown) {
+    return this.client.call<T>("bridge", method, params);
   }
 
   /**
@@ -209,7 +209,7 @@ export class HivemindAPI {
    * ```
    */
   public getRankedPosts(options: PostsQuery): Promise<Discussion[]> {
-    return this.call("get_ranked_posts", options);
+    return this.call<Discussion[]>("get_ranked_posts", options);
   }
 
   /**
@@ -231,7 +231,7 @@ export class HivemindAPI {
    * ```
    */
   public getAccountPosts(options: AccountPostsQuery): Promise<Discussion[]> {
-    return this.call("get_account_posts", options);
+    return this.call<Discussion[]>("get_account_posts", options);
   }
 
   /**
@@ -255,7 +255,7 @@ export class HivemindAPI {
    * ```
    */
   public getCommunity(options: CommunityQuery): Promise<CommunityDetail[]> {
-    return this.call("get_community", options);
+    return this.call<CommunityDetail[]>("get_community", options);
   }
 
   /**
@@ -274,7 +274,7 @@ export class HivemindAPI {
    * ```
    */
   public listAllSubscriptions(account: Account["name"] | object): Promise<Discussion[]> {
-    return this.call("list_all_subscriptions", account);
+    return this.call<Discussion[]>("list_all_subscriptions", account);
   }
 
   /**
@@ -295,7 +295,7 @@ export class HivemindAPI {
    * ```
    */
   public getAccountNotifications(options?: AccountNotifsQuery): Promise<Notifications[]> {
-    return this.call("account_notifications", options);
+    return this.call<Notifications[]>("account_notifications", options);
   }
 
   /**
@@ -316,6 +316,6 @@ export class HivemindAPI {
    * ```
    */
   public listCommunities(options: ListCommunitiesQuery): Promise<CommunityDetail[]> {
-    return this.call("list_communities", options);
+    return this.call<CommunityDetail[]>("list_communities", options);
   }
 }

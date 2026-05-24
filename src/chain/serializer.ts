@@ -104,7 +104,7 @@ const BooleanSerializer = (buffer: BinaryWriter, data: boolean) => {
 };
 
 const StaticVariantSerializer =
-  (itemSerializers: Serializer[]) => (buffer: BinaryWriter, data: [number, any]) => {
+  (itemSerializers: Serializer[]) => (buffer: BinaryWriter, data: [number, unknown]) => {
     const [id, item] = data;
     buffer.writeVarint32(id);
     itemSerializers[id](buffer, item);
@@ -160,7 +160,7 @@ const VariableBinarySerializer = BinarySerializer();
 
 const FlatMapSerializer =
   (keySerializer: Serializer, valueSerializer: Serializer) =>
-  (buffer: BinaryWriter, data: [any, any][]) => {
+  (buffer: BinaryWriter, data: [unknown, unknown][]) => {
     buffer.writeVarint32(data.length);
     for (const [key, value] of data) {
       keySerializer(buffer, key);
@@ -168,7 +168,7 @@ const FlatMapSerializer =
     }
   };
 
-const ArraySerializer = (itemSerializer: Serializer) => (buffer: BinaryWriter, data: any[]) => {
+const ArraySerializer = (itemSerializer: Serializer) => (buffer: BinaryWriter, data: unknown[]) => {
   buffer.writeVarint32(data.length);
   for (const item of data) {
     itemSerializer(buffer, item);
@@ -176,26 +176,29 @@ const ArraySerializer = (itemSerializer: Serializer) => (buffer: BinaryWriter, d
 };
 
 const ObjectSerializer =
-  (keySerializers: [string, Serializer][]) =>
-  (buffer: BinaryWriter, data: { [key: string]: any }) => {
+  (keySerializers: [string, Serializer][]) => (buffer: BinaryWriter, data: any) => {
     for (const [key, serializer] of keySerializers) {
       try {
         serializer(buffer, data[key]);
-      } catch (error: any) {
-        error.message = `${key}: ${error.message}`;
-        throw error;
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          error.message = `${key}: ${error.message}`;
+          throw error;
+        }
+        throw new Error(`${key}: ${String(error)}`);
       }
     }
   };
 
-const OptionalSerializer = (valueSerializer: Serializer) => (buffer: BinaryWriter, data: any) => {
-  if (data) {
-    buffer.writeUint8(1);
-    valueSerializer(buffer, data);
-  } else {
-    buffer.writeUint8(0);
-  }
-};
+const OptionalSerializer =
+  (valueSerializer: Serializer) => (buffer: BinaryWriter, data: unknown) => {
+    if (data) {
+      buffer.writeUint8(1);
+      valueSerializer(buffer, data);
+    } else {
+      buffer.writeUint8(0);
+    }
+  };
 
 const AuthoritySerializer = ObjectSerializer([
   ["weight_threshold", UInt32Serializer],
@@ -232,7 +235,7 @@ const ChainPropertiesSerializer = ObjectSerializer([
 
 const OperationDataSerializer = (operationId: number, definitions: [string, Serializer][]) => {
   const objectSerializer = ObjectSerializer(definitions);
-  return (buffer: BinaryWriter, data: { [key: string]: any }) => {
+  return (buffer: BinaryWriter, data: any) => {
     buffer.writeVarint32(operationId);
     objectSerializer(buffer, data);
   };
@@ -621,9 +624,12 @@ const OperationSerializer = (buffer: BinaryWriter, operation: Operation) => {
   }
   try {
     serializer(buffer, operation[1]);
-  } catch (error: any) {
-    error.message = `${operation[0]}: ${error.message}`;
-    throw error;
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      error.message = `${operation[0]}: ${error.message}`;
+      throw error;
+    }
+    throw new Error(`${operation[0]}: ${String(error)}`);
   }
 };
 

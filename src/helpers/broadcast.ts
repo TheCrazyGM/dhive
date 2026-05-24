@@ -608,8 +608,10 @@ export class BroadcastAPI {
    */
   public async send(transaction: SignedTransaction): Promise<TransactionConfirmation> {
     const trxId = cryptoUtils.generateTrxId(transaction);
-    const result = await this.call("broadcast_transaction", [transaction]);
-    return Object.assign({ id: trxId }, result);
+    const result = await this.call<Omit<TransactionConfirmation, "id">>("broadcast_transaction", [
+      transaction,
+    ]);
+    return { id: trxId, ...result };
   }
 
   /**
@@ -627,7 +629,7 @@ export class BroadcastAPI {
    * const result = await client.broadcast.call('broadcast_transaction', [signed])
    * ```
    */
-  public call(method: string, params?: any[]) {
-    return this.client.call("condenser_api", method, params);
+  public call<T = unknown>(method: string, params?: unknown[]) {
+    return this.client.call<T>("condenser_api", method, params);
   }
 }

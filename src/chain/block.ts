@@ -53,7 +53,7 @@ export interface BlockHeader {
   timestamp: string; // time_point_sec
   witness: string;
   transaction_merkle_root: string; // checksum_type
-  extensions: any[]; // block_header_extensions_type
+  extensions: unknown[]; // block_header_extensions_type
 }
 
 /**

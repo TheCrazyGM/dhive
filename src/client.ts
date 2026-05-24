@@ -106,29 +106,29 @@ interface RPCRequest {
   /**
    * RPC method.
    */
-  method: "call" | "notice" | "callback";
+  method: string;
   /**
    * Array of parameters to pass to the method.
    */
   jsonrpc: "2.0";
-  params: any[];
+  params: unknown;
 }
 
 interface RPCCall extends RPCRequest {
-  method: "call" | any;
+  method: string;
   /**
    * 1. API to call, you can pass either the numerical id of the API you get
    *    from calling 'get_api_by_name' or the name directly as a string.
    * 2. Method to call on that API.
    * 3. Arguments to pass to the method.
    */
-  params: [number | string, string, any[]];
+  params: [number | string, string, unknown];
 }
 
 interface RPCErrorData {
   code: number;
   message: string;
-  data?: any;
+  data?: unknown;
 }
 
 interface RPCResponse {
@@ -137,13 +137,13 @@ interface RPCResponse {
    */
   id: number;
   error?: RPCErrorData;
-  result?: any;
+  result?: unknown;
 }
 
 interface PendingRequest {
   request: RPCRequest;
   timer: NodeJS.Timer | undefined;
-  resolve: (response: any) => void;
+  resolve: (response: RPCResponse) => void;
   reject: (error: Error) => void;
 }
 
@@ -215,7 +215,7 @@ export interface ClientOptions {
    * Defaults to using https.globalAgent.
    * @see https://nodejs.org/api/http.html#http_new_agent_options.
    */
-  agent?: any; // https.Agent
+  agent?: unknown; // https.Agent
   /**
    * Options for the node health tracker.
    * Controls cooldown periods, stale block thresholds, etc.
@@ -439,11 +439,11 @@ export class Client {
    * @see {@link retryingFetch}
    * @see {@link NodeHealthTracker}
    */
-  public async call(api: string, method: string, params: any = []): Promise<any> {
+  public async call<T = unknown>(api: string, method: string, params: unknown = []): Promise<T> {
     const isBroadcast =
       api === "network_broadcast_api" || method.startsWith("broadcast_transaction");
 
-    const request: RPCCall = {
+    const request: RPCRequest = {
       id: 0,
       jsonrpc: "2.0",
       method: api + "." + method,
@@ -456,7 +456,7 @@ export class Client {
       }
       return value;
     });
-    const opts: any = {
+    const opts: RequestInit & { agent?: unknown } = {
       body,
       cache: "no-cache",
       headers: {
@@ -478,7 +478,7 @@ export class Client {
     if (this.options.agent) {
       opts.agent = this.options.agent;
     }
-    let fetchTimeout: any;
+    let fetchTimeout: ((tries: number) => number) | undefined;
     if (!isBroadcast) {
       // bit of a hack to work around some nodes high error rates
       // only effective in node.js (until timeout spec lands in browsers)
@@ -513,9 +513,10 @@ export class Client {
     if (
       response.result &&
       method === "get_dynamic_global_properties" &&
-      response.result.head_block_number
+      typeof response.result === "object" &&
+      "head_block_number" in response.result
     ) {
-      this.healthTracker.updateHeadBlock(currentAddress, response.result.head_block_number);
+      this.healthTracker.updateHeadBlock(currentAddress, (response.result as any).head_block_number);
     }
 
     // Handle RPC-level errors.
@@ -523,7 +524,7 @@ export class Client {
     // We record it as an API-specific failure so the health tracker can
     // deprioritize this node for this API in future calls.
     if (response.error) {
-      const formatValue = (value: any) => {
+      const formatValue = (value: unknown): string => {
         switch (typeof value) {
           case "object":
             return JSON.stringify(value);
@@ -531,14 +532,19 @@ export class Client {
             return String(value);
         }
       };
-      const { data } = response.error;
+      const data = response.error.data as {
+        stack?: {
+          data: Record<string, unknown>;
+          format: string;
+        }[];
+      } | undefined;
       let { message } = response.error;
       if (data && data.stack && data.stack.length > 0) {
         const top = data.stack[0];
         const topData = copy(top.data);
         message = top.format.replace(/\$\{([a-z_]+)\}/gi, (match: string, key: string) => {
           let rv = match;
-          if (topData[key]) {
+          if (topData[key] !== undefined) {
             rv = formatValue(topData[key]);
             delete topData[key];
           }
@@ -557,17 +563,16 @@ export class Client {
       //   -32601 = Method not found (plugin not enabled on this node)
       //   -32603 = Internal error (node issue)
       //   -32003 = Hive assertion error (user error — bad params, invalid account)
-      // Only API/plugin errors should be tracked, and only as API-specific failures
-      // (not global node failures) since other APIs on this node may work fine.
+      //   -32003 is technically not a node failure, but we want failover for it in some cases.
       const rpcCode = response.error.code;
       if (rpcCode === -32601 || rpcCode === -32603) {
         this.healthTracker.recordApiFailure(currentAddress, api);
       }
 
-      throw new RPCError(message, data);
+      throw new RPCError(message, response.error.data);
     }
     assert.equal(response.id, request.id, "got invalid response id");
-    return response.result;
+    return response.result as T;
   }
 }
 

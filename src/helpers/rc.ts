@@ -48,8 +48,8 @@ export class RCAPI {
    * })
    * ```
    */
-  public call(method: string, params?: any) {
-    return this.client.call("rc_api", method, params);
+  public call<T = unknown>(method: string, params?: unknown) {
+    return this.client.call<T>("rc_api", method, params);
   }
 
   /**
@@ -68,7 +68,10 @@ export class RCAPI {
    * ```
    */
   public async findRCAccounts(usernames: string[]): Promise<RCAccount[]> {
-    return (await this.call("find_rc_accounts", { accounts: usernames })).rc_accounts;
+    const res = await this.call<{ rc_accounts: RCAccount[] }>("find_rc_accounts", {
+      accounts: usernames,
+    });
+    return res.rc_accounts;
   }
 
   /**
@@ -87,7 +90,8 @@ export class RCAPI {
    * ```
    */
   public async getResourceParams(): Promise<RCParams> {
-    return (await this.call("get_resource_params", {})).resource_params;
+    const res = await this.call<{ resource_params: RCParams }>("get_resource_params", {});
+    return res.resource_params;
   }
 
   /**
@@ -105,7 +109,8 @@ export class RCAPI {
    * ```
    */
   public async getResourcePool(): Promise<RCPool> {
-    return (await this.call("get_resource_pool", {})).resource_pool;
+    const res = await this.call<{ resource_pool: RCPool }>("get_resource_pool", {});
+    return res.resource_pool;
   }
 
   /**
@@ -155,7 +160,7 @@ export class RCAPI {
    */
   public async getVPMana(username: string): Promise<Manabar> {
     const account: Account = (
-      await this.client.call("condenser_api", "get_accounts", [[username]])
+      await this.client.call<Account[]>("condenser_api", "get_accounts", [[username]])
     )[0];
     return this.calculateVPMana(account);
   }

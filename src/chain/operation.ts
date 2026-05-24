@@ -147,12 +147,21 @@ export type VirtualOperationName = // <id>
   | "expired_account_notification" // last_regular + 26
   | "changed_recovery_account" // last_regular + 27
   | "transfer_to_vesting_completed" // last_regular + 28
+  | "pow_reward" // last_regular + 29
   | "vesting_shares_split" // last_regular + 30
   | "account_created" // last_regular + 31
   | "fill_collateralized_convert_request" // last_regular + 32
   | "system_warning" // last_regular + 33,
   | "fill_recurrent_transfer" // last_regular + 34
-  | "failed_recurrent_transfer"; // last_regular + 35
+  | "failed_recurrent_transfer" // last_regular + 35
+  | "limit_order_cancelled"
+  | "producer_missed"
+  | "proposal_fee"
+  | "collateralized_convert_immediate_conversion"
+  | "escrow_approved"
+  | "escrow_rejected"
+  | "proxy_cleared"
+  | "declined_voting_rights"; // last_regular + 35
 
 /**
  * Generic Hive operation tuple.
@@ -172,10 +181,104 @@ export type VirtualOperationName = // <id>
  * }]
  * ```
  */
-export interface Operation {
+export interface OperationTuple {
   0: OperationName | VirtualOperationName;
   1: { [key: string]: any };
 }
+
+export type Operation =
+  | VoteOperation
+  | CommentOperation
+  | TransferOperation
+  | TransferToVestingOperation
+  | WithdrawVestingOperation
+  | LimitOrderCreateOperation
+  | LimitOrderCancelOperation
+  | FeedPublishOperation
+  | ConvertOperation
+  | AccountCreateOperation
+  | AccountUpdateOperation
+  | WitnessUpdateOperation
+  | AccountWitnessVoteOperation
+  | AccountWitnessProxyOperation
+  | CustomOperation
+  | ReportOverProductionOperation
+  | DeleteCommentOperation
+  | CustomJsonOperation
+  | CommentOptionsOperation
+  | SetWithdrawVestingRouteOperation
+  | LimitOrderCreate2Operation
+  | ClaimAccountOperation
+  | CreateClaimedAccountOperation
+  | RequestAccountRecoveryOperation
+  | RecoverAccountOperation
+  | ChangeRecoveryAccountOperation
+  | EscrowTransferOperation
+  | EscrowDisputeOperation
+  | EscrowReleaseOperation
+  | EscrowApproveOperation
+  | TransferToSavingsOperation
+  | TransferFromSavingsOperation
+  | CancelTransferFromSavingsOperation
+  | CustomBinaryOperation
+  | DeclineVotingRightsOperation
+  | ResetAccountOperation
+  | SetResetAccountOperation
+  | ClaimRewardBalanceOperation
+  | DelegateVestingSharesOperation
+  | AccountCreateWithDelegationOperation
+  | WitnessSetPropertiesOperation
+  | AccountUpdate2Operation
+  | CreateProposalOperation
+  | UpdateProposalVotesOperation
+  | RemoveProposalOperation
+  | UpdateProposalOperation
+  | CollateralizedConvertOperation
+  | RecurrentTransferOperation
+  | FillConvertRequestOperation
+  | AuthorRewardOperation
+  | CurationRewardOperation
+  | CommentRewardOperation
+  | LiquidityRewardOperation
+  | InterestOperation
+  | FillVestingWithdrawOperation
+  | FillOrderOperation
+  | ShutdownWitnessOperation
+  | FillTransferFromSavingsOperation
+  | HardforkOperation
+  | CommentPayoutUpdateOperation
+  | ReturnVestingDelegationOperation
+  | CommentBenefactorRewardOperation
+  | ProducerRewardOperation
+  | ClearNullAccountBalanceOperation
+  | ProposalPayOperation
+  | SpsFundOperation
+  | HardforkHiveOperation
+  | HardforkHiveRestoreOperation
+  | DelayedVotingOperation
+  | ConsolidateTreasuryBalanceOperation
+  | EffectiveCommentVoteOperation
+  | IneffectiveDeleteCommentOperation
+  | SpsConvertOperation
+  | ExpiredAccountNotificationOperation
+  | ChangedRecoveryAccountOperation
+  | TransferToVestingCompletedOperation
+  | PowRewardOperation
+  | VestingSharesSplitOperation
+  | AccountCreatedOperation
+  | FillCollateralizedConvertRequestOperation
+  | SystemWarningOperation
+  | FillRecurrentTransferOperation
+  | FailedRecurrentTransferOperation
+  | LimitOrderCancelledOperation
+  | ProducerMissedOperation
+  | ProposalFeeOperation
+  | CollateralizedConvertImmediateConversionOperation
+  | EscrowApprovedOperation
+  | EscrowRejectedOperation
+  | ProxyClearedOperation
+  | DeclinedVotingRightsOperation
+  | [string, Record<string, any>];
 
 /**
  * Operation record annotated with block and transaction position.
@@ -222,7 +325,7 @@ export interface AppliedOperation {
  * }]
  * ```
  */
-export interface AccountCreateOperation extends Operation {
+export interface AccountCreateOperation extends OperationTuple {
   0: "account_create";
   1: {
     fee: string | Asset;
@@ -243,7 +346,7 @@ export interface AccountCreateOperation extends Operation {
  * Delegation gives a new account immediate resource capacity without
  * transferring ownership of the underlying vesting shares.
  */
-export interface AccountCreateWithDelegationOperation extends Operation {
+export interface AccountCreateWithDelegationOperation extends OperationTuple {
   0: "account_create_with_delegation";
   1: {
     fee: string | Asset;
@@ -278,7 +381,7 @@ export interface AccountCreateWithDelegationOperation extends Operation {
  * }]
  * ```
  */
-export interface AccountUpdateOperation extends Operation {
+export interface AccountUpdateOperation extends OperationTuple {
   0: "account_update"; // 10
   1: {
     account: string; // account_name_type
@@ -297,7 +400,7 @@ export interface AccountUpdateOperation extends Operation {
  * When a proxy is set, the account delegates witness-vote influence to another
  * account instead of voting witnesses directly.
  */
-export interface AccountWitnessProxyOperation extends Operation {
+export interface AccountWitnessProxyOperation extends OperationTuple {
   0: "account_witness_proxy"; // 13
   1: {
     account: string; // account_name_type
@@ -317,7 +420,7 @@ export interface AccountWitnessProxyOperation extends Operation {
  * }]
  * ```
  */
-export interface AccountWitnessVoteOperation extends Operation {
+export interface AccountWitnessVoteOperation extends OperationTuple {
   0: "account_witness_vote"; // 12
   1: {
     account: string; // account_name_type
@@ -329,7 +432,7 @@ export interface AccountWitnessVoteOperation extends Operation {
 /**
  * Cancels a pending savings withdrawal request.
  */
-export interface CancelTransferFromSavingsOperation extends Operation {
+export interface CancelTransferFromSavingsOperation extends OperationTuple {
   0: "cancel_transfer_from_savings"; // 34
   1: {
     from: string; // account_name_type
@@ -355,7 +458,7 @@ export interface CancelTransferFromSavingsOperation extends Operation {
  * witness vote weights. The top voted witness is explicitly the most trusted
  * witness according to stake.
  */
-export interface ChangeRecoveryAccountOperation extends Operation {
+export interface ChangeRecoveryAccountOperation extends OperationTuple {
   0: "change_recovery_account"; // 26
   1: {
     /**
@@ -380,7 +483,7 @@ export interface ChangeRecoveryAccountOperation extends Operation {
  * Any reward field may be `0.000` in its respective asset. Hive requires the
  * operation to name all three reward buckets explicitly.
  */
-export interface ClaimRewardBalanceOperation extends Operation {
+export interface ClaimRewardBalanceOperation extends OperationTuple {
   0: "claim_reward_balance"; // 39
   1: {
     account: string; // account_name_type
@@ -398,7 +501,7 @@ export interface ClaimRewardBalanceOperation extends Operation {
  * {@link CreateClaimedAccountOperation}. A zero fee is valid when the chain has
  * free account subsidies available.
  */
-export interface ClaimAccountOperation extends Operation {
+export interface ClaimAccountOperation extends OperationTuple {
   0: "claim_account"; // 22
   1: {
     creator: string; // account_name_type
@@ -430,7 +533,7 @@ export interface ClaimAccountOperation extends Operation {
  * }]
  * ```
  */
-export interface CommentOperation extends Operation {
+export interface CommentOperation extends OperationTuple {
   0: "comment"; // 1
   1: {
     parent_author: string; // account_name_type
@@ -450,7 +553,7 @@ export interface CommentOperation extends Operation {
  * This usually travels in the same transaction as {@link CommentOperation} so a
  * new post never exists with unintended payout settings.
  */
-export interface CommentOptionsOperation extends Operation {
+export interface CommentOptionsOperation extends OperationTuple {
   0: "comment_options"; // 19
   1: {
     author: string; // account_name_type
@@ -470,7 +573,7 @@ export interface CommentOptionsOperation extends Operation {
 /**
  * Converts HBD to HIVE through the standard conversion request flow.
  */
-export interface ConvertOperation extends Operation {
+export interface ConvertOperation extends OperationTuple {
   0: "convert"; // 8
   1: {
     owner: string; // account_name_type
@@ -482,7 +585,7 @@ export interface ConvertOperation extends Operation {
 /**
  * Consumes a claimed account ticket to create a new account.
  */
-export interface CreateClaimedAccountOperation extends Operation {
+export interface CreateClaimedAccountOperation extends OperationTuple {
   0: "create_claimed_account"; // 23
   1: {
     creator: string; // account_name_type
@@ -502,7 +605,7 @@ export interface CreateClaimedAccountOperation extends Operation {
 /**
  * Legacy binary custom operation requiring active authority.
  */
-export interface CustomOperation extends Operation {
+export interface CustomOperation extends OperationTuple {
   0: "custom"; // 15
   1: {
     required_auths: string[];
@@ -514,7 +617,7 @@ export interface CustomOperation extends Operation {
 /**
  * Binary custom operation supporting owner, active, posting, and authority auths.
  */
-export interface CustomBinaryOperation extends Operation {
+export interface CustomBinaryOperation extends OperationTuple {
   0: "custom_binary"; // 35
   1: {
     required_owner_auths: string[]; // flat_set< account_name_type >
@@ -547,7 +650,7 @@ export interface CustomBinaryOperation extends Operation {
  * }]
  * ```
  */
-export interface CustomJsonOperation extends Operation {
+export interface CustomJsonOperation extends OperationTuple {
   0: "custom_json"; // 18
   1: {
     required_auths: string[]; // flat_set< account_name_type >
@@ -566,7 +669,7 @@ export interface CustomJsonOperation extends Operation {
 /**
  * Enables or disables an account's ability to vote.
  */
-export interface DeclineVotingRightsOperation extends Operation {
+export interface DeclineVotingRightsOperation extends OperationTuple {
   0: "decline_voting_rights"; // 36
   1: {
     account: string; // account_name_type
@@ -580,7 +683,7 @@ export interface DeclineVotingRightsOperation extends Operation {
  * @remarks
  * Set `vesting_shares` to `0.000000 VESTS` to remove an existing delegation.
  */
-export interface DelegateVestingSharesOperation extends Operation {
+export interface DelegateVestingSharesOperation extends OperationTuple {
   0: "delegate_vesting_shares"; // 40
   1: {
     /**
@@ -601,7 +704,7 @@ export interface DelegateVestingSharesOperation extends Operation {
 /**
  * Deletes a comment or post when chain rules allow it.
  */
-export interface DeleteCommentOperation extends Operation {
+export interface DeleteCommentOperation extends OperationTuple {
   0: "delete_comment"; // 17
   1: {
     author: string; // account_name_type
@@ -614,7 +717,7 @@ export interface DeleteCommentOperation extends Operation {
  * the blockchain. Once a part approves the escrow, the cannot revoke their approval.
  * Subsequent escrow approve operations, regardless of the approval, will be rejected.
  */
-export interface EscrowApproveOperation extends Operation {
+export interface EscrowApproveOperation extends OperationTuple {
   0: "escrow_approve"; // 31
   1: {
     from: string; // account_name_type
@@ -634,7 +737,7 @@ export interface EscrowApproveOperation extends Operation {
  * raise it for dispute. Once a payment is in dispute, the agent has authority over
  * who gets what.
  */
-export interface EscrowDisputeOperation extends Operation {
+export interface EscrowDisputeOperation extends OperationTuple {
   0: "escrow_dispute"; // 28
   1: {
     from: string; // account_name_type
@@ -655,7 +758,7 @@ export interface EscrowDisputeOperation extends Operation {
  * If there is a dispute regardless of expiration, the agent can release funds to either party
  *    following whichever agreement was in place between the parties.
  */
-export interface EscrowReleaseOperation extends Operation {
+export interface EscrowReleaseOperation extends OperationTuple {
   0: "escrow_release"; // 29
   1: {
     from: string; // account_name_type
@@ -702,7 +805,7 @@ export interface EscrowReleaseOperation extends Operation {
  * Escrow transactions are uniquely identified by 'from' and 'escrow_id', the 'escrow_id' is defined
  * by the sender.
  */
-export interface EscrowTransferOperation extends Operation {
+export interface EscrowTransferOperation extends OperationTuple {
   0: "escrow_transfer"; // 27
   1: {
     from: string; // account_name_type
@@ -725,7 +828,7 @@ export interface EscrowTransferOperation extends Operation {
  * Witness feeds influence the median HIVE/HBD price used by conversions and
  * debt-ratio mechanics.
  */
-export interface FeedPublishOperation extends Operation {
+export interface FeedPublishOperation extends OperationTuple {
   0: "feed_publish"; // 7
   1: {
     publisher: string; // account_name_type
@@ -736,7 +839,7 @@ export interface FeedPublishOperation extends Operation {
 /**
  * Cancels an order and returns the balance to owner.
  */
-export interface LimitOrderCancelOperation extends Operation {
+export interface LimitOrderCancelOperation extends OperationTuple {
   0: "limit_order_cancel"; // 6
   1: {
     owner: string; // account_name_type
@@ -747,7 +850,7 @@ export interface LimitOrderCancelOperation extends Operation {
 /**
  * This operation creates a limit order and matches it against existing open orders.
  */
-export interface LimitOrderCreateOperation extends Operation {
+export interface LimitOrderCreateOperation extends OperationTuple {
   0: "limit_order_create"; // 5
   1: {
     owner: string; // account_name_type
@@ -763,7 +866,7 @@ export interface LimitOrderCreateOperation extends Operation {
  * This operation is identical to limit_order_create except it serializes the price rather
  * than calculating it from other fields.
  */
-export interface LimitOrderCreate2Operation extends Operation {
+export interface LimitOrderCreate2Operation extends OperationTuple {
   0: "limit_order_create2"; // 21
   1: {
     owner: string; // account_name_type
@@ -812,7 +915,7 @@ export interface LimitOrderCreate2Operation extends Operation {
  * complicated, but that is an application level concern, not the blockchain's
  * concern.
  */
-export interface RecoverAccountOperation extends Operation {
+export interface RecoverAccountOperation extends OperationTuple {
   0: "recover_account"; // 25
   1: {
     /**
@@ -848,7 +951,7 @@ export interface RecoverAccountOperation extends Operation {
  * The result of the operation is to transfer the full VESTING HIVE balance
  * of the block producer to the reporter.
  */
-export interface ReportOverProductionOperation extends Operation {
+export interface ReportOverProductionOperation extends OperationTuple {
   0: "report_over_production"; // 16
   1: {
     reporter: string; // account_name_type
@@ -884,7 +987,7 @@ export interface ReportOverProductionOperation extends Operation {
  * The account to recover confirms its identity to the blockchain in
  * the recover account operation.
  */
-export interface RequestAccountRecoveryOperation extends Operation {
+export interface RequestAccountRecoveryOperation extends OperationTuple {
   0: "request_account_recovery"; // 24
   1: {
     /**
@@ -911,7 +1014,7 @@ export interface RequestAccountRecoveryOperation extends Operation {
  * This operation allows recovery_account to change account_to_reset's owner authority to
  * new_owner_authority after 60 days of inactivity.
  */
-export interface ResetAccountOperation extends Operation {
+export interface ResetAccountOperation extends OperationTuple {
   0: "reset_account"; // 37
   1: {
     reset_account: string; // account_name_type
@@ -924,7 +1027,7 @@ export interface ResetAccountOperation extends Operation {
  * This operation allows 'account' owner to control which account has the power
  * to execute the 'reset_account_operation' after 60 days.
  */
-export interface SetResetAccountOperation extends Operation {
+export interface SetResetAccountOperation extends OperationTuple {
   0: "set_reset_account"; // 38
   1: {
     account: string; // account_name_type
@@ -940,7 +1043,7 @@ export interface SetResetAccountOperation extends Operation {
  * can be immediately vested again, circumventing the conversion from
  * vests to hive and back, guaranteeing they maintain their value.
  */
-export interface SetWithdrawVestingRouteOperation extends Operation {
+export interface SetWithdrawVestingRouteOperation extends OperationTuple {
   0: "set_withdraw_vesting_route"; // 20
   1: {
     from_account: string; // account_name_type
@@ -967,7 +1070,7 @@ export interface SetWithdrawVestingRouteOperation extends Operation {
  * }]
  * ```
  */
-export interface TransferOperation extends Operation {
+export interface TransferOperation extends OperationTuple {
   0: "transfer"; // 2
   1: {
     /**
@@ -996,7 +1099,7 @@ export interface TransferOperation extends Operation {
  * The request can be cancelled with {@link CancelTransferFromSavingsOperation}
  * before it completes.
  */
-export interface TransferFromSavingsOperation extends Operation {
+export interface TransferFromSavingsOperation extends OperationTuple {
   0: "transfer_from_savings"; // 33
   1: {
     from: string; // account_name_type
@@ -1010,7 +1113,7 @@ export interface TransferFromSavingsOperation extends Operation {
 /**
  * Moves liquid HIVE or HBD into an account's savings balance.
  */
-export interface TransferToSavingsOperation extends Operation {
+export interface TransferToSavingsOperation extends OperationTuple {
   0: "transfer_to_savings"; // 32
   1: {
     amount: string | Asset;
@@ -1028,7 +1131,7 @@ export interface TransferToSavingsOperation extends Operation {
  * pre-fund new accounts with vesting shares.
  * (A.k.a. Powering Up)
  */
-export interface TransferToVestingOperation extends Operation {
+export interface TransferToVestingOperation extends OperationTuple {
   0: "transfer_to_vesting"; // 3
   1: {
     from: string; // account_name_type
@@ -1057,7 +1160,7 @@ export interface TransferToVestingOperation extends Operation {
  * }]
  * ```
  */
-export interface VoteOperation extends Operation {
+export interface VoteOperation extends OperationTuple {
   0: "vote"; // 0
   1: {
     voter: string; // account_name_type
@@ -1082,7 +1185,7 @@ export interface VoteOperation extends Operation {
  * This operation is not valid if the user has no vesting shares.
  * (A.k.a. Powering Down)
  */
-export interface WithdrawVestingOperation extends Operation {
+export interface WithdrawVestingOperation extends OperationTuple {
   0: "withdraw_vesting"; // 4
   1: {
     account: string; // account_name_type
@@ -1107,7 +1210,7 @@ export interface WithdrawVestingOperation extends Operation {
  * contention.  The network will pick the top 21 witnesses for
  * producing blocks.
  */
-export interface WitnessUpdateOperation extends Operation {
+export interface WitnessUpdateOperation extends OperationTuple {
   0: "witness_update"; // 11
   1: {
     owner: string; // account_name_type
@@ -1124,7 +1227,7 @@ export interface WitnessUpdateOperation extends Operation {
   };
 }
 
-export interface WitnessSetPropertiesOperation extends Operation {
+export interface WitnessSetPropertiesOperation extends OperationTuple {
   0: "witness_set_properties"; // 42
   1: {
     owner: string;
@@ -1140,7 +1243,7 @@ export interface WitnessSetPropertiesOperation extends Operation {
  * This operation extends the legacy account update shape by allowing separate
  * profile/application metadata in `posting_json_metadata`.
  */
-export interface AccountUpdate2Operation extends Operation {
+export interface AccountUpdate2Operation extends OperationTuple {
   0: "account_update2"; // 43
   1: {
     account: string; // account_name_type
@@ -1161,7 +1264,7 @@ export interface AccountUpdate2Operation extends Operation {
  * Proposal payments are made to `receiver` between `start_date` and `end_date`
  * when the proposal receives sufficient stake-weighted approval.
  */
-export interface CreateProposalOperation extends Operation {
+export interface CreateProposalOperation extends OperationTuple {
   0: "create_proposal"; // 44
   1: {
     creator: string;
@@ -1178,7 +1281,7 @@ export interface CreateProposalOperation extends Operation {
 /**
  * Approves or removes approvals for DHF proposal ids.
  */
-export interface UpdateProposalVotesOperation extends Operation {
+export interface UpdateProposalVotesOperation extends OperationTuple {
   0: "update_proposal_votes"; // 45
   1: {
     voter: string;
@@ -1191,7 +1294,7 @@ export interface UpdateProposalVotesOperation extends Operation {
 /**
  * Removes DHF proposals owned by an account.
  */
-export interface RemoveProposalOperation extends Operation {
+export interface RemoveProposalOperation extends OperationTuple {
   0: "remove_proposal"; // 46
   1: {
     proposal_owner: string;
@@ -1203,7 +1306,7 @@ export interface RemoveProposalOperation extends Operation {
 /**
  * Updates mutable fields on an existing DHF proposal.
  */
-export interface UpdateProposalOperation extends Operation {
+export interface UpdateProposalOperation extends OperationTuple {
   0: "update_proposal"; // 47
   1: {
     proposal_id: number;
@@ -1218,7 +1321,7 @@ export interface UpdateProposalOperation extends Operation {
 /**
  * Converts HIVE to HBD through the collateralized conversion flow.
  */
-export interface CollateralizedConvertOperation extends Operation {
+export interface CollateralizedConvertOperation extends OperationTuple {
   0: "collateralized_convert"; // 48
   1: {
     owner: string;
@@ -1247,7 +1350,7 @@ export interface CollateralizedConvertOperation extends Operation {
  * }]
  * ```
  */
-export interface RecurrentTransferOperation extends Operation {
+export interface RecurrentTransferOperation extends OperationTuple {
   0: "recurrent_transfer"; // 49
   1: {
     from: string;
@@ -1257,5 +1360,422 @@ export interface RecurrentTransferOperation extends Operation {
     recurrence: number;
     executions: number;
     extensions: any[];
+  };
+}
+
+// ==========================================
+// Virtual Operations
+// ==========================================
+
+export interface FillConvertRequestOperation extends OperationTuple {
+  0: "fill_convert_request";
+  1: {
+    owner: string;
+    requestid: number;
+    amount_in: string | Asset;
+    amount_out: string | Asset;
+  };
+}
+
+export interface AuthorRewardOperation extends OperationTuple {
+  0: "author_reward";
+  1: {
+    author: string;
+    permlink: string;
+    hbd_payout: string | Asset;
+    hive_payout: string | Asset;
+    vesting_payout: string | Asset;
+    curators_vesting_payout: string | Asset;
+    payout_must_be_claimed: boolean;
+  };
+}
+
+export interface CurationRewardOperation extends OperationTuple {
+  0: "curation_reward";
+  1: {
+    curator: string;
+    reward: string | Asset;
+    author: string;
+    permlink: string;
+    payout_must_be_claimed: boolean;
+  };
+}
+
+export interface CommentRewardOperation extends OperationTuple {
+  0: "comment_reward";
+  1: {
+    author: string;
+    permlink: string;
+    payout: string | Asset;
+    author_rewards: number | string;
+    total_payout_value: string | Asset;
+    curator_payout_value: string | Asset;
+    beneficiary_payout_value: string | Asset;
+  };
+}
+
+export interface LiquidityRewardOperation extends OperationTuple {
+  0: "liquidity_reward";
+  1: {
+    owner: string;
+    payout: string | Asset;
+  };
+}
+
+export interface InterestOperation extends OperationTuple {
+  0: "interest";
+  1: {
+    owner: string;
+    interest: string | Asset;
+    is_saved_into_hbd_balance: boolean;
+  };
+}
+
+export interface FillVestingWithdrawOperation extends OperationTuple {
+  0: "fill_vesting_withdraw";
+  1: {
+    from_account: string;
+    to_account: string;
+    withdrawn: string | Asset;
+    deposited: string | Asset;
+  };
+}
+
+export interface FillOrderOperation extends OperationTuple {
+  0: "fill_order";
+  1: {
+    current_owner: string;
+    current_orderid: number;
+    current_pays: string | Asset;
+    open_owner: string;
+    open_orderid: number;
+    open_pays: string | Asset;
+  };
+}
+
+export interface ShutdownWitnessOperation extends OperationTuple {
+  0: "shutdown_witness";
+  1: {
+    owner: string;
+  };
+}
+
+export interface FillTransferFromSavingsOperation extends OperationTuple {
+  0: "fill_transfer_from_savings";
+  1: {
+    from: string;
+    to: string;
+    amount: string | Asset;
+    request_id: number;
+    memo: string;
+  };
+}
+
+export interface HardforkOperation extends OperationTuple {
+  0: "hardfork";
+  1: {
+    hardfork_id: number;
+  };
+}
+
+export interface CommentPayoutUpdateOperation extends OperationTuple {
+  0: "comment_payout_update";
+  1: {
+    author: string;
+    permlink: string;
+  };
+}
+
+export interface ReturnVestingDelegationOperation extends OperationTuple {
+  0: "return_vesting_delegation";
+  1: {
+    account: string;
+    vesting_shares: string | Asset;
+  };
+}
+
+export interface CommentBenefactorRewardOperation extends OperationTuple {
+  0: "comment_benefactor_reward";
+  1: {
+    benefactor: string;
+    author: string;
+    permlink: string;
+    hbd_payout: string | Asset;
+    hive_payout: string | Asset;
+    vesting_payout: string | Asset;
+    payout_must_be_claimed: boolean;
+  };
+}
+
+export interface ProducerRewardOperation extends OperationTuple {
+  0: "producer_reward";
+  1: {
+    producer: string;
+    vesting_shares: string | Asset;
+  };
+}
+
+export interface ClearNullAccountBalanceOperation extends OperationTuple {
+  0: "clear_null_account_balance";
+  1: {
+    total_cleared: (string | Asset)[];
+  };
+}
+
+export interface ProposalPayOperation extends OperationTuple {
+  0: "proposal_pay";
+  1: {
+    proposal_id: number;
+    receiver: string;
+    payer: string;
+    payment: string | Asset;
+  };
+}
+
+export interface SpsFundOperation extends OperationTuple {
+  0: "sps_fund";
+  1: {
+    treasury: string;
+    additional_funds: string | Asset;
+  };
+}
+
+export interface HardforkHiveOperation extends OperationTuple {
+  0: "hardfork_hive";
+  1: {
+    account: string;
+    treasury: string;
+    other_affected_accounts: string[];
+    hbd_transferred: string | Asset;
+    hive_transferred: string | Asset;
+    vests_converted: string | Asset;
+    total_hive_from_vests: string | Asset;
+  };
+}
+
+export interface HardforkHiveRestoreOperation extends OperationTuple {
+  0: "hardfork_hive_restore";
+  1: {
+    account: string;
+    treasury: string;
+    hbd_transferred: string | Asset;
+    hive_transferred: string | Asset;
+  };
+}
+
+export interface DelayedVotingOperation extends OperationTuple {
+  0: "delayed_voting";
+  1: {
+    voter: string;
+    votes: number | string;
+  };
+}
+
+export interface ConsolidateTreasuryBalanceOperation extends OperationTuple {
+  0: "consolidate_treasury_balance";
+  1: {
+    total_cleared?: (string | Asset)[];
+    total_moved?: (string | Asset)[];
+  };
+}
+
+export interface EffectiveCommentVoteOperation extends OperationTuple {
+  0: "effective_comment_vote";
+  1: {
+    voter: string;
+    author: string;
+    permlink: string;
+    weight: number | string;
+    rshares: number | string;
+    total_vote_weight: number | string;
+    pending_payout: string | Asset;
+  };
+}
+
+export interface IneffectiveDeleteCommentOperation extends OperationTuple {
+  0: "ineffective_delete_comment";
+  1: {
+    author: string;
+    permlink: string;
+  };
+}
+
+export interface SpsConvertOperation extends OperationTuple {
+  0: "sps_convert";
+  1: {
+    treasury: string;
+    hive_amount_in: string | Asset;
+    hbd_amount_out: string | Asset;
+  };
+}
+
+export interface ExpiredAccountNotificationOperation extends OperationTuple {
+  0: "expired_account_notification";
+  1: {
+    account: string;
+  };
+}
+
+export interface ChangedRecoveryAccountOperation extends OperationTuple {
+  0: "changed_recovery_account";
+  1: {
+    account: string;
+    old_recovery_account: string;
+    new_recovery_account: string;
+  };
+}
+
+export interface TransferToVestingCompletedOperation extends OperationTuple {
+  0: "transfer_to_vesting_completed";
+  1: {
+    from_account: string;
+    to_account: string;
+    hive_vested: string | Asset;
+    vesting_shares_received: string | Asset;
+  };
+}
+
+export interface PowRewardOperation extends OperationTuple {
+  0: "pow_reward";
+  1: {
+    worker: string;
+    reward: string | Asset;
+  };
+}
+
+export interface VestingSharesSplitOperation extends OperationTuple {
+  0: "vesting_shares_split";
+  1: {
+    owner: string;
+    vesting_shares_before_split: string | Asset;
+    vesting_shares_after_split: string | Asset;
+  };
+}
+
+export interface AccountCreatedOperation extends OperationTuple {
+  0: "account_created";
+  1: {
+    new_account_name: string;
+    creator: string;
+    initial_vesting_shares: string | Asset;
+    initial_delegation: string | Asset;
+  };
+}
+
+export interface FillCollateralizedConvertRequestOperation extends OperationTuple {
+  0: "fill_collateralized_convert_request";
+  1: {
+    owner: string;
+    requestid: number;
+    amount_in: string | Asset;
+    amount_out: string | Asset;
+    excess_collateral: string | Asset;
+  };
+}
+
+export interface SystemWarningOperation extends OperationTuple {
+  0: "system_warning";
+  1: {
+    message: string;
+  };
+}
+
+export interface FillRecurrentTransferOperation extends OperationTuple {
+  0: "fill_recurrent_transfer";
+  1: {
+    from: string;
+    to: string;
+    amount: string | Asset;
+    memo: string;
+    remaining_executions: number;
+    extensions: any[];
+  };
+}
+
+export interface FailedRecurrentTransferOperation extends OperationTuple {
+  0: "failed_recurrent_transfer";
+  1: {
+    from: string;
+    to: string;
+    amount: string | Asset;
+    memo: string;
+    consecutive_failures: number;
+    remaining_executions: number;
+    deleted: boolean;
+    extensions: any[];
+  };
+}
+
+export interface LimitOrderCancelledOperation extends OperationTuple {
+  0: "limit_order_cancelled";
+  1: {
+    seller: string;
+    orderid: number;
+    amount_back: string | Asset;
+  };
+}
+
+export interface ProducerMissedOperation extends OperationTuple {
+  0: "producer_missed";
+  1: {
+    producer: string;
+  };
+}
+
+export interface ProposalFeeOperation extends OperationTuple {
+  0: "proposal_fee";
+  1: {
+    creator: string;
+    treasury: string;
+    proposal_id: number;
+    fee: string | Asset;
+  };
+}
+
+export interface CollateralizedConvertImmediateConversionOperation extends OperationTuple {
+  0: "collateralized_convert_immediate_conversion";
+  1: {
+    owner: string;
+    requestid: number;
+    hbd_out: string | Asset;
+  };
+}
+
+export interface EscrowApprovedOperation extends OperationTuple {
+  0: "escrow_approved";
+  1: {
+    from: string;
+    to: string;
+    agent: string;
+    escrow_id: number;
+    fee: string | Asset;
+  };
+}
+
+export interface EscrowRejectedOperation extends OperationTuple {
+  0: "escrow_rejected";
+  1: {
+    from: string;
+    to: string;
+    agent: string;
+    escrow_id: number;
+    hbd_amount: string | Asset;
+    hive_amount: string | Asset;
+    fee: string | Asset;
+  };
+}
+
+export interface ProxyClearedOperation extends OperationTuple {
+  0: "proxy_cleared";
+  1: {
+    account: string;
+    proxy: string;
+  };
+}
+
+export interface DeclinedVotingRightsOperation extends OperationTuple {
+  0: "declined_voting_rights";
+  1: {
+    account: string;
   };
 }

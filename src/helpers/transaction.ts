@@ -72,8 +72,8 @@ export class TransactionStatusAPI {
    * })
    * ```
    */
-  public call(method: string, params?: any) {
-    return this.client.call("transaction_status_api", method, params);
+  public call<T = unknown>(method: string, params?: unknown) {
+    return this.client.call<T>("transaction_status_api", method, params);
   }
 
   /**
@@ -109,6 +109,6 @@ export class TransactionStatusAPI {
     if (expiration) {
       params.expiration = expiration;
     }
-    return this.call("find_transaction", params);
+    return this.call<{ status: TransactionStatus }>("find_transaction", params);
   }
 }

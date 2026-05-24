@@ -435,20 +435,22 @@ export function copy<T>(object: T): T {
 /**
  * Check if an error code indicates the request never reached the server.
  */
-function isPreConnectionError(error: any): boolean {
-  if (!error || !error.code) return false;
-  return PRE_CONNECTION_ERRORS.some((code) => error.code.includes(code));
+function isPreConnectionError(error: unknown): boolean {
+  if (!error || typeof error !== "object" || !("code" in error)) return false;
+  const code = (error as { code: string }).code;
+  return PRE_CONNECTION_ERRORS.some((errCode) => code.includes(errCode));
 }
 
 /**
  * Check if an error should trigger failover for read operations.
  * Matches any known network/timeout error, or errors with no code (HTTP errors).
  */
-function shouldFailover(error: any): boolean {
+function shouldFailover(error: unknown): boolean {
   if (!error) return true;
   // HTTP errors (from !response.ok) have no .code — they should trigger failover
-  if (!error.code) return true;
-  return FAILOVER_ERRORS.some((code) => error.code.includes(code));
+  if (typeof error !== "object" || !("code" in error)) return true;
+  const code = (error as { code: string }).code;
+  return FAILOVER_ERRORS.some((errCode) => code.includes(errCode));
 }
 
 /**
@@ -477,7 +479,7 @@ export function exponentialBackoffWithJitter(
 export async function retryingFetch(
   currentAddress: string,
   allAddresses: string | string[],
-  opts: any,
+  opts: RequestInit & { agent?: unknown; timeout?: number },
   timeout: number,
   failoverThreshold: number,
   consoleOnFailover: boolean,
@@ -504,7 +506,7 @@ export async function retryingFetch(
   const startTime = Date.now();
   let nodesTriedInRound = 0;
   let round = 0;
-  let lastError: any;
+  let lastError: unknown;
 
   while (true) {
     const node = orderedNodes[nodeIndex];
@@ -644,7 +646,7 @@ export interface WitnessProps {
   url?: string;
 }
 
-const serialize = (serializer: Serializer, data: any) => {
+const serialize = (serializer: Serializer, data: unknown) => {
   const writer = new BinaryWriter();
   serializer(writer, data);
   return toHex(writer.getBuffer());
