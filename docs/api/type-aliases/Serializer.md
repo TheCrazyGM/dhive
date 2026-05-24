@@ -8,7 +8,7 @@
 
 > **Serializer** = (`buffer`, `data`) => `void`
 
-Defined in: [src/chain/serializer.ts:59](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/serializer.ts#L59)
+Defined in: [src/chain/serializer.ts:59](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/serializer.ts#L59)
 
 Function signature for writing one Hive protocol value to a binary buffer.
 

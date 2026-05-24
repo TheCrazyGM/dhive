@@ -6,7 +6,7 @@
 
 # Class: Authority
 
-Defined in: [src/chain/account.ts:74](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/account.ts#L74)
+Defined in: [src/chain/account.ts:74](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/account.ts#L74)
 
 Convenience wrapper for Hive owner, active, and posting authorities.
 
@@ -31,7 +31,7 @@ const posting = Authority.from(postingPublicKey)
 
 > **new Authority**(`authority`): `Authority`
 
-Defined in: [src/chain/account.ts:84](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/account.ts#L84)
+Defined in: [src/chain/account.ts:84](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/account.ts#L84)
 
 Creates an authority from explicit threshold and auth lists.
 
@@ -53,7 +53,7 @@ Raw authority fields from Hive.
 
 > **account\_auths**: \[`string`, `number`\][]
 
-Defined in: [src/chain/account.ts:76](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/account.ts#L76)
+Defined in: [src/chain/account.ts:76](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/account.ts#L76)
 
 #### Implementation of
 
@@ -65,7 +65,7 @@ Defined in: [src/chain/account.ts:76](https://github.com/TheCrazyGM/dhive/blob/e
 
 > **key\_auths**: \[`string` \| [`PublicKey`](PublicKey.md), `number`\][]
 
-Defined in: [src/chain/account.ts:77](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/account.ts#L77)
+Defined in: [src/chain/account.ts:77](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/account.ts#L77)
 
 #### Implementation of
 
@@ -77,7 +77,7 @@ Defined in: [src/chain/account.ts:77](https://github.com/TheCrazyGM/dhive/blob/e
 
 > **weight\_threshold**: `number`
 
-Defined in: [src/chain/account.ts:75](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/account.ts#L75)
+Defined in: [src/chain/account.ts:75](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/account.ts#L75)
 
 #### Implementation of
 
@@ -89,7 +89,7 @@ Defined in: [src/chain/account.ts:75](https://github.com/TheCrazyGM/dhive/blob/e
 
 > `static` **from**(`value`): `Authority`
 
-Defined in: [src/chain/account.ts:102](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/account.ts#L102)
+Defined in: [src/chain/account.ts:102](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/account.ts#L102)
 
 Normalizes a public key or raw authority into an Authority.
 

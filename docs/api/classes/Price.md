@@ -6,7 +6,7 @@
 
 # Class: Price
 
-Defined in: [src/chain/asset.ts:405](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/asset.ts#L405)
+Defined in: [src/chain/asset.ts:377](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/asset.ts#L377)
 
 Price ratio between two different Hive assets.
 
@@ -32,7 +32,7 @@ const hbd = price.convert(Asset.from('10.000 HIVE'))
 
 > **new Price**(`base`, `quote`): `Price`
 
-Defined in: [src/chain/asset.ts:420](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/asset.ts#L420)
+Defined in: [src/chain/asset.ts:392](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/asset.ts#L392)
 
 Creates a price ratio from non-zero base and quote assets.
 
@@ -71,7 +71,7 @@ const price = new Price(Asset.from('1.000 HIVE'), Asset.from('0.300 HBD'))
 
 > `readonly` **base**: [`Asset`](Asset.md)
 
-Defined in: [src/chain/asset.ts:420](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/asset.ts#L420)
+Defined in: [src/chain/asset.ts:393](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/asset.ts#L393)
 
 Asset being priced.
 
@@ -81,7 +81,7 @@ Asset being priced.
 
 > `readonly` **quote**: [`Asset`](Asset.md)
 
-Defined in: [src/chain/asset.ts:420](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/asset.ts#L420)
+Defined in: [src/chain/asset.ts:394](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/asset.ts#L394)
 
 Relative asset used to express the price.
 
@@ -91,7 +91,7 @@ Relative asset used to express the price.
 
 > **convert**(`asset`): [`Asset`](Asset.md)
 
-Defined in: [src/chain/asset.ts:478](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/asset.ts#L478)
+Defined in: [src/chain/asset.ts:447](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/asset.ts#L447)
 
 Converts an asset between the price pair's two symbols.
 
@@ -126,7 +126,7 @@ const hbd = price.convert(Asset.from('10.000 HIVE'))
 
 > **toString**(): `string`
 
-Defined in: [src/chain/asset.ts:460](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/asset.ts#L460)
+Defined in: [src/chain/asset.ts:429](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/asset.ts#L429)
 
 Renders the price pair.
 
@@ -148,7 +148,7 @@ price.toString()
 
 > `static` **from**(`value`): `Price`
 
-Defined in: [src/chain/asset.ts:442](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/asset.ts#L442)
+Defined in: [src/chain/asset.ts:411](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/asset.ts#L411)
 
 Normalizes a price-like value into a Price.
 

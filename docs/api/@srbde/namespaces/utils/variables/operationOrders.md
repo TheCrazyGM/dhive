@@ -8,9 +8,7 @@
 
 > `const` **operationOrders**: `object`
 
-Defined in: [src/utils.ts:779](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/utils.ts#L779)
-
-Mapping from Hive operation names to protocol operation ids.
+Defined in: [src/utils.ts:605](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/utils.ts#L605)
 
 ## Type Declaration
 
@@ -353,17 +351,3 @@ Mapping from Hive operation names to protocol operation ids.
 ### witness\_update
 
 > **witness\_update**: `number` = `11`
-
-## Remarks
-
-This is primarily used with [makeBitMaskFilter](../functions/makeBitMaskFilter.md) when filtering account
-history by operation type.
-
-## Example
-
-```ts
-const mask = makeBitMaskFilter([
-  operationOrders.transfer,
-  operationOrders.claim_reward_balance
-])
-```

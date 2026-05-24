@@ -6,7 +6,7 @@
 
 # Interface: BeneficiaryRoute
 
-Defined in: [src/chain/comment.ts:142](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/comment.ts#L142)
+Defined in: [src/chain/comment.ts:142](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/comment.ts#L142)
 
 Beneficiary payout route attached to comment options.
 
@@ -29,7 +29,7 @@ const beneficiary: BeneficiaryRoute = {
 
 > **account**: `string`
 
-Defined in: [src/chain/comment.ts:143](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/comment.ts#L143)
+Defined in: [src/chain/comment.ts:143](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/comment.ts#L143)
 
 ***
 
@@ -37,4 +37,4 @@ Defined in: [src/chain/comment.ts:143](https://github.com/TheCrazyGM/dhive/blob/
 
 > **weight**: `number`
 
-Defined in: [src/chain/comment.ts:144](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/comment.ts#L144)
+Defined in: [src/chain/comment.ts:144](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/comment.ts#L144)

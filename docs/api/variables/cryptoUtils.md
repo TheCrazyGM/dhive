@@ -8,7 +8,7 @@
 
 > `const` **cryptoUtils**: `object`
 
-Defined in: [src/crypto.ts:676](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/crypto.ts#L676)
+Defined in: [src/crypto.ts:449](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/crypto.ts#L449)
 
 Low-level cryptographic utility namespace.
 
@@ -16,7 +16,7 @@ Low-level cryptographic utility namespace.
 
 ### decodePrivate
 
-> **decodePrivate**: (`encodedKey`) => `Buffer`
+> **decodePrivate**: (`encodedKey`) => `Uint8Array`
 
 Decode bs58+doubleSha256-checksum encoded private key.
 
@@ -28,11 +28,11 @@ Decode bs58+doubleSha256-checksum encoded private key.
 
 #### Returns
 
-`Buffer`
+`Uint8Array`
 
 ### doubleSha256
 
-> **doubleSha256**: (`input`) => `Buffer`
+> **doubleSha256**: (`input`) => `Uint8Array`
 
 Return 2-round sha256 hash of input.
 
@@ -40,11 +40,11 @@ Return 2-round sha256 hash of input.
 
 ##### input
 
-`string` \| `Buffer`\<`ArrayBufferLike`\>
+`string` \| `Uint8Array`\<`ArrayBufferLike`\>
 
 #### Returns
 
-`Buffer`
+`Uint8Array`
 
 ### encodePrivate
 
@@ -56,7 +56,7 @@ Encode bs58+doubleSha256-checksum private key.
 
 ##### key
 
-`Buffer`
+`Uint8Array`
 
 #### Returns
 
@@ -72,7 +72,7 @@ Encode public key with bs58+ripemd160-checksum.
 
 ##### key
 
-`Buffer`
+`Uint8Array`
 
 ##### prefix
 
@@ -106,7 +106,7 @@ Return true if signature is canonical, otherwise false.
 
 ##### signature
 
-`Buffer`
+`Uint8Array`
 
 #### Returns
 
@@ -122,7 +122,7 @@ Return true if string is wif, otherwise false.
 
 ##### privWif
 
-`string` \| `Buffer`\<`ArrayBufferLike`\>
+`string` \| `Uint8Array`\<`ArrayBufferLike`\>
 
 #### Returns
 
@@ -130,7 +130,7 @@ Return true if string is wif, otherwise false.
 
 ### ripemd160
 
-> **ripemd160**: (`input`) => `Buffer`
+> **ripemd160**: (`input`) => `Uint8Array`
 
 Return ripemd160 hash of input.
 
@@ -138,15 +138,15 @@ Return ripemd160 hash of input.
 
 ##### input
 
-`string` \| `Buffer`\<`ArrayBufferLike`\>
+`string` \| `Uint8Array`\<`ArrayBufferLike`\>
 
 #### Returns
 
-`Buffer`
+`Uint8Array`
 
 ### sha256
 
-> **sha256**: (`input`) => `Buffer`
+> **sha256**: (`input`) => `Uint8Array`
 
 Return sha256 hash of input.
 
@@ -154,11 +154,11 @@ Return sha256 hash of input.
 
 ##### input
 
-`string` \| `Buffer`\<`ArrayBufferLike`\>
+`string` \| `Uint8Array`\<`ArrayBufferLike`\>
 
 #### Returns
 
-`Buffer`
+`Uint8Array`
 
 ### signTransaction
 
@@ -172,40 +172,21 @@ Returns a copy of a transaction with one or more signatures appended.
 
 [`Transaction`](../interfaces/Transaction.md)
 
-Transaction to sign.
-
 ##### keys
 
 [`PrivateKey`](../classes/PrivateKey.md) \| [`PrivateKey`](../classes/PrivateKey.md)[]
 
-Private key or keys to sign the transaction digest.
-
 ##### chainId?
 
-`Buffer` = `DEFAULT_CHAIN_ID`
-
-Chain id to include in the transaction digest.
+`Uint8Array` = `DEFAULT_CHAIN_ID`
 
 #### Returns
 
 [`SignedTransaction`](../interfaces/SignedTransaction.md)
 
-A signed transaction copy.
-
-#### Throws
-
-SerializationError
-Thrown when the transaction cannot be serialized before hashing.
-
-#### Example
-
-```ts
-const signed = cryptoUtils.signTransaction(transaction, activeKey, client.chainId)
-```
-
 ### transactionDigest
 
-> **transactionDigest**: (`transaction`, `chainId`) => `Buffer`\<`ArrayBufferLike`\>
+> **transactionDigest**: (`transaction`, `chainId`) => `Uint8Array`\<`ArrayBufferLike`\>
 
 Return the sha256 transaction digest.
 
@@ -217,25 +198,8 @@ Return the sha256 transaction digest.
 
 ##### chainId?
 
-`Buffer` = `DEFAULT_CHAIN_ID`
-
-The chain id to use when creating the hash.
+`Uint8Array` = `DEFAULT_CHAIN_ID`
 
 #### Returns
 
-`Buffer`\<`ArrayBufferLike`\>
-
-## Remarks
-
-These helpers expose Hive-compatible hashing, key encoding, signature
-canonicality, transaction digesting, and transaction id generation. Most apps
-should prefer [PrivateKey](../classes/PrivateKey.md), [PublicKey](../classes/PublicKey.md), [Signature](../classes/Signature.md), and
-`client.broadcast`, but the namespace is useful for protocol tooling and
-educational examples in the Pollen documentation hub.
-
-## Example
-
-```ts
-const digest = cryptoUtils.transactionDigest(transaction, client.chainId)
-const signature = activeKey.sign(digest)
-```
+`Uint8Array`\<`ArrayBufferLike`\>

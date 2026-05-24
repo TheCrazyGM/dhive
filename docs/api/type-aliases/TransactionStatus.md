@@ -8,7 +8,7 @@
 
 > **TransactionStatus** = `"unknown"` \| `"within_mempool"` \| `"within_reversible_block"` \| `"within_irreversible_block"` \| `"expired_reversible"` \| `"expired_irreversible"` \| `"too_old"`
 
-Defined in: [src/helpers/transaction.ts:22](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/transaction.ts#L22)
+Defined in: [src/helpers/transaction.ts:22](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/transaction.ts#L22)
 
 Lifecycle state reported by Hive's transaction-status plugin.
 

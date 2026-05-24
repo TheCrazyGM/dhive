@@ -8,7 +8,7 @@
 
 > `const` **Types**: `object`
 
-Defined in: [src/chain/serializer.ts:696](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/serializer.ts#L696)
+Defined in: [src/chain/serializer.ts:668](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/serializer.ts#L668)
 
 Hive protocol serializer registry.
 

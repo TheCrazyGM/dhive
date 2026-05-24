@@ -6,7 +6,7 @@
 
 # Interface: UpdateProposalOperation
 
-Defined in: [src/chain/operation.ts:1206](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L1206)
+Defined in: [src/chain/operation.ts:1206](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L1206)
 
 Updates mutable fields on an existing DHF proposal.
 
@@ -20,7 +20,7 @@ Updates mutable fields on an existing DHF proposal.
 
 > **0**: `"update_proposal"`
 
-Defined in: [src/chain/operation.ts:1207](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L1207)
+Defined in: [src/chain/operation.ts:1207](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L1207)
 
 #### Overrides
 
@@ -32,7 +32,7 @@ Defined in: [src/chain/operation.ts:1207](https://github.com/TheCrazyGM/dhive/bl
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:1208](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L1208)
+Defined in: [src/chain/operation.ts:1208](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L1208)
 
 #### creator
 

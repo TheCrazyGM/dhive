@@ -8,7 +8,7 @@
 
 > `const` **DEFAULT\_ADDRESS\_PREFIX**: `"STM"` = `'STM'`
 
-Defined in: [src/client.ts:98](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/client.ts#L98)
+Defined in: [src/client.ts:99](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/client.ts#L99)
 
 Main Hive network public-key address prefix.
 

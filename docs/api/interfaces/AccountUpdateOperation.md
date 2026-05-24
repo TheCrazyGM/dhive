@@ -6,7 +6,7 @@
 
 # Interface: AccountUpdateOperation
 
-Defined in: [src/chain/operation.ts:281](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L281)
+Defined in: [src/chain/operation.ts:281](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L281)
 
 Updates account authorities, memo key, or legacy JSON metadata.
 
@@ -35,7 +35,7 @@ const op: AccountUpdateOperation = ['account_update', {
 
 > **0**: `"account_update"`
 
-Defined in: [src/chain/operation.ts:282](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L282)
+Defined in: [src/chain/operation.ts:282](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L282)
 
 #### Overrides
 
@@ -47,7 +47,7 @@ Defined in: [src/chain/operation.ts:282](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:283](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L283)
+Defined in: [src/chain/operation.ts:283](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L283)
 
 #### account
 

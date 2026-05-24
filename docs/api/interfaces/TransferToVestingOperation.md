@@ -6,7 +6,7 @@
 
 # Interface: TransferToVestingOperation
 
-Defined in: [src/chain/operation.ts:1031](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L1031)
+Defined in: [src/chain/operation.ts:1031](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L1031)
 
 This operation converts HIVE into VFS (Vesting Fund Shares) at
 the current exchange rate. With this operation it is possible to
@@ -24,7 +24,7 @@ pre-fund new accounts with vesting shares.
 
 > **0**: `"transfer_to_vesting"`
 
-Defined in: [src/chain/operation.ts:1032](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L1032)
+Defined in: [src/chain/operation.ts:1032](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L1032)
 
 #### Overrides
 
@@ -36,7 +36,7 @@ Defined in: [src/chain/operation.ts:1032](https://github.com/TheCrazyGM/dhive/bl
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:1033](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L1033)
+Defined in: [src/chain/operation.ts:1033](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L1033)
 
 #### amount
 

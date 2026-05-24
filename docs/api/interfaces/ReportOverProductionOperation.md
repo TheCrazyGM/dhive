@@ -6,7 +6,7 @@
 
 # Interface: ReportOverProductionOperation
 
-Defined in: [src/chain/operation.ts:851](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L851)
+Defined in: [src/chain/operation.ts:851](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L851)
 
 This operation is used to report a miner who signs two blocks
 at the same time. To be valid, the violation must be reported within
@@ -30,7 +30,7 @@ of the block producer to the reporter.
 
 > **0**: `"report_over_production"`
 
-Defined in: [src/chain/operation.ts:852](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L852)
+Defined in: [src/chain/operation.ts:852](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L852)
 
 #### Overrides
 
@@ -42,7 +42,7 @@ Defined in: [src/chain/operation.ts:852](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:853](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L853)
+Defined in: [src/chain/operation.ts:853](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L853)
 
 #### first\_block
 

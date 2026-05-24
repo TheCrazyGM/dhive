@@ -6,7 +6,7 @@
 
 # Interface: ClaimAccountOperation
 
-Defined in: [src/chain/operation.ts:401](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L401)
+Defined in: [src/chain/operation.ts:401](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L401)
 
 Claims a discounted account creation ticket.
 
@@ -26,7 +26,7 @@ free account subsidies available.
 
 > **0**: `"claim_account"`
 
-Defined in: [src/chain/operation.ts:402](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L402)
+Defined in: [src/chain/operation.ts:402](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L402)
 
 #### Overrides
 
@@ -38,7 +38,7 @@ Defined in: [src/chain/operation.ts:402](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:403](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L403)
+Defined in: [src/chain/operation.ts:403](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L403)
 
 #### creator
 

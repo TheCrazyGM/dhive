@@ -8,7 +8,7 @@
 
 > **getVests**(`account`, `subtract_delegated?`, `add_received?`): `number`
 
-Defined in: [src/chain/misc.ts:344](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/misc.ts#L344)
+Defined in: [src/chain/misc.ts:349](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/misc.ts#L349)
 
 Calculates an account's effective vesting shares.
 

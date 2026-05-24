@@ -8,7 +8,7 @@
 
 > **DiscussionQueryCategory** = `"active"` \| `"blog"` \| `"cashout"` \| `"children"` \| `"comments"` \| `"feed"` \| `"hot"` \| `"promoted"` \| `"trending"` \| `"votes"` \| `"created"`
 
-Defined in: [src/helpers/database.ts:65](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/database.ts#L65)
+Defined in: [src/helpers/database.ts:62](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/database.ts#L62)
 
 Sort or lookup category used by Hive's `get_discussions_by_*` RPC family.
 

@@ -6,7 +6,7 @@
 
 # Interface: RCPool
 
-Defined in: [src/chain/rc.ts:67](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L67)
+Defined in: [src/chain/rc.ts:67](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L67)
 
 Current available RC pool levels by resource class.
 
@@ -23,7 +23,7 @@ console.log(pool.resource_state_bytes.pool)
 
 > **resource\_execution\_time**: [`Pool`](Pool.md)
 
-Defined in: [src/chain/rc.ts:72](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L72)
+Defined in: [src/chain/rc.ts:72](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L72)
 
 ***
 
@@ -31,7 +31,7 @@ Defined in: [src/chain/rc.ts:72](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_history\_bytes**: [`Pool`](Pool.md)
 
-Defined in: [src/chain/rc.ts:68](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L68)
+Defined in: [src/chain/rc.ts:68](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L68)
 
 ***
 
@@ -39,7 +39,7 @@ Defined in: [src/chain/rc.ts:68](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_market\_bytes**: [`Pool`](Pool.md)
 
-Defined in: [src/chain/rc.ts:70](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L70)
+Defined in: [src/chain/rc.ts:70](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L70)
 
 ***
 
@@ -47,7 +47,7 @@ Defined in: [src/chain/rc.ts:70](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_new\_accounts**: [`Pool`](Pool.md)
 
-Defined in: [src/chain/rc.ts:69](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L69)
+Defined in: [src/chain/rc.ts:69](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L69)
 
 ***
 
@@ -55,4 +55,4 @@ Defined in: [src/chain/rc.ts:69](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_state\_bytes**: [`Pool`](Pool.md)
 
-Defined in: [src/chain/rc.ts:71](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L71)
+Defined in: [src/chain/rc.ts:71](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L71)

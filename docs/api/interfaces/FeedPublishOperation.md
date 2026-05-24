@@ -6,7 +6,7 @@
 
 # Interface: FeedPublishOperation
 
-Defined in: [src/chain/operation.ts:728](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L728)
+Defined in: [src/chain/operation.ts:728](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L728)
 
 Publishes a witness price feed.
 
@@ -25,7 +25,7 @@ debt-ratio mechanics.
 
 > **0**: `"feed_publish"`
 
-Defined in: [src/chain/operation.ts:729](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L729)
+Defined in: [src/chain/operation.ts:729](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L729)
 
 #### Overrides
 
@@ -37,7 +37,7 @@ Defined in: [src/chain/operation.ts:729](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:730](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L730)
+Defined in: [src/chain/operation.ts:730](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L730)
 
 #### exchange\_rate
 

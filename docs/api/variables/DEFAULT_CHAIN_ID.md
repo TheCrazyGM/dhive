@@ -6,9 +6,9 @@
 
 # Variable: DEFAULT\_CHAIN\_ID
 
-> `const` **DEFAULT\_CHAIN\_ID**: `Buffer`\<`ArrayBuffer`\>
+> `const` **DEFAULT\_CHAIN\_ID**: `Uint8Array`\<`ArrayBufferLike`\>
 
-Defined in: [src/client.ts:86](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/client.ts#L86)
+Defined in: [src/client.ts:88](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/client.ts#L88)
 
 Main Hive network chain id as a 32-byte buffer.
 
@@ -23,5 +23,5 @@ different chain.
 ```ts
 import { DEFAULT_CHAIN_ID } from '@srbde/pollen'
 
-console.log(DEFAULT_CHAIN_ID.toString('hex'))
+console.log(toHex(DEFAULT_CHAIN_ID))
 ```

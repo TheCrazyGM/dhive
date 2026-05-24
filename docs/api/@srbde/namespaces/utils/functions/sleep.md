@@ -8,7 +8,7 @@
 
 > **sleep**(`ms`): `Promise`\<`void`\>
 
-Defined in: [src/utils.ts:317](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/utils.ts#L317)
+Defined in: [src/utils.ts:313](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/utils.ts#L313)
 
 Pauses execution for a fixed number of milliseconds.
 
@@ -18,16 +18,6 @@ Pauses execution for a fixed number of milliseconds.
 
 `number`
 
-Delay duration.
-
 ## Returns
 
 `Promise`\<`void`\>
-
-A promise that resolves after the timeout.
-
-## Example
-
-```ts
-await sleep(3000)
-```

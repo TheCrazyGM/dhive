@@ -6,7 +6,7 @@
 
 # Interface: ChangeRecoveryAccountOperation
 
-Defined in: [src/chain/operation.ts:358](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L358)
+Defined in: [src/chain/operation.ts:358](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L358)
 
 Each account lists another account as their recovery account.
 The recovery account has the ability to create account_recovery_requests
@@ -35,7 +35,7 @@ witness according to stake.
 
 > **0**: `"change_recovery_account"`
 
-Defined in: [src/chain/operation.ts:359](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L359)
+Defined in: [src/chain/operation.ts:359](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L359)
 
 #### Overrides
 
@@ -47,7 +47,7 @@ Defined in: [src/chain/operation.ts:359](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:360](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L360)
+Defined in: [src/chain/operation.ts:360](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L360)
 
 #### account\_to\_recover
 

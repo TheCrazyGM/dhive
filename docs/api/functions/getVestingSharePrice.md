@@ -8,7 +8,7 @@
 
 > **getVestingSharePrice**(`props`): [`Price`](../classes/Price.md)
 
-Defined in: [src/chain/misc.ts:312](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/misc.ts#L312)
+Defined in: [src/chain/misc.ts:317](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/misc.ts#L317)
 
 Calculates the HIVE/VESTS conversion price from global properties.
 

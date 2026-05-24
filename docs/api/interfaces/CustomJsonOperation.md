@@ -6,7 +6,7 @@
 
 # Interface: CustomJsonOperation
 
-Defined in: [src/chain/operation.ts:550](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L550)
+Defined in: [src/chain/operation.ts:550](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L550)
 
 JSON custom operation used by Hive application protocols.
 
@@ -37,7 +37,7 @@ const op: CustomJsonOperation = ['custom_json', {
 
 > **0**: `"custom_json"`
 
-Defined in: [src/chain/operation.ts:551](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L551)
+Defined in: [src/chain/operation.ts:551](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L551)
 
 #### Overrides
 
@@ -49,7 +49,7 @@ Defined in: [src/chain/operation.ts:551](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:552](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L552)
+Defined in: [src/chain/operation.ts:552](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L552)
 
 #### id
 

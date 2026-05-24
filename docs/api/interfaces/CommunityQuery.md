@@ -6,7 +6,7 @@
 
 # Interface: CommunityQuery
 
-Defined in: [src/helpers/hivemind.ts:77](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/hivemind.ts#L77)
+Defined in: [src/helpers/hivemind.ts:77](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/hivemind.ts#L77)
 
 Query options for fetching a single community.
 
@@ -16,7 +16,7 @@ Query options for fetching a single community.
 
 > **name**: `string`
 
-Defined in: [src/helpers/hivemind.ts:78](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/hivemind.ts#L78)
+Defined in: [src/helpers/hivemind.ts:78](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/hivemind.ts#L78)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: [src/helpers/hivemind.ts:78](https://github.com/TheCrazyGM/dhive/blo
 
 > **observer**: `string`
 
-Defined in: [src/helpers/hivemind.ts:79](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/hivemind.ts#L79)
+Defined in: [src/helpers/hivemind.ts:79](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/hivemind.ts#L79)

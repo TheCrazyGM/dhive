@@ -6,7 +6,7 @@
 
 # Class: RCAPI
 
-Defined in: [src/helpers/rc.ts:25](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L25)
+Defined in: [src/helpers/rc.ts:25](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L25)
 
 Helper for Hive Resource Credit and voting mana calculations.
 
@@ -32,7 +32,7 @@ console.log(rc.percentage / 100, vp.percentage / 100)
 
 > **new RCAPI**(`client`): `RCAPI`
 
-Defined in: [src/helpers/rc.ts:31](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L31)
+Defined in: [src/helpers/rc.ts:31](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L31)
 
 Creates an RC helper bound to a client.
 
@@ -54,7 +54,7 @@ Client used to call `rc_api` and condenser account data.
 
 > `readonly` **client**: [`Client`](Client.md)
 
-Defined in: [src/helpers/rc.ts:31](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L31)
+Defined in: [src/helpers/rc.ts:31](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L31)
 
 Client used to call `rc_api` and condenser account data.
 
@@ -64,7 +64,7 @@ Client used to call `rc_api` and condenser account data.
 
 > **calculateRCMana**(`rc_account`): [`Manabar`](../interfaces/Manabar.md)
 
-Defined in: [src/helpers/rc.ts:175](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L175)
+Defined in: [src/helpers/rc.ts:175](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L175)
 
 Calculates current RC mana from an RC account record.
 
@@ -95,7 +95,7 @@ const mana = client.rc.calculateRCMana(rcAccount)
 
 > **calculateVPMana**(`account`): [`Manabar`](../interfaces/Manabar.md)
 
-Defined in: [src/helpers/rc.ts:195](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L195)
+Defined in: [src/helpers/rc.ts:192](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L192)
 
 Calculates current voting mana from a condenser account record.
 
@@ -127,7 +127,7 @@ const mana = client.rc.calculateVPMana(account)
 
 > **call**(`method`, `params?`): `Promise`\<`any`\>
 
-Defined in: [src/helpers/rc.ts:51](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L51)
+Defined in: [src/helpers/rc.ts:51](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L51)
 
 Sends a raw `rc_api` call through the parent client.
 
@@ -171,7 +171,7 @@ const result = await client.rc.call('find_rc_accounts', {
 
 > **findRCAccounts**(`usernames`): `Promise`\<[`RCAccount`](../interfaces/RCAccount.md)[]\>
 
-Defined in: [src/helpers/rc.ts:70](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L70)
+Defined in: [src/helpers/rc.ts:70](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L70)
 
 Fetches RC account records for one or more usernames.
 
@@ -207,7 +207,7 @@ console.log(rcAccount.max_rc)
 
 > **getRCMana**(`username`): `Promise`\<[`Manabar`](../interfaces/Manabar.md)\>
 
-Defined in: [src/helpers/rc.ts:131](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L131)
+Defined in: [src/helpers/rc.ts:131](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L131)
 
 Fetches and calculates current RC mana for an account.
 
@@ -249,7 +249,7 @@ console.log(`${mana.percentage / 100}% RC`)
 
 > **getResourceParams**(): `Promise`\<[`RCParams`](../interfaces/RCParams.md)\>
 
-Defined in: [src/helpers/rc.ts:89](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L89)
+Defined in: [src/helpers/rc.ts:89](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L89)
 
 Fetches global RC resource parameters.
 
@@ -278,7 +278,7 @@ console.log(params.resource_params)
 
 > **getResourcePool**(): `Promise`\<[`RCPool`](../interfaces/RCPool.md)\>
 
-Defined in: [src/helpers/rc.ts:107](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L107)
+Defined in: [src/helpers/rc.ts:107](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L107)
 
 Fetches the current RC resource pool.
 
@@ -306,7 +306,7 @@ console.log(pool.resource_pool)
 
 > **getVPMana**(`username`): `Promise`\<[`Manabar`](../interfaces/Manabar.md)\>
 
-Defined in: [src/helpers/rc.ts:156](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/helpers/rc.ts#L156)
+Defined in: [src/helpers/rc.ts:156](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/helpers/rc.ts#L156)
 
 Fetches and calculates current voting mana for an account.
 

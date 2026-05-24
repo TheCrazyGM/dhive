@@ -6,7 +6,7 @@
 
 # Interface: DynamicParam
 
-Defined in: [src/chain/rc.ts:39](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L39)
+Defined in: [src/chain/rc.ts:39](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L39)
 
 Dynamic RC pool tuning values for one resource class.
 
@@ -21,7 +21,7 @@ over time.
 
 > **budget\_per\_time\_unit**: `number`
 
-Defined in: [src/chain/rc.ts:41](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L41)
+Defined in: [src/chain/rc.ts:41](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L41)
 
 ***
 
@@ -29,7 +29,7 @@ Defined in: [src/chain/rc.ts:41](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **decay\_params**: `object`
 
-Defined in: [src/chain/rc.ts:44](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L44)
+Defined in: [src/chain/rc.ts:44](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L44)
 
 #### decay\_per\_time\_unit
 
@@ -45,7 +45,7 @@ Defined in: [src/chain/rc.ts:44](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **max\_pool\_size**: `string`
 
-Defined in: [src/chain/rc.ts:43](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L43)
+Defined in: [src/chain/rc.ts:43](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L43)
 
 ***
 
@@ -53,7 +53,7 @@ Defined in: [src/chain/rc.ts:43](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **min\_decay**: `number`
 
-Defined in: [src/chain/rc.ts:48](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L48)
+Defined in: [src/chain/rc.ts:48](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L48)
 
 ***
 
@@ -61,7 +61,7 @@ Defined in: [src/chain/rc.ts:48](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **pool\_eq**: `string`
 
-Defined in: [src/chain/rc.ts:42](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L42)
+Defined in: [src/chain/rc.ts:42](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L42)
 
 ***
 
@@ -69,4 +69,4 @@ Defined in: [src/chain/rc.ts:42](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_unit**: `number`
 
-Defined in: [src/chain/rc.ts:40](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L40)
+Defined in: [src/chain/rc.ts:40](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L40)

@@ -6,7 +6,7 @@
 
 # Interface: RCParams
 
-Defined in: [src/chain/rc.ts:18](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L18)
+Defined in: [src/chain/rc.ts:18](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L18)
 
 Global RC pricing parameters for every Hive resource class.
 
@@ -29,7 +29,7 @@ console.log(params.resource_execution_time.price_curve_params)
 
 > **resource\_execution\_time**: [`Resource`](Resource.md)
 
-Defined in: [src/chain/rc.ts:23](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L23)
+Defined in: [src/chain/rc.ts:23](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L23)
 
 ***
 
@@ -37,7 +37,7 @@ Defined in: [src/chain/rc.ts:23](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_history\_bytes**: [`Resource`](Resource.md)
 
-Defined in: [src/chain/rc.ts:19](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L19)
+Defined in: [src/chain/rc.ts:19](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L19)
 
 ***
 
@@ -45,7 +45,7 @@ Defined in: [src/chain/rc.ts:19](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_market\_bytes**: [`Resource`](Resource.md)
 
-Defined in: [src/chain/rc.ts:21](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L21)
+Defined in: [src/chain/rc.ts:21](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L21)
 
 ***
 
@@ -53,7 +53,7 @@ Defined in: [src/chain/rc.ts:21](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_new\_accounts**: [`Resource`](Resource.md)
 
-Defined in: [src/chain/rc.ts:20](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L20)
+Defined in: [src/chain/rc.ts:20](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L20)
 
 ***
 
@@ -61,4 +61,4 @@ Defined in: [src/chain/rc.ts:20](https://github.com/TheCrazyGM/dhive/blob/ebc878
 
 > **resource\_state\_bytes**: [`Resource`](Resource.md)
 
-Defined in: [src/chain/rc.ts:22](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/rc.ts#L22)
+Defined in: [src/chain/rc.ts:22](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/rc.ts#L22)

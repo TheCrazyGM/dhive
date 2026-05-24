@@ -6,7 +6,7 @@
 
 # Interface: CommentOptionsOperation
 
-Defined in: [src/chain/operation.ts:453](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L453)
+Defined in: [src/chain/operation.ts:453](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L453)
 
 Sets payout, vote, curation, and beneficiary options for a comment.
 
@@ -25,7 +25,7 @@ new post never exists with unintended payout settings.
 
 > **0**: `"comment_options"`
 
-Defined in: [src/chain/operation.ts:454](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L454)
+Defined in: [src/chain/operation.ts:454](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L454)
 
 #### Overrides
 
@@ -37,7 +37,7 @@ Defined in: [src/chain/operation.ts:454](https://github.com/TheCrazyGM/dhive/blo
 
 > **1**: `object`
 
-Defined in: [src/chain/operation.ts:455](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/operation.ts#L455)
+Defined in: [src/chain/operation.ts:455](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/operation.ts#L455)
 
 #### allow\_curation\_rewards
 

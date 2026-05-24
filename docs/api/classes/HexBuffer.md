@@ -6,7 +6,7 @@
 
 # Class: HexBuffer
 
-Defined in: [src/chain/misc.ts:61](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/misc.ts#L61)
+Defined in: [src/chain/misc.ts:63](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/misc.ts#L63)
 
 Buffer wrapper that serializes to a hex-encoded string.
 
@@ -28,15 +28,15 @@ console.log(bytes.toJSON())
 
 > **new HexBuffer**(`buffer`): `HexBuffer`
 
-Defined in: [src/chain/misc.ts:67](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/misc.ts#L67)
+Defined in: [src/chain/misc.ts:69](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/misc.ts#L69)
 
-Creates a hex-buffer wrapper around a Node buffer.
+Creates a hex-buffer wrapper around a Uint8Array.
 
 #### Parameters
 
 ##### buffer
 
-`Buffer`
+`Uint8Array`
 
 Raw binary data.
 
@@ -48,9 +48,9 @@ Raw binary data.
 
 ### buffer
 
-> **buffer**: `Buffer`
+> **buffer**: `Uint8Array`
 
-Defined in: [src/chain/misc.ts:67](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/misc.ts#L67)
+Defined in: [src/chain/misc.ts:69](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/misc.ts#L69)
 
 Raw binary data.
 
@@ -60,7 +60,7 @@ Raw binary data.
 
 > **toJSON**(): `string`
 
-Defined in: [src/chain/misc.ts:96](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/misc.ts#L96)
+Defined in: [src/chain/misc.ts:101](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/misc.ts#L101)
 
 #### Returns
 
@@ -72,13 +72,13 @@ Defined in: [src/chain/misc.ts:96](https://github.com/TheCrazyGM/dhive/blob/ebc8
 
 > **toString**(`encoding?`): `string`
 
-Defined in: [src/chain/misc.ts:92](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/misc.ts#L92)
+Defined in: [src/chain/misc.ts:94](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/misc.ts#L94)
 
 #### Parameters
 
 ##### encoding?
 
-`string` = `'hex'`
+`string` = `"hex"`
 
 #### Returns
 
@@ -90,7 +90,7 @@ Defined in: [src/chain/misc.ts:92](https://github.com/TheCrazyGM/dhive/blob/ebc8
 
 > `static` **from**(`value`): `HexBuffer`
 
-Defined in: [src/chain/misc.ts:80](https://github.com/TheCrazyGM/dhive/blob/ebc8785ae8359da960ba5757e072e62d38bf0c05/src/chain/misc.ts#L80)
+Defined in: [src/chain/misc.ts:82](https://github.com/TheCrazyGM/dhive/blob/ab36e508de98a7faeac27bf4201fc79843d471c8/src/chain/misc.ts#L82)
 
 Normalizes hex, bytes, or an existing wrapper into a HexBuffer.
 
@@ -98,9 +98,9 @@ Normalizes hex, bytes, or an existing wrapper into a HexBuffer.
 
 ##### value
 
-`string` \| `number`[] \| `HexBuffer` \| `Buffer`\<`ArrayBufferLike`\>
+`string` \| `number`[] \| `Uint8Array`\<`ArrayBufferLike`\> \| `HexBuffer`
 
-Buffer, existing wrapper, byte array, or hex string.
+Uint8Array, existing wrapper, byte array, or hex string.
 
 #### Returns
 
