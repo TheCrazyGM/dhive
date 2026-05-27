@@ -1,6 +1,6 @@
 # 🌸 Pollen
 
-**The modern, secure, and zero-dependency TypeScript SDK for the Hive blockchain. Built for 2026 and beyond.**
+**The modern, secure, and zero-dependency TypeScript SDK for the Hive blockchain. Built for production. Made to last.**
 
 `dhive` built the foundation of JavaScript development on Hive — but it carried a decade of legacy: unmaintained cryptography, thousands of transient vulnerabilities, and a build system stuck in the past. **Pollen** is its spiritual successor, rebuilt for security, performance, and the environments developers actually build for today.
 
